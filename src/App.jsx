@@ -1,6 +1,6 @@
 import './App.css';
 
-const App = ({}) => {
+const App = () => {
   return <div></div>;
 };
 
