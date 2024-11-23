@@ -1,7 +1,10 @@
 import './App.css';
+import { Modal } from './components/Modal/Modal';
 
 const App = () => {
-  return <div></div>;
+  return <div>
+    <Modal/>
+  </div>;
 };
 
 export default App;
