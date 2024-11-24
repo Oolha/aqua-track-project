@@ -1,10 +1,52 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/poppins-regular-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/poppins-bold-webfont.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./assets/fonts/gilroy-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Gilroy';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./assets/fonts/gilroy-bold.woff2') format('woff2');
+}
 :root {
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Gilroy', sans-serif;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --color-background: #fafafa;
+  --color-heading: #323f47;
+
+  --line-height: 1.5;
+
   --my-white: #fff;
 }
 
 body {
-  font-family: sans-serif;
-  line-height: 1.5;
+  padding: 16px 16px;
+  box-sizing: border-box;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height);
 }
 
 h1,
@@ -12,23 +54,43 @@ h2,
 h3,
 h4,
 h5,
-h6,
+h6 {
+  margin: 0;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+}
 p {
   margin: 0;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
 }
-
 ul,
 ol {
   margin: 0;
   padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 button {
   margin: 0;
   padding: 0;
+  cursor: pointer;
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    padding: 32px 32px;
+  }
 }
