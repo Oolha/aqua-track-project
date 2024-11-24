@@ -1,5 +1,11 @@
+import WaterDetailedInfo from '../../components/WaterDetailedInfo/WaterDetailedInfo';
+
 const HomePage = ({}) => {
-  return <div></div>;
+  return (
+    <div>
+      <WaterDetailedInfo />
+    </div>
+  );
 };
 
 export default HomePage;

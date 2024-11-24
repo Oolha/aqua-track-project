@@ -5,5 +5,25 @@
   <path d="M21 7L7 21" stroke="#2F2F2F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
   <path d="M7 7L21 21" stroke="#2F2F2F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
 </symbol>
+
+<symbol id="chevron-down-2" fill="none" viewBox="0 0 20 20">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m5 12.5 5-5 5 5"></path>
+</symbol>
+<symbol id="edit" fill="none" viewBox="0 0 14 14">
+      <g clip-path="url(#a)">
+        <path stroke="#323F47" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M9.916 1.75a1.65 1.65 0 1 1 2.334 2.333l-7.875 7.875-3.208.875.875-3.208L9.915 1.75Z"></path>
+      </g>
+      <defs>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 0h14v14H0z"></path>
+        </clipPath>
+      </defs>
+</symbol>
+<symbol id="trash" fill="none" viewBox="0 0 14 14">
+      <path stroke="#323F47" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.3" d="M5.25 1.75h3.5M1.75 3.5h10.5m-1.167 0-.409 6.136c-.061.92-.092 1.381-.29 1.73a1.75 1.75 0 0 1-.758.709c-.362.175-.823.175-1.746.175H6.12c-.923 0-1.384 0-1.746-.175a1.75 1.75 0 0 1-.757-.709c-.2-.349-.23-.81-.291-1.73L2.916 3.5"></path>
+</symbol>
+
   </defs>
 </svg>  
+
+
