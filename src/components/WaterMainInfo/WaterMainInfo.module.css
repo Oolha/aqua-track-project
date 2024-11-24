@@ -1,0 +1,30 @@
+.wrapper {
+  position: relative;
+  background-color: #9be1a0;
+  border-radius: 30px;
+  width: 343px;
+  height: 415px;
+  padding: 24px 16px 32px 16px;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    width: 704px;
+    height: 578px;
+    padding: 32px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .wrapper {
+    width: 672px;
+    height: 736px;
+  }
+}
+
+.imageBottle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
