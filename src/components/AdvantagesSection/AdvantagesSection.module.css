@@ -1,0 +1,172 @@
+.fontSection {
+  background-image: url('../../assets/images/Rectangle.jpg');
+  border-radius: 30px;
+  width: 343px;
+  height: 353px;
+  background-size: cover;
+  padding: 20px;
+}
+.listBtn {
+  display: flex;
+  justify-content: flex-start;
+  column-count: 2;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 8px;
+  margin-left: 120px;
+  margin-top: 12px;
+}
+
+.listItemHabit {
+  border-radius: 30px;
+  padding: 9px 12px;
+  width: 83px;
+  height: 26px;
+  background: #323f47;
+  font-weight: 600;
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #ffffff;
+}
+.listItemView {
+  border-radius: 30px;
+  padding: 9px 12px;
+  width: 90px;
+  height: 26px;
+  background: #9be1a0;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #323f47;
+}
+.listItemPersonal {
+  border-radius: 30px;
+  padding: 9px 12px;
+  width: 120px;
+  height: 26px;
+  background: #ffffff;
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-align: center;
+  color: #323f47;
+}
+.listStylesImg {
+  display: flex;
+  border-radius: 30px;
+  padding: 8px 5px;
+  width: 160px;
+  height: 48px;
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin-top: 209px;
+  margin-left: 10px;
+}
+.avatarGroup {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: -10px;
+  position: relative;
+  z-index: 1;
+}
+
+.avatar:first-child {
+  margin-left: 0;
+}
+.textParagraph {
+  font-weight: 700;
+  font-size: 8px;
+  line-height: 117%;
+  color: #323f47;
+}
+.happy {
+}
+
+/* -------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .fontSection {
+    width: 736px;
+    height: 446px;
+    padding: 32px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  .listStylesImg {
+    display: flex;
+    border-radius: 30px;
+    padding: 10px 20px;
+    width: 250px;
+    height: 67px;
+    box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    margin-top: 275px;
+    margin-left: -22px;
+  }
+  .avatar {
+    width: 47px;
+    height: 47px;
+  }
+  .listItemHabit {
+    padding: 11px 16px;
+    width: 111px;
+    height: 34px;
+    background: #323f47;
+    font-weight: 700;
+    font-size: 12px;
+  }
+  .listItemView {
+    padding: 11px 16px;
+    width: 130px;
+    height: 34px;
+    background: transparent;
+    font-size: 12px;
+  }
+  .listItemPersonal {
+    border-radius: 30px;
+    padding: 11px 16px;
+    width: 170px;
+    height: 34px;
+    font-size: 12px;
+  }
+  .textParagraph {
+    font-size: 15px;
+    line-height: 149%;
+  }
+  .listBtn {
+    display: flex;
+    justify-content: flex-start;
+    column-count: 2;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: 420px;
+  }
+}
+/* ------------------------------------- */
+@media only screen and (min-width: 1440px) {
+  .fontSection {
+    width: 672px;
+  }
+  .listStylesImg {
+    width: 250px;
+    height: 67px;
+    box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+    margin-top: 275px;
+    margin-left: -22px;
+  }
+
+  .listBtn {
+    margin-left: 280px;
+  }
+}
