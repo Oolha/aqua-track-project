@@ -1,0 +1,7 @@
+.mainBox {
+  padding: 40px 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  background: #f0eff4;
+}
