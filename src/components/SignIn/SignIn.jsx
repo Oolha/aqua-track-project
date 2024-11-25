@@ -35,7 +35,7 @@ function SignInForm() {
   const onSubmit = async data => {
     try {
       // Запит на backend
-      const response = await axios.post('https://example.com/api/login', data);
+      const response = await axios.post('https://example.com/api/signin', data);
 
       // Симуляція відповіді сервера
       const { token } = response.data;
