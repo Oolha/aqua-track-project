@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
-import './LoginForm.css'; // Стилі форми
+import './SignIn.module.css'; // Стилі форми
 
 const schema = Yup.object().shape({
   email: Yup.string()
