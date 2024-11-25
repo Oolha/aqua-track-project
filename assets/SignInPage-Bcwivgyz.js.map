@@ -1,1 +1,0 @@
-{"version":3,"file":"SignInPage-Bcwivgyz.js","sources":["../../src/pages/SignInPage/SignInPage.jsx"],"sourcesContent":["const SignInPage = ({}) => {\n  return <div></div>;\n};\n\nexport default SignInPage;\n"],"names":["SignInPage"],"mappings":"wCAAM,MAAAA,EAAa,CAAC,CAAA,UACV,MAAI,CAAA,CAAA"}

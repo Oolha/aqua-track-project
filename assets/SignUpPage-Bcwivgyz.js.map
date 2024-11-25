@@ -1,1 +1,0 @@
-{"version":3,"file":"SignUpPage-Bcwivgyz.js","sources":["../../src/pages/SignUpPage/SignUpPage.jsx"],"sourcesContent":["const SignUpPage = ({}) => {\n  return <div></div>;\n};\n\nexport default SignUpPage;\n"],"names":["SignUpPage"],"mappings":"wCAAM,MAAAA,EAAa,CAAC,CAAA,UACV,MAAI,CAAA,CAAA"}
