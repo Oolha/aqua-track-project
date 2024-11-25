@@ -1,0 +1,81 @@
+.waterForm {
+  margin-top: 24px;
+  width: 303px;
+}
+
+.valuePickerContainer {
+  margin-top: 20px;
+}
+
+.adjustmentContainer {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.amountDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #323f47;
+  color: white;
+  border-radius: 30px;
+  padding: 0 20px;
+}
+
+.adjustmentButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 1.5px solid #323f47;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+}
+
+.icon {
+  stroke: #323f47;
+}
+
+.inputField {
+  border: 1px solid rgba(47, 47, 47, 0.2);
+  border-radius: 15px;
+  padding: 0 16px;
+  width: 303px;
+  height: 46px;
+  outline: none;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.inputField:active {
+  border: 1px solid rgba(47, 47, 47, 0.4);
+}
+
+.timeBlockLabel {
+  margin-top: 16px;
+}
+
+.amountBlockLabel {
+  margin-top: 24px;
+}
+
+.saveBtn {
+  border-radius: 30px;
+  border: none;
+  height: 46px;
+  padding: 0 40px;
+  background: #9be1a0;
+  margin-top: 24px;
+  cursor: pointer;
+}
+
+.waterForm > p,
+.amountBlockLabel {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: -0.01em;
+}
