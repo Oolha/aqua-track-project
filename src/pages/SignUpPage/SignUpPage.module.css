@@ -1,5 +1,4 @@
 .containerUp {
-  width: 343px;
   margin: auto;
   background-color: #f0eff4;
   border-radius: 30px;
@@ -8,7 +7,6 @@
 
 @media (min-width: 765px) {
   .containerUp {
-    margin: 32px;
     width: 704px;
   }
 }

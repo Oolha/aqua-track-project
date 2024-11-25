@@ -3,8 +3,11 @@
   padding: 126px 16px 170px 16px;
 }
 
+.formUp div {
+  margin-bottom: 16px; /* Або будь-яке значення */
+}
+
 .titleUp {
-  font-family: 'Poppins', sans-serif;
   color: #323f47;
   font-weight: 700;
   font-size: 32px;
@@ -14,7 +17,6 @@
 }
 
 .labelUp {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 129%;
@@ -30,8 +32,7 @@
   padding-left: 16px;
   width: 311px;
   height: 50px;
-  margin-bottom: 16px;
-  font-family: 'Poppins', sans-serif;
+  /*  margin-bottom: 16px; */
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
@@ -44,7 +45,6 @@
   border: none;
   width: 311px;
   height: 50px;
-  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: -0.01em;
@@ -54,7 +54,6 @@
 }
 
 .textUp {
-  font-family: 'Poppins', sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: rgba(47, 47, 47, 0.5);
@@ -62,24 +61,25 @@
 }
 
 .linkUp {
-  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   color: #2f2f2f;
   cursor: pointer;
 }
 
-.inputWrapper {
-  position: relative;
-}
-
-.icon {
+.iconButton {
+  all: unset;
   position: absolute;
   right: 16px;
-  top: 18px;
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
-  fill: none;
-  stroke: currentColor;
-  fill: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputWrapper {
+  position: relative;
 }
 
 @media only screen and (min-width: 768px) {
