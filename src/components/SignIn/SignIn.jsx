@@ -21,7 +21,7 @@ function SignInForm() {
   const [notification, setNotification] = useState(null); // Для повідомлень
   const navigate = useNavigate();
 
-  const togglePwdVisibility = () => setShowPwd(prev => !prev);
+  const togglePwdVisibility = () => setShowPwd((prev) => !prev);
 
   const {
     register,
@@ -32,7 +32,7 @@ function SignInForm() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = async data => {
+  const onSubmit = async (data) => {
     try {
       // Запит на backend
       const response = await axios.post('https://example.com/api/signin', data);
@@ -98,7 +98,7 @@ function SignInForm() {
                 onClick={togglePwdVisibility}
                 aria-label={showPwd ? 'Hide password' : 'Show password'}
               >
-               <Icon id={showPwd ? 'icon-eye' : 'icon-eye-off'} size={24} />
+                <Icon id={showPwd ? 'icon-eye' : 'icon-eye-off'} size={24} />
               </button>
             </div>
             {errors.password && (
@@ -122,4 +122,3 @@ function SignInForm() {
 }
 
 export default SignInForm;
-
