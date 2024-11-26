@@ -7,8 +7,4 @@ function Logo() {
   );
 }
 
-<<<<<<< HEAD
 export default Logo;
-=======
-export default Logo;
->>>>>>> main
