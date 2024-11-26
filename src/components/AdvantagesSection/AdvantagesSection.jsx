@@ -7,18 +7,18 @@ function AdvantagesSection() {
         <div className={styles.avatarGroup}>
           <img
             className={styles.avatar}
-            src="../../assets/images/MaleMemojis3.jpg"
-            // alt="Avatar 1"
+            // src="../../assets/images/MaleMemojis3.jpg"
+            alt="Av1"
           />
           <img
             className={styles.avatar}
-            src="../../assets/images/MaleMemojis2.jpg"
-            // alt="Avatar 2"
+            // src="../../assets/images/MaleMemojis2.jpg"
+            alt="Av2"
           />
           <img
             className={styles.avatar}
-            src="../../assets/images/MaleMemojis1.jpg"
-            // alt="Avatar 3"
+            // src="../../assets/images/MaleMemojis1.jpg"
+            alt="Av3"
           />
         </div>
         <p className={styles.textParagraph}>
