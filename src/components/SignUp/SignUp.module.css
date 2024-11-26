@@ -1,6 +1,16 @@
+.containerUp {
+  margin: auto;
+  background-color: #f0eff4;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
 .formUp {
-  width: 343px;
-  padding: 126px 16px 170px 16px;
+  width: 100%;
+  padding: 126px 0 170px 0;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .formUp div {
@@ -30,19 +40,31 @@
   border-radius: 15px;
   padding-right: 40px;
   padding-left: 16px;
-  width: 311px;
+  width: 100%;
+  max-width: 100%; /* Інпут займатиме всю ширину контейнера */
+
   height: 50px;
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
   letter-spacing: -0.01em;
   color: rgba(47, 47, 47, 0.6);
+  box-sizing: border-box;
+}
+
+.errorText {
+  color: #ef5050;
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  margin-top: 2px;
 }
 
 .btnUp {
   border-radius: 30px;
   border: none;
-  width: 311px;
+  width: 100%;
+
   height: 50px;
   font-size: 14px;
   font-weight: 700;
@@ -79,12 +101,23 @@
 
 .inputWrapper {
   position: relative;
+  align-items: center;
+}
+
+.inputError {
+  border: 1px solid red; /* Червона рамка для полів з помилкою */
+  background-color: #ffe6e6; /* Легкий червоний відтінок */
 }
 
 @media only screen and (min-width: 768px) {
+  .containerUp {
+    width: 704px;
+    padding: 32px;
+  }
+
   .formUp {
     width: 100%;
-    padding: 171px 134px 227px 134px;
+    padding: 171px 102px 227px 102px;
   }
 
   .titleUp {
@@ -96,7 +129,7 @@
     line-height: 150%;
   }
   .inputUp {
-    width: 436px;
+    width: 100%;
     height: 56px;
     font-size: 16px;
     line-height: 150%;
@@ -113,8 +146,11 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .containerUp {
+    width: 672px;
+  }
   .formUp {
     width: 100%;
-    padding: 74px 118px 100px 118px;
+    padding: 74px 86px 100px 86px;
   }
 }
