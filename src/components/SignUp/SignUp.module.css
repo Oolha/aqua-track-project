@@ -1,7 +1,14 @@
+.containerUp {
+  margin: auto;
+  background-color: #f0eff4;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 16px;
+}
+
 .formUp {
   width: 100%;
-
-  padding: 126px 16px 170px 16px;
+  padding: 126px 0 170px 0;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -103,9 +110,14 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .containerUp {
+    width: 704px;
+    padding: 32px;
+  }
+
   .formUp {
     width: 100%;
-    padding: 171px 134px 227px 134px;
+    padding: 171px 102px 227px 102px;
   }
 
   .titleUp {
@@ -134,8 +146,11 @@
 }
 
 @media only screen and (min-width: 1440px) {
+  .containerUp {
+    width: 672px;
+  }
   .formUp {
     width: 100%;
-    padding: 74px 118px 100px 118px;
+    padding: 74px 86px 100px 86px;
   }
 }
