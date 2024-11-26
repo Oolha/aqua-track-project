@@ -39,6 +39,16 @@
   color: rgba(47, 47, 47, 0.6);
 }
 
+.errorText {
+  color: #ef5050;
+  font-weight: 400;
+  font-size: 14px;
+  position: absolute;
+  margin-top: 2px;
+
+  /*  bottom: -20px; */
+}
+
 .btnUp {
   border-radius: 30px;
   border: none;
@@ -79,6 +89,12 @@
 
 .inputWrapper {
   position: relative;
+  align-items: center;
+}
+
+.inputError {
+  border: 1px solid red; /* Червона рамка для полів з помилкою */
+  background-color: #ffe6e6; /* Легкий червоний відтінок */
 }
 
 @media only screen and (min-width: 768px) {

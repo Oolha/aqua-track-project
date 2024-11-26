@@ -13,13 +13,13 @@ const schema = Yup.object().shape({
     .max(50, 'Too Long!')
     .required('Email is required'),
   password: Yup.string()
-    .min(8, 'Enter a real password!')
+    .min(4, 'Enter a real password!')
     .max(50, 'Too long')
     .required('Password is required'),
   repeatPassword: Yup.string()
-    .min(8, 'Enter a real password!')
+    .min(4, 'Enter a real password!')
     .max(50, 'Too long')
-    .oneOf([Yup.ref('password'), null], 'Passwords must match')
+    .oneOf([Yup.ref('password'), null], 'Passwords must match!')
     .required('Password is required'),
 });
 
@@ -27,8 +27,8 @@ function SignUpForm() {
   const [showPwd, setShowPwd] = useState(false);
   const [showRepeatPwd, setShowRepeatPwd] = useState(false);
 
-  const togglePwdVisibility = () => setShowPwd(prev => !prev);
-  const toggleRepeatPwdVisibility = () => setShowRepeatPwd(prev => !prev);
+  const togglePwdVisibility = () => setShowPwd((prev) => !prev);
+  const toggleRepeatPwdVisibility = () => setShowRepeatPwd((prev) => !prev);
 
   const {
     register,
@@ -38,7 +38,7 @@ function SignUpForm() {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = data => {
+  const onSubmit = (data) => {
     console.log('Form submitted:', data);
   };
 
@@ -55,12 +55,13 @@ function SignUpForm() {
             type="email"
             name="email"
             placeholder="Enter your email"
-            className={css.inputUp}
+            className={`${css.inputUp} ${errors.email ? css.inputError : ''}`}
           />
           {errors.email && (
             <p className={css.errorText}>{errors.email.message}</p>
           )}
         </div>
+
         <div>
           <label htmlFor="password" className={css.labelUp}>
             Password
@@ -71,7 +72,9 @@ function SignUpForm() {
               type={showPwd ? 'text' : 'password'}
               name="password"
               placeholder="Enter your password"
-              className={css.inputUp}
+              className={`${css.inputUp} ${
+                errors.password ? css.inputError : ''
+              }  `}
             />
             {errors.password && (
               <p className={css.errorText}>{errors.password.message}</p>
@@ -98,7 +101,9 @@ function SignUpForm() {
               type={showRepeatPwd ? 'text' : 'password'}
               name="repeatPassword"
               placeholder="Repeat password"
-              className={css.inputUp}
+              className={`${css.inputUp} ${
+                errors.repeatPassword ? css.inputError : ''
+              }`}
             />
             {errors.repeatPassword && (
               <p className={css.errorText}>{errors.repeatPassword.message}</p>
