@@ -1,7 +1,7 @@
 import './App.css';
 
 import {Calendar} from './components/Calendar/Calendar.jsx'
-import { CalendarPagination } from './components/CalendarPagination/CalendarPagination';
+import {MonthInfo} from './components/MonthInfo/MonthInfo.jsx'
 
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
@@ -16,7 +16,7 @@ const App = () => {
 const date=new Date();
   return (
     <>
-    <CalendarPagination/>
+    <MonthInfo/>
     <Calendar initialDate={date} />
     </>
     
