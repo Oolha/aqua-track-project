@@ -12,9 +12,12 @@ const DailyInfo = ({}) => {
   const closeModal = () => setModalVisible(false);
 
   return (
-    <div className={css.dailyInfoBox}>
-      <ChooseDate />
-      <AddWaterBtn onAddWaterClick={showModal} />
+    <div>
+      <div className={css.dailyInfoBox}>
+        <ChooseDate />
+        <AddWaterBtn onAddWaterClick={showModal} />
+      </div>
+
       <WaterList waterItems={waterItems} />
     </div>
   );
