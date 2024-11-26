@@ -1,0 +1,19 @@
+button {
+  border:none;
+  background-color: transparent;
+}
+
+.buttonPrev {
+  margin-right: 16px;
+}
+
+.calendarPag span{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  color:#323F47;
+}
+
+.yearField{
+  margin-right: 16px;
+}

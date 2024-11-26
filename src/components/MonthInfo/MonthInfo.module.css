@@ -2,10 +2,15 @@
     margin-bottom: 24px;
 }
 
+
 .monthInfoHeader {
     display: inline-block;
     margin-right: 56px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
+}
+
+.pagination{
+  margin-right: 16px;
 }
