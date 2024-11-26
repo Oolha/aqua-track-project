@@ -1,0 +1,20 @@
+.waterItem {
+  border-radius: 15px;
+  padding: 18px 14px;
+  width: 148px;
+  backdrop-filter: blur(33.599998474121094px);
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  gap: 14px;
+}
+.listItems {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
