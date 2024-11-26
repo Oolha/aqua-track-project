@@ -1,0 +1,120 @@
+.formUp {
+  width: 343px;
+  padding: 126px 16px 170px 16px;
+}
+
+.formUp div {
+  margin-bottom: 16px;
+}
+
+.titleUp {
+  color: #323f47;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  margin-bottom: 32px;
+}
+
+.labelUp {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 129%;
+  color: #2f2f2f;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.inputUp {
+  border: 1px solid rgba(47, 47, 47, 0.2);
+  border-radius: 15px;
+  padding-right: 40px;
+  padding-left: 16px;
+  width: 311px;
+  height: 50px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  color: rgba(47, 47, 47, 0.6);
+}
+
+.btnUp {
+  border-radius: 30px;
+  border: none;
+  width: 311px;
+  height: 50px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: #9be1a0;
+  margin: 16px 0 16px 0;
+  cursor: pointer;
+}
+
+.textUp {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(47, 47, 47, 0.5);
+  text-align: center;
+}
+
+.linkUp {
+  font-weight: 700;
+  color: #2f2f2f;
+  cursor: pointer;
+}
+
+.iconButton {
+  all: unset;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+@media only screen and (min-width: 768px) {
+  .formUp {
+    width: 100%;
+    padding: 171px 134px 227px 134px;
+  }
+
+  .titleUp {
+    font-size: 36px;
+    line-height: 106%;
+  }
+  .labelUp {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .inputUp {
+    width: 436px;
+    height: 56px;
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .btnUp {
+    width: 436px;
+    height: 60px;
+    font-size: 16px;
+  }
+  .textUp {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+  .formUp {
+    width: 100%;
+    padding: 74px 118px 100px 118px;
+  }
+}
