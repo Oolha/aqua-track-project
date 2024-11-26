@@ -2,7 +2,7 @@ const monthNames = [
     "January", "February", "March", "April", "May", "June",
     "July", "August", "September", "October", "November", "December"
   ];
-function getPreviousMonth(initalDate,increase=true) {
+export function getPreviousMonth(initalDate,increase=true) {
     const date = new Date(initalDate);
     (increase) ? date.setMonth(date.getMonth() + 1):date.setMonth(date.getMonth() - 1)
     const year = date.getFullYear();
@@ -12,7 +12,7 @@ function getPreviousMonth(initalDate,increase=true) {
     
 }
 
-function getDaysInMonthFromDate(initialDate) {
+export  function getDaysInMonthFromDate(initialDate) {
   
   const date = new Date(initialDate);
 
@@ -24,4 +24,3 @@ function getDaysInMonthFromDate(initialDate) {
   return new Date(year, month, 0).getDate();
 }
 
-console.log(getPreviousMonth(new Date(),false))
