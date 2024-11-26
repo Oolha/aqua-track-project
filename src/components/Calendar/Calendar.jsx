@@ -1,5 +1,7 @@
 import { CalendarItem } from "../CalendarItem/CalendarItem";
 import { getDaysInMonthFromDate } from "../../utils/calendar";
+import css from "./Calendar.module.css";
+
 
 export const Calendar = ({initialDate}) => {
 
@@ -19,7 +21,7 @@ export const Calendar = ({initialDate}) => {
 
 
     return (
-        <ul>
+        <ul className={css.calendar}>
             {dayItems}
 
         </ul>

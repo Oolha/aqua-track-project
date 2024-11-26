@@ -1,0 +1,26 @@
+.button {
+    display: flex;
+    flex-direction: column;
+    row-gap: 6px;
+    cursor: pointer;
+}
+.day {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    padding: 5px 11px;
+    border-radius: 50%;
+    background-color: rgba(50, 63, 71, 0.2);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.29;
+    color:rgba(50, 63, 71, 1);
+    
+}
+.rate {
+    font-size: 10px;
+    line-height: 1;
+    color:rgba(47, 47, 47, 0.6);
+}
