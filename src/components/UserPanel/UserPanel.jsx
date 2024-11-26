@@ -5,7 +5,7 @@ const UserPanel = ({}) => {
   return (
     <div className={css.mainBox}>
       <h2 className={css.title}>
-        Hello <span className={css.span}>, !</span>
+        Hello <span className={css.span}>, Name!</span>
       </h2>
       <UserBar />
     </div>

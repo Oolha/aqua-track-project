@@ -2,14 +2,14 @@
   border-radius: 30px;
   padding: 6px 12px;
   width: 137px;
-  height: 50px;
   background: #323f47;
   border: none;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 4px;
+  transition: background-color 0.2s ease;
+  margin-bottom: 40px;
 }
 .name {
   font-size: 14px;
@@ -19,10 +19,23 @@
   color: #fff;
 }
 .icon {
-  fill: #fff;
   stroke: #fff;
 }
 .avatar {
   width: 38px;
   height: 38px;
+}
+@media only screen and (min-width: 768px) {
+  .btn {
+    position: relative;
+    top: -9px;
+    width: 157px;
+  }
+  .name {
+    font-size: 16px;
+  }
+  .avatar {
+    width: 44px;
+    height: 44px;
+  }
 }
