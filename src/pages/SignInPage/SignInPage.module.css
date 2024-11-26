@@ -1,0 +1,20 @@
+.container {
+  width: 343px;
+  margin: auto;
+  background-color: #f0eff4;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 765px) {
+  .container {
+    margin: 32px;
+    width: 704px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    width: 672px;
+  }
+}
