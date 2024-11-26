@@ -1,16 +1,48 @@
 .monthInfo {
-    margin-bottom: 24px;
+  display: flex;
+  max-width: 304px;
+  margin-bottom: 24px;
 }
-
 
 .monthInfoHeader {
-    display: inline-block;
-    margin-right: 56px;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.2;
+  margin-right: auto;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
 }
 
-.pagination{
+.pagination {
   margin-right: 16px;
+}
+
+.iconStat {
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .monthInfo {
+    max-width: 640px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .monthInfo {
+    max-width: 608px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .monthInfoHeader {
+    font-size: 28px;
+    line-height: 1.14;
+  }
+  .pagination {
+    margin-right: 20px;
+  }
+
+  .iconStat {
+    width: 24px;
+    height: 24px;
+  }
 }

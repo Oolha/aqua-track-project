@@ -1,22 +1,24 @@
-import { Icon } from "../Icon/Icon";
+import Icons from '../../assets/icons/sprite.svg';
 
-import css from "./CalendarPagination.module.css";
+import css from './CalendarPagination.module.css';
 
-export const CalendarPagination = ({initialMonth,InitialYear}) => {
-
-    return (
-
-
-        <span className={css.calendarPag}>
-            <button type="button" className={css.buttonPrev}>
-            <Icon id="icon-prev_month" size={9} />
-            </button>
-            <span>{initialMonth}, </span>
-            <span className={css.yearField}>{InitialYear}</span>
-            <button type="button" >
-            <Icon id="icon-next_month" size={9} />
-            </button>
-        </span>
-
-    );
-}
+export const CalendarPagination = ({ initialMonth, InitialYear }) => {
+  return (
+    <span className={css.calendarPag}>
+      <button type="button" className={css.buttonPrev}>
+      <svg className={css.iconArrow}>
+          <use href={Icons + '#icon-prev_month'} ></use>
+        </svg>
+       
+      </button>
+      <span>{initialMonth}, </span>
+      <span className={css.yearField}>{InitialYear}</span>
+      <button type="button" className={css.buttonArrow}>
+      <svg className={css.iconArrow}>
+          <use href={Icons + '#icon-next_month'} ></use>
+        </svg>
+        
+      </button>
+    </span>
+  );
+};
