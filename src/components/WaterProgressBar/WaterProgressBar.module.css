@@ -20,6 +20,14 @@
   margin-bottom: 8px;
 }
 
+.volumeInfo {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.8;
+  color: #9be1a0;
+}
+
 .scale {
   border-radius: 9px;
   width: 174px;
