@@ -1,7 +1,7 @@
 import { Icon } from '../Icon/Icon';
-import css from './AddWaterBtn.module.css';
+import css from './AddWaterBtn2.module.css';
 
-const AddWaterBtn = ({ onAddWaterClick }) => {
+const AddWaterBtn2 = ({ onAddWaterClick }) => {
   return (
     <div className={css.addBtnBox}>
       <button type="button" className={css.addBtn} onClick={onAddWaterClick}>
@@ -12,4 +12,4 @@ const AddWaterBtn = ({ onAddWaterClick }) => {
   );
 };
 
-export default AddWaterBtn;
+export default AddWaterBtn2;

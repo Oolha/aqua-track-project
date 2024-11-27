@@ -1,4 +1,4 @@
-import AddWaterBtn from '../AddWaterBtn/AddWaterBtn';
+import AddWaterBtn2 from '../AddWaterBtn2/AddWaterBtn2';
 import ChooseDate from '../ChooseDate/ChooseDate';
 import WaterList from '../WaterList/WaterList';
 import css from './DailyInfo.module.css';
@@ -15,7 +15,7 @@ const DailyInfo = ({}) => {
     <div>
       <div className={css.dailyInfoBox}>
         <ChooseDate />
-        <AddWaterBtn onAddWaterClick={showModal} />
+        <AddWaterBtn2 onAddWaterClick={showModal} />
       </div>
 
       <WaterList waterItems={waterItems} />
