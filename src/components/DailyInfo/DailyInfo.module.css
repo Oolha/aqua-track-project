@@ -1,3 +1,6 @@
+.mainBox {
+  margin-bottom: 40px;
+}
 .dailyInfoBox {
   display: flex;
   flex-direction: row;
