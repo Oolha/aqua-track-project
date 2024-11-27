@@ -1,0 +1,22 @@
+.addBtnBox {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.addBtn {
+  border: none;
+  color: transparent;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+}
+.icon {
+  width: 30px;
+  height: 30px;
+}
+.addWaterText {
+  font-weight: 700;
+  font-size: 16px;
+  color: #323f47;
+}

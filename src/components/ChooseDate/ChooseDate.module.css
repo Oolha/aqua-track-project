@@ -1,0 +1,10 @@
+.curDate {
+  font-weight: 700;
+  font-size: 20px;
+  color: #323f47;
+}
+@media only screen and (min-width: 768px) {
+  .curDate {
+    font-size: 28px;
+  }
+}
