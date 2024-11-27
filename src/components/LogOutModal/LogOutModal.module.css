@@ -1,0 +1,87 @@
+.modal {
+  width: 344px;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.2;
+  color: #323f47;
+  margin-bottom: 16px;
+}
+
+.text {
+  color: #323f47;
+  margin-bottom: 28px;
+}
+
+.boxButton {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.button {
+  border-radius: 30px;
+  height: 46px;
+  border: none;
+  transition: all 250ms linear;
+  font-weight: 700;
+}
+
+.logoutButton {
+  background-color: #9be1a0;
+}
+
+.cancelButton {
+  background-color: #f0eff4;
+  color: rgba(50, 63, 71, 0.3);
+}
+
+.logoutButton:hover,
+.logoutButton:focus {
+  background-color: #87d28d;
+}
+
+.cancelButton:hover,
+.cancelButton:focus {
+  background-color: #f0eff4;
+  color: #323f47;
+}
+
+@media only screen and (min-width: 768px) {
+
+.modal {
+    width: 516px;
+    padding: 40px;
+  }
+
+.title {
+    font-size: 28px;
+    line-height: 1.14286;
+    margin-bottom: 24px;
+  }
+
+.text {
+    margin-bottom: 24px;
+    font-size: 18px;
+    line-height: 1.33333;
+  }
+
+.boxButton {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+  }
+
+.button {
+    padding: 18px 57px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+}
