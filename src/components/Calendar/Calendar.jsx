@@ -1,8 +1,8 @@
 import { CalendarItem } from '../CalendarItem/CalendarItem';
 import { getDaysInMonthFromDate } from '../../utils/calendar';
 import css from './Calendar.module.css';
-
-export const Calendar = ({ initialDate }) => {
+const currentDate = new Date();
+export const Calendar = ({ initialDate=currentDate }) => {
   const date = new Date(initialDate);
   const month = date.getMonth();
   const year = date.getFullYear();

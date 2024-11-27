@@ -1,5 +1,6 @@
 import css from './CalendarItem.module.css';
 
+
 export const CalendarItem = ({ initialDay, waterNorma, waterAmount }) => {
   const rate = Math.round((waterAmount * 100) / waterNorma);
   return (

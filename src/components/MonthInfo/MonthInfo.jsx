@@ -3,6 +3,7 @@ import Icons from '../../assets/icons/sprite.svg';
 
 import { getMonthName } from '../../utils/calendar.js';
 import css from './MonthInfo.module.css';
+import {Calendar} from '../../components/Calendar/Calendar.jsx'
 
 export const MonthInfo = ({}) => {
   const currentDate = new Date();
@@ -11,6 +12,7 @@ export const MonthInfo = ({}) => {
 
   return (
     <section className={css.monthInfo}>
+      <div className={css.wrapper}>
       <h2 className={css.monthInfoHeader}>Month</h2>
       <span className={css.pagination}>
         <CalendarPagination
@@ -24,6 +26,9 @@ export const MonthInfo = ({}) => {
           <use href={Icons + '#icon-statistics'} ></use>
         </svg>
       </button>
+      
+      </div>
+      <Calendar/>
     </section>
   );
 };
