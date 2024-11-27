@@ -41,7 +41,7 @@
   padding-right: 40px;
   padding-left: 16px;
   width: 100%;
-  max-width: 100%; /* Інпут займатиме всю ширину контейнера */
+  max-width: 100%;
 
   height: 50px;
   font-weight: 400;
@@ -105,8 +105,8 @@
 }
 
 .inputError {
-  border: 1px solid red; /* Червона рамка для полів з помилкою */
-  background-color: #ffe6e6; /* Легкий червоний відтінок */
+  border: 1px solid red;
+  background-color: #ffe6e6;
 }
 
 @media only screen and (min-width: 768px) {
