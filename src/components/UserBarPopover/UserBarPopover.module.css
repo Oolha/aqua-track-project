@@ -1,0 +1,58 @@
+.mainBox {
+  border-radius: 15px;
+  padding: 14px 20px;
+  box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 137px;
+  height: 72px;
+  z-index: 1000;
+}
+.btnSetting,
+.btnLogOut {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #323f47;
+  font-size: 14px;
+}
+.btnLogOut {
+  color: rgba(50, 63, 71, 0.4);
+}
+
+.iconLogOut {
+  stroke: rgba(50, 63, 71, 0.4);
+}
+
+.mainBox {
+  animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .mainBox {
+    width: 157px;
+    height: 82px;
+    gap: 10px;
+  }
+  .btnSetting,
+  .btnLogOut {
+    font-size: 16px;
+  }
+}

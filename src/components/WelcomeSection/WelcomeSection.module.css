@@ -1,0 +1,131 @@
+.welcomFont {
+  background: #f0eff4;
+  border-radius: 30px;
+  width: 343px;
+}
+.box {
+  padding: 118px 16px 67px 16px;
+  margin-bottom: 16px;
+}
+.subtitle {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: 0.06em;
+  color: #2f2f2f;
+  margin-bottom: 16px;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  color: #323f47;
+  margin-bottom: 32px;
+}
+.links {
+  display: flex;
+  gap: 10px;
+}
+
+.linkGreen {
+  border-radius: 30px;
+  padding: 14px 19px;
+  font-size: 14px;
+  width: 116px;
+  height: 46px;
+  color: #323f47;
+  background-color: #9be1a0;
+}
+.linkWhite {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 14px 28px;
+  font-size: 14px;
+  width: 104px;
+  height: 46px;
+  color: #323f47;
+  background-color: transparent;
+}
+
+/* -------------------------------------------- */
+@media only screen and (min-width: 768px) {
+  .welcomFont {
+    width: 736px;
+  }
+  .box {
+    padding: 106px 93px 50px 64px;
+    margin-bottom: 16px;
+  }
+  .subtitle {
+    font-size: 16px;
+    line-height: 150%;
+  }
+  .title {
+    font-size: 64px;
+    line-height: 109%;
+  }
+  .links {
+    gap: 16px;
+  }
+  .linkGreen {
+    padding: 18px 40px;
+    background-color: transparent;
+    width: 169px;
+    height: 60px;
+  }
+  .linkWhite {
+    padding: 18px 40px;
+    width: 135px;
+    height: 60px;
+  }
+}
+/* ------------------------------------- */
+@media only screen and (min-width: 1440px) {
+  .welcomFont {
+    background: #f0eff4;
+    width: 672px;
+    height: 736px;
+  }
+  .box {
+    padding: 188px 61px 188px 64px;
+    margin: 0;
+  }
+  .subtitle {
+    font-size: 16px;
+    line-height: 150%;
+    margin: 0;
+  }
+  .title {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 95%;
+    letter-spacing: -0.01em;
+    margin-bottom: 32px;
+  }
+  .links {
+    display: flex;
+    gap: 16px;
+  }
+
+  .linkGreen {
+    font-size: 16px;
+    width: 168px;
+    background-color: transparent;
+  }
+  .linkGreen:hover,
+  .linkGreen:focus {
+    background-color: #9be1a0;
+  }
+  .linkWhite {
+    border: 1px solid black;
+    border-radius: 30px;
+    font-size: 16px;
+    width: 135px;
+    height: 60px;
+    color: #323f47;
+    background-color: transparent;
+  }
+}
