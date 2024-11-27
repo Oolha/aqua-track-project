@@ -1,0 +1,39 @@
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.buttonPrev {
+  margin-right: 16px;
+  padding: 5px 7px;
+}
+
+.calendarPag span {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.29;
+  color: #323f47;
+}
+
+.yearField {
+  margin-right: 16px;
+}
+
+.iconArrow {
+  width: 7px;
+  height: 12px;
+}
+.buttonArrow{
+  padding: 5px 7px;
+}
+
+@media screen and (min-width: 768px) {
+  .buttonPrev {
+    margin-right: 20px;
+  }
+
+  .calendarPag span {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
