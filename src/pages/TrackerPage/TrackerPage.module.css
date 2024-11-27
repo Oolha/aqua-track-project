@@ -1,0 +1,8 @@
+
+
+@media screen and (min-width: 1440px) {
+    .wrapper {
+        display: flex;
+        column-gap: 32px;
+    }
+}
