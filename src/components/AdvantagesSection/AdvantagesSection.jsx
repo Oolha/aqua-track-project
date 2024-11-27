@@ -25,11 +25,18 @@ function AdvantagesSection() {
           Our <span className={styles.happy}>happy</span> customers
         </p>
       </div>
-      <ul className={styles.listBtn}>
-        <li className={styles.listItemHabit}>Habit drive</li>
-        <li className={styles.listItemView}>View statistics</li>
-        <li className={styles.listItemPersonal}>Personal rate setting</li>
-      </ul>
+      <div className={styles.listBtn}>
+        <button className={styles.btnHabit} type="button">
+          Habit drive
+        </button>
+        <span className={styles.ellipse}></span>
+        <button className={styles.btnView} type="button">
+          View statistics
+        </button>
+        <button className={styles.btnPersonal} type="button">
+          Personal rate setting
+        </button>
+      </div>
     </div>
   );
 }
