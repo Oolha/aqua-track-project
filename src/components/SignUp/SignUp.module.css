@@ -1,5 +1,5 @@
 .containerUp {
-  margin: auto;
+  /*   margin: auto; */
   background-color: #f0eff4;
   border-radius: 30px;
   box-sizing: border-box;
@@ -148,6 +148,7 @@
 @media only screen and (min-width: 1440px) {
   .containerUp {
     width: 672px;
+    height: 736px;
   }
   .formUp {
     width: 100%;
