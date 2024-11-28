@@ -15,6 +15,7 @@
     "@reactour/tour": "^3.7.0",
     "@reduxjs/toolkit": "^2.3.0",
     "axios": "^1.7.8",
+    "axois": "^0.0.1-security",
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "modern-normalize": "^3.0.1",
