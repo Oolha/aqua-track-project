@@ -4,8 +4,15 @@ import WaterDailyNorma from '../WaterDailyNorma/WaterDailyNorma';
 import Logo from '../Logo/Logo';
 import AddWaterBtn from '../AddWaterBtn/AddWaterBtn';
 import WaterProgressBar from '../WaterProgressBar/WaterProgressBar';
+import { useState } from 'react';
+import WaterModal from '../WaterModal/WaterModal';
 
 const WaterMainInfo = () => {
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+  const showModal = () => {
+    setIsOpenModal(true);
+  };
   return (
     <div className={css.wrapper}>
       <Logo />
@@ -32,7 +39,8 @@ const WaterMainInfo = () => {
       </picture>
 
       <WaterProgressBar />
-      <AddWaterBtn />
+      <AddWaterBtn handleClickBtn={showModal} />
+      {isOpenModal && <WaterModal />}
     </div>
   );
 };
