@@ -1,18 +1,15 @@
-.containerUp {
-  margin: auto;
-  background-color: #f0eff4;
-  border-radius: 30px;
-  box-sizing: border-box;
+.hidden {
+  display: none;
 }
 
-@media (min-width: 765px) {
-  .containerUp {
-    width: 704px;
+@media only screen and (min-width: 1440px) {
+  .hidden {
+    display: block;
+    border-radius: 30px;
   }
-}
 
-@media (min-width: 1440px) {
-  .containerUp {
-    width: 672px;
+  .signUp {
+    display: flex;
+    gap: 32px;
   }
 }
