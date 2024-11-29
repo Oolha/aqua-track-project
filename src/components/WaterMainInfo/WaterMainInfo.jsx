@@ -6,7 +6,8 @@ import AddWaterBtn from '../AddWaterBtn/AddWaterBtn';
 import WaterProgressBar from '../WaterProgressBar/WaterProgressBar';
 import WaterModal from '../WaterModal/WaterModal';
 import { Modal } from '../Modal/Modal';
-import useModal from '../../hooks/useModalHook'
+import {useModal} from '../../hooks/useModalHook.js'
+
 
 
 const WaterMainInfo = () => {
