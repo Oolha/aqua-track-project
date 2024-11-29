@@ -129,22 +129,22 @@
 
 /* Стиль для успішного повідомлення */
 .notification.success {
-  background-color: #4caf50; /* Зелений колір */
+  background-color: #4caf50;
 }
 
 /* Стиль для повідомлення про помилку */
 .notification.error {
-  background-color: #f44336; /* Червоний колір */
+  background-color: #f44336;
 }
 
 /* Стиль для інформаційного повідомлення */
 .notification.info {
-  background-color: #2196f3; /* Синій колір */
+  background-color: #2196f3;
 }
 
 /* Стиль для попереджувального повідомлення */
 .notification.warning {
-  background-color: #ff9800; /* Помаранчевий колір */
+  background-color: #ff9800;
 }
 
 @keyframes fadeInOut {

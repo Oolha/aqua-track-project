@@ -8,7 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import Logo from '../../components/Logo/Logo.jsx';
 import axios from 'axios';
-import { loginFailure, loginSuccess } from '../../redux/slice.js';
+import { loginFailure, loginSuccess } from '../../redux/auth/slice.js';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -54,7 +54,7 @@ function SignUpForm() {
       );
 
       //! імітація запиту для перевірки роботи коду без бекенду
-      /*    const response = {
+      /*       const response = {
         data: {
           token: 'fakeToken123', // Симулюємо отримання токену
         },
