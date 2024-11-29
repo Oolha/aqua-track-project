@@ -65,10 +65,10 @@ function SignInForm() {
       <div className={css.loginContainer}>
         <Logo/>
   <div className={css.formWrapper}>
-    <h2 className={css.logo}>Sign In</h2>
-          <form onSubmit={handleSubmit(onSubmit)}>
+    <h2 className={css.title}>Sign In</h2>
+          <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
 
-      <div>
+      <div className={css.field}>
         <label htmlFor="email" className={css.formLabel}>
           Email
         </label>
@@ -83,7 +83,7 @@ function SignInForm() {
         )}
           </div>
 
-      <div>
+      <div className={css.field}>
         <label htmlFor="password" className={css.formLabel}>
           Password
         </label>
@@ -103,24 +103,23 @@ function SignInForm() {
             onClick={togglePwdVisibility}
             aria-label={showPwd ? 'Hide password' : 'Show password'}
           >
-            <Icon id={showPwd ? 'icon-eye' : 'icon-eye-off'} size={24} />
+            <Icon id={showPwd ? 'icon-eye' : 'icon-eye-off'} size={20} className={css.iconEye}/>
           </button>
             </div>
 
-        {/* {errors.password && (
-          <p className={css.errorMessage}>{errors.password.message}</p>
-        )} */}
-      </div>
-
+            </div>
+<div className={css.btnWrapper}>
         <button type="submit" className={css.formButton}>
           Sign In
-        </button>
-        </form>
+              </button>
+              </div>
+          </form>
+
       </div>
 
 
         <div>
-    <p className={css.signupText}>
+    <p className={css.signinText}>
       Don&apos;t have an account?{' '}
       <Link to="/signup" className={css.signupLink}>
         Sign Up
