@@ -7,7 +7,7 @@ const modalRoot =
 modalRoot.id = 'modalRoot';
 document.body.appendChild(modalRoot);
 
-export const Modal = ({ children, toggleModal }) => {
+export const Modal = ({ children, toggleModal, isSettings = false }) => {
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.code === 'Escape') {
@@ -35,7 +35,7 @@ export const Modal = ({ children, toggleModal }) => {
       onClick={handleClickOnBackdrop}
       className={style.backdrop}
     >
-      <div className={style.modal}>
+      <div className={`${style.modal} ${isSettings ? style.modal_settings : ""}`} >
         <button
           className={style.btn_close}
           type="button"
