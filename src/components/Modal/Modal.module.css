@@ -24,7 +24,15 @@
     padding: 40px;
 }
 }
+.modal_settings{
+    padding: 40px 7px 40px 20px;
+}
 
+@media screen and (min-width:768px) {
+    .modal_settings {
+    padding: 40px 16px 40px 40px;
+}
+}
 .btn_close {
     display: flex;
     justify-content: center;
