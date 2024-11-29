@@ -14,7 +14,7 @@ const TrackerPage = lazy(() => import('./pages/TrackerPage/TrackerPage'));
 const App = () => {
   const date = new Date();
   return (
-    <Provider store={store}>
+  <Provider store={store}>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
           <Route index element={<HomePage />} />
