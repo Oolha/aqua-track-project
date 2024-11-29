@@ -1,0 +1,19 @@
+.mainBox {
+  padding: 40px 20px;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  background: #f0eff4;
+  max-width: 343px;
+}
+@media only screen and (min-width: 768px) {
+  .mainBox {
+    padding: 41px 32px;
+    max-width: 704px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .mainBox {
+    max-width: 762px;
+  }
+}
