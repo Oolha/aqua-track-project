@@ -1,9 +1,13 @@
 import { useForm, Controller } from 'react-hook-form';
 import { Icon } from '../Icon/Icon';
 import style from './WaterForm.module.css';
+import { useDispatch } from 'react-redux';
+import { createWaterEntry } from '../../redux/water/operations';
 
 const WaterForm = ({ data }) => {
-  const extractTime = timestamp => {
+  const dispatch = useDispatch();
+
+  const extractTime = (timestamp) => {
     const date = timestamp ? new Date(timestamp) : new Date();
     const hours = String(date.getHours()).padStart(2, '0');
     const minutes = String(date.getMinutes()).padStart(2, '0');
@@ -26,11 +30,20 @@ const WaterForm = ({ data }) => {
 
   const currentAmount = watch('amount');
 
-  const onSubmit = formData => {
-    console.log('Submitted data:', formData);
+  const onSubmit = (formData) => {
+    console.log('Submitting water entry:', {
+      amount: Number(formData.amount),
+      time: formData.time,
+    });
+    dispatch(
+      createWaterEntry({
+        amount: Number(formData.amount),
+        time: formData.time,
+      })
+    );
   };
 
-  const litersFormat = value =>
+  const litersFormat = (value) =>
     Number(value) >= 1000
       ? `${Math.floor(value / 1000)},${value % 1000} l`
       : `${value} ml`;
