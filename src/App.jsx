@@ -1,5 +1,4 @@
 import './App.css';
-
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from './components/SharedLayout/SharedLayout';
@@ -10,7 +9,6 @@ const SignInPage = lazy(() => import('./pages/SignInPage/SignInPage'));
 const TrackerPage = lazy(() => import('./pages/TrackerPage/TrackerPage'));
 
 const App = () => {
-  const date = new Date();
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
