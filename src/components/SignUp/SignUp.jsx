@@ -44,6 +44,7 @@ function SignUpForm() {
     reset,
   } = useForm({
     resolver: yupResolver(schema),
+    mode: 'onChange',
   });
 
   const onSubmit = async (data) => {
@@ -85,7 +86,7 @@ function SignUpForm() {
       <Logo />
       <div className={css.formUp}>
         <h2 className={css.titleUp}>Sign Up</h2>
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div>
             <label htmlFor="email" className={css.labelUp}>
               Email
