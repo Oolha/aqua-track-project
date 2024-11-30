@@ -1,9 +1,3 @@
-// const SignInPage = ({}) => {
-//   return <div></div>;
-// };
-
-// export default SignInPage;
-
 import SignInForm from '../../components/SignIn/SignIn.jsx';
 import css from './SignInPage.module.css';
 import AdvantagesSection from '../../components/AdvantagesSection/AdvantagesSection.jsx';
@@ -20,4 +14,3 @@ function SignInPage() {
 }
 
 export default SignInPage;
-
