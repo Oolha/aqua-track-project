@@ -52,17 +52,4 @@ const App = () => {
   );
 };
 
-// const App = () => {
-//   return (
-//     <Routes>
-//       <Route path="/" element={<SharedLayout />}>
-//         <Route index element={<HomePage />} />
-//         <Route path="signup" element={<SignUpPage />} />
-//         <Route path="signin" element={<SignInPage />} />
-//         <Route path="tracker" element={<TrackerPage />} />
-//       </Route>
-//     </Routes>
-//   );
-// };
-
 export default App;
