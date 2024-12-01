@@ -83,23 +83,19 @@ function SignUpForm() {
   // };
 
   const onSubmit = async (data) => {
-    try {
-      const signupData = {
-        email: data.email,
-        password: data.password,
-      };
+    const { email, password } = data;
 
-      const result = await dispatch(fetchSignUp(signupData)).unwrap();
+    try {
+      const result = await dispatch(fetchSignUp({ email, password })).unwrap();
 
       reset();
       navigate('/tracker');
     } catch (error) {
-      setNotification({
-        message: error || 'Registration failed. Please try again.',
-        type: 'error',
-      });
+      const errorMessage =
+        error?.message || 'Failed to sign up. Please try again.';
 
-      setTimeout(() => setNotification(null), 8000);
+      setNotification(errorMessage);
+      setTimeout(() => setNotification(null), 5000);
     }
   };
 

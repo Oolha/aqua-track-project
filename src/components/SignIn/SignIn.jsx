@@ -7,6 +7,8 @@ import axios from 'axios';
 import { Icon } from '../Icon/Icon.jsx';
 import Logo from '../../components/Logo/Logo.jsx';
 import css from './SignIn.module.css'; // Стилі форми
+import { useDispatch } from 'react-redux';
+import { fetchSignIn } from '../../redux/auth/operations.js';
 
 const schema = Yup.object({
   email: Yup.string()
@@ -21,6 +23,7 @@ function SignInForm() {
   const [showPwd, setShowPwd] = useState(false);
   const [notification, setNotification] = useState(null); // Для повідомлень
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const togglePwdVisibility = () => setShowPwd((prev) => !prev);
 
@@ -35,27 +38,15 @@ function SignInForm() {
 
   const onSubmit = async (data) => {
     try {
-      // Запит на backend
-      const response = await axios.post('https://example.com/api/signin', data);
+      const result = await dispatch(fetchSignIn(data)).unwrap();
 
-      // Симуляція відповіді сервера
-      const { token } = response.data;
-
-      // Збереження токена та авторизація
-      localStorage.setItem('authToken', token);
-
-      // Очищення форми
       reset();
-
-      // Перенаправлення на TrackerPage
       navigate('/tracker');
     } catch (error) {
       const errorMessage =
-        error.response?.data?.message || 'Failed to log in. Please try again.';
-      // Відображення помилки
-      setNotification(errorMessage);
+        error?.message || 'Failed to log in. Please try again.';
 
-      // Автоматичне закриття сповіщення
+      setNotification(errorMessage);
       setTimeout(() => setNotification(null), 5000);
     }
   };
@@ -63,76 +54,76 @@ function SignInForm() {
   return (
     <>
       <div className={css.loginContainer}>
-        <Logo/>
-  <div className={css.formWrapper}>
-    <h2 className={css.title}>Sign In</h2>
+        <Logo />
+        <div className={css.formWrapper}>
+          <h2 className={css.title}>Sign In</h2>
           <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
+            <div className={css.field}>
+              <label htmlFor="email" className={css.formLabel}>
+                Email
+              </label>
+              <input
+                {...register('email')}
+                type="email"
+                placeholder="Enter your email"
+                className={`${css.formInput} ${errors.email ? css.error : ''}`}
+              />
+              {errors.email && (
+                <p className={css.errorMessage}>{errors.email.message}</p>
+              )}
+            </div>
 
-      <div className={css.field}>
-        <label htmlFor="email" className={css.formLabel}>
-          Email
-        </label>
-        <input
-          {...register('email')}
-          type="email"
-          placeholder="Enter your email"
-          className={`${css.formInput} ${errors.email ? css.error : ''}`}
-        />
-        {errors.email && (
-          <p className={css.errorMessage}>{errors.email.message}</p>
-        )}
-          </div>
-
-      <div className={css.field}>
-        <label htmlFor="password" className={css.formLabel}>
-          Password
-        </label>
-        <div className={css.passwordWrapper}>
-          <input
-            {...register('password')}
-            type={showPwd ? 'text' : 'password'}
-            placeholder="Enter your password"
-            className={`${css.formInput} ${errors.password ? css.error : ''}`}
+            <div className={css.field}>
+              <label htmlFor="password" className={css.formLabel}>
+                Password
+              </label>
+              <div className={css.passwordWrapper}>
+                <input
+                  {...register('password')}
+                  type={showPwd ? 'text' : 'password'}
+                  placeholder="Enter your password"
+                  className={`${css.formInput} ${
+                    errors.password ? css.error : ''
+                  }`}
                 />
                 {errors.password && (
-                <p className={css.errorMessage}>{errors.password.message}</p>
-              )}
-          <button
-            type="button"
-            className={css.passwordToggle}
-            onClick={togglePwdVisibility}
-            aria-label={showPwd ? 'Hide password' : 'Show password'}
-          >
-            <Icon id={showPwd ? 'icon-eye' : 'icon-eye-off'} size={20} className={css.iconEye}/>
-          </button>
-            </div>
-
-            </div>
-<div className={css.btnWrapper}>
-        <button type="submit" className={css.formButton}>
-          Sign In
-              </button>
+                  <p className={css.errorMessage}>{errors.password.message}</p>
+                )}
+                <button
+                  type="button"
+                  className={css.passwordToggle}
+                  onClick={togglePwdVisibility}
+                  aria-label={showPwd ? 'Hide password' : 'Show password'}
+                >
+                  <Icon
+                    id={showPwd ? 'icon-eye' : 'icon-eye-off'}
+                    size={20}
+                    className={css.iconEye}
+                  />
+                </button>
               </div>
+            </div>
+            <div className={css.btnWrapper}>
+              <button type="submit" className={css.formButton}>
+                Sign In
+              </button>
+            </div>
           </form>
-
-      </div>
-
-
-        <div>
-    <p className={css.signinText}>
-      Don&apos;t have an account?{' '}
-      <Link to="/signup" className={css.signupLink}>
-        Sign Up
-      </Link>
-    </p>
         </div>
 
+        <div>
+          <p className={css.signinText}>
+            Don&apos;t have an account?{' '}
+            <Link to="/signup" className={css.signupLink}>
+              Sign Up
+            </Link>
+          </p>
+        </div>
 
-  {notification && <div className={css.notification}>{notification}</div>}
-</div>
+        {notification && <div className={css.notification}>{notification}</div>}
+      </div>
     </>
   );
-};
+}
 
-  export default SignInForm;
-
+export default SignInForm;
