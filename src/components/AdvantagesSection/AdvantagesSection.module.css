@@ -2,11 +2,11 @@
   background-image: url('../../assets/images/imageMobile@1x.jpg');
   border-radius: 30px;
   width: 343px;
-  height: 353px;
   background-size: cover;
   padding: 20px;
 }
 .listBtn {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -16,7 +16,8 @@
   margin-top: 12px;
 }
 
-.listItemHabit {
+.btnHabit {
+  border: none;
   border-radius: 30px;
   padding: 9px 12px;
   width: 83px;
@@ -28,9 +29,21 @@
   letter-spacing: -0.01em;
   text-align: center;
   color: #ffffff;
+  cursor: not-allowed;
 }
-.listItemView {
+.ellipse {
+  width: 8px;
+  height: 8px;
+  position: absolute;
+  left: 8px;
+  top: 20%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #9be1a0;
+}
+.btnView {
   border-radius: 30px;
+  border: none;
   padding: 9px 12px;
   width: 90px;
   height: 26px;
@@ -41,8 +54,9 @@
   letter-spacing: -0.01em;
   text-align: center;
   color: #323f47;
+  cursor: not-allowed;
 }
-.listItemPersonal {
+.btnPersonal {
   border-radius: 30px;
   padding: 9px 12px;
   width: 120px;
@@ -54,6 +68,8 @@
   letter-spacing: -0.01em;
   text-align: center;
   color: #323f47;
+  border: none;
+  cursor: not-allowed;
 }
 .listStylesImg {
   /* display: flex; */
@@ -91,7 +107,12 @@
   color: #323f47;
 }
 .happy {
+<<<<<<< HEAD
 } */
+=======
+  color: #9be1a0;
+}
+>>>>>>> main
 
 /* -------------------------------------------- */
 @media only screen and (min-width: 768px) {
@@ -100,9 +121,6 @@
     width: 736px;
     height: 466px;
     padding: 32px;
-    /* background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center; */
   }
   .listStylesImg {
     display: flex;
@@ -118,8 +136,13 @@
   /* .avatar {
     width: 47px;
     height: 47px;
+<<<<<<< HEAD
   } */
   .listItemHabit {
+=======
+  }
+  .btnHabit {
+>>>>>>> main
     padding: 11px 16px;
     width: 111px;
     height: 34px;
@@ -127,15 +150,15 @@
     font-weight: 700;
     font-size: 12px;
   }
-  .listItemView {
+  .btnView {
     padding: 11px 16px;
     width: 130px;
     height: 34px;
-    background: transparent;
     font-size: 12px;
   }
-  .listItemPersonal {
+  .btnPersonal {
     border-radius: 30px;
+    border: none;
     padding: 11px 16px;
     width: 170px;
     height: 34px;

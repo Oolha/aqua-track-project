@@ -2,9 +2,13 @@
   background: #f0eff4;
   border-radius: 30px;
   width: 343px;
+  padding-top: 24px;
+  padding-left: 16px;
 }
 .box {
-  padding: 118px 16px 67px 16px;
+  padding-top: 118px;
+  padding-right: 16px;
+  padding-bottom: 67px;
   margin-bottom: 16px;
 }
 .subtitle {
@@ -30,7 +34,7 @@
   gap: 10px;
 }
 
-.linkGreen {
+.tryTrackerBtn {
   border-radius: 30px;
   padding: 14px 19px;
   font-size: 14px;
@@ -39,7 +43,7 @@
   color: #323f47;
   background-color: #9be1a0;
 }
-.linkWhite {
+.signInBtn {
   border: 1px solid black;
   border-radius: 30px;
   padding: 14px 28px;
@@ -54,9 +58,11 @@
 @media only screen and (min-width: 768px) {
   .welcomFont {
     width: 736px;
+    padding-top: 32px;
+    padding-left: 32px;
   }
   .box {
-    padding: 106px 93px 50px 64px;
+    padding: 106px 93px 50px 32px;
     margin-bottom: 16px;
   }
   .subtitle {
@@ -70,13 +76,13 @@
   .links {
     gap: 16px;
   }
-  .linkGreen {
+  .tryTrackerBtn {
     padding: 18px 40px;
-    background-color: transparent;
+    font-size: 14px;
     width: 169px;
     height: 60px;
   }
-  .linkWhite {
+  .signInBtn {
     padding: 18px 40px;
     width: 135px;
     height: 60px;
@@ -88,6 +94,7 @@
     background: #f0eff4;
     width: 672px;
     height: 736px;
+    margin-right: 32px;
   }
   .box {
     padding: 188px 61px 188px 64px;
@@ -96,7 +103,6 @@
   .subtitle {
     font-size: 16px;
     line-height: 150%;
-    margin: 0;
   }
   .title {
     font-weight: 700;
@@ -110,16 +116,12 @@
     gap: 16px;
   }
 
-  .linkGreen {
+  .tryTrackerBtn {
     font-size: 16px;
     width: 168px;
-    background-color: transparent;
   }
-  .linkGreen:hover,
-  .linkGreen:focus {
-    background-color: #9be1a0;
-  }
-  .linkWhite {
+
+  .signInBtn {
     border: 1px solid black;
     border-radius: 30px;
     font-size: 16px;

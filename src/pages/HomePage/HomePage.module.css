@@ -1,6 +1,5 @@
 @media only screen and (min-width: 1440px) {
   .homePage {
     display: flex;
-    gap: 10px;
   }
 }

@@ -1,4 +1,4 @@
-.container {
+.login {
   width: 343px;
   margin: auto;
   background-color: #f0eff4;
@@ -7,14 +7,14 @@
 }
 
 @media (min-width: 765px) {
-  .container {
+  .login {
     margin: 32px;
     width: 704px;
   }
 }
 
 @media (min-width: 1440px) {
-  .container {
+  .login {
     width: 672px;
   }
 }

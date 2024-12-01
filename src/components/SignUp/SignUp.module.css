@@ -1,5 +1,5 @@
 .containerUp {
-  margin: auto;
+  /*   margin: auto; */
   background-color: #f0eff4;
   border-radius: 30px;
   box-sizing: border-box;
@@ -109,6 +109,60 @@
   background-color: #ffe6e6;
 }
 
+.notification {
+  position: fixed; /* Завжди зверху екрану */
+  top: 20px; /* Відступ від верхнього краю */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000; /* Щоб поверх всього */
+  padding: 15px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  min-width: 300px;
+  max-width: 90%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeInOut 3s ease forwards;
+}
+
+/* Стиль для успішного повідомлення */
+.notification.success {
+  background-color: #4caf50;
+}
+
+/* Стиль для повідомлення про помилку */
+.notification.error {
+  background-color: #f44336;
+}
+
+/* Стиль для інформаційного повідомлення */
+.notification.info {
+  background-color: #2196f3;
+}
+
+/* Стиль для попереджувального повідомлення */
+.notification.warning {
+  background-color: #ff9800;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
 @media only screen and (min-width: 768px) {
   .containerUp {
     width: 704px;
@@ -148,6 +202,7 @@
 @media only screen and (min-width: 1440px) {
   .containerUp {
     width: 672px;
+    height: 736px;
   }
   .formUp {
     width: 100%;
