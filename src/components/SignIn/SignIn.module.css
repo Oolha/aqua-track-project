@@ -1,5 +1,5 @@
 .loginContainer {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: left;
   padding: 16px;
@@ -10,20 +10,20 @@
   background-color: #f0eff4;
   border-radius: 30px;
   justify-content: flex-start;
+  padding: 16px; */
+background-color: #f0eff4;
+  border-radius: 30px;
+  box-sizing: border-box;
   padding: 16px;
-
 }
+
 
 
 .formWrapper {
   width: 100%;
-  /* padding: 172x 16px 216px 16px; */
-  margin: 0 auto;
-  box-sizing: border-box;
-  justify-content: center;
-  align-items: center;
-  /* margin-top: 172px; */
-
+    padding: 172px 16px 216px 16px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 
@@ -39,8 +39,8 @@
 
 .form {
   width: 100%;
-    /* max-width: 436px;
-    margin: 0 auto; */
+    max-width: 436px;
+    /* margin: 0 auto; */
 
 }
 
@@ -189,38 +189,56 @@
 }
 
 @media only screen and (min-width: 768px) {
+
+
   .logo {
     padding: 32px 0 0 32px;
   }
+    .loginContainer {
+      width: 704px;
+      padding: 32px;
+    }
+        .formWrapper {
+          width: 100%;
+          padding: 225px 0 281px 0;
+        }
+.title {
+  font-size: 36px;
+  line-height: 106%;
+}
 
-  .title {
-    font-size: 36px;
-    line-height: 1.5;
-  }
+.formLabel {
+  font-size: 16px;
+  line-height: 150%;
+}
 
-  .formLabel,
-  .formInput,
-  .formButton,
-  .signinText {
-    font-size: 16px;
-    line-height: 1.5;
-  }
+.formInput {
+  width: 100%;
+  height: 56px;
+  font-size: 16px;
+  line-height: 150%;
+}
 
+.formButton {
+  width: 436px;
+  height: 60px;
+  font-size: 16px;
+}
+
+.signinText {
+  font-size: 16px;
+}
   .loginContainer {
     padding-left: 134px;
     padding-right: 134px;
   }
 
-  .field {
-    width: 436px;
-  }
-
-  .formButton {
+    /* .formButton {
     width: 214px;
     height: 60px;
     padding-top: 18px;
     padding-bottom: 18px;
-  }
+  } */
 
   .signinText {
     flex-direction: row;
@@ -256,6 +274,8 @@
       width: 100%;
   }
 
+
+
       .errorMessage {
     margin-top: 8px;
     color: #ff6b6b;
@@ -268,10 +288,13 @@
 
 @media only screen and (min-width: 1440px) {
   .loginContainer {
-    padding-left: 118px;
-    padding-right: 118px;
+    /* padding-left: 118px;
+    padding-right: 118px; */
+    width: 672px;
+    height: 736px;
+      }
   }
-}
+
 
 .notification {
   position: fixed;

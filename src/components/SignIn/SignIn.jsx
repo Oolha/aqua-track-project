@@ -110,7 +110,7 @@ await dispatch(fetchSignIn(data)).unwrap();
               </button>
             </div>
           </form>
-        </div>
+
 
         <div>
           <p className={css.signinText}>
@@ -119,7 +119,8 @@ await dispatch(fetchSignIn(data)).unwrap();
               Sign Up
             </Link>
           </p>
-        </div>
+          </div>
+          </div>
 
         {notification && <div className={css.notification}>{notification}</div>}
       </div>
