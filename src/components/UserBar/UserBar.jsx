@@ -13,6 +13,7 @@ import {
   useInteractions,
 } from '@floating-ui/react';
 import { useState } from 'react';
+import clsx from 'clsx';
 
 const UserBar = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +41,12 @@ const UserBar = ({}) => {
       >
         <h4 className={css.name}>Name</h4>
         <RxAvatar className={css.avatar} />
-        <Icon id="icon-menu" size={16} className={css.icon} />
+        <Icon
+          id="icon-menu"
+          className={clsx(css.icon, {
+            [css.rotated]: isOpen,
+          })}
+        />
       </button>
 
       {isOpen && (
