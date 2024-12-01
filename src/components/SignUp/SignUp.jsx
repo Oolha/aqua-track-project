@@ -7,8 +7,6 @@ import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import Logo from '../../components/Logo/Logo.jsx';
-import axios from 'axios';
-// import { loginFailure, loginSuccess } from '../../redux/auth/slice.js';
 import { fetchSignUp } from '../../redux/auth/operations.js';
 
 const schema = Yup.object().shape({
@@ -48,40 +46,6 @@ function SignUpForm() {
     mode: 'onChange',
   });
 
-  // const onSubmit = async (data) => {
-  //   try {
-  //     const response = await axios.post(
-  //       'http://localhost:5173/api/signup',
-  //       data
-  //     );
-
-  //     //! імітація запиту для перевірки роботи коду без бекенду
-  //     /*       const response = {
-  //       data: {
-  //         token: 'fakeToken123', // Симулюємо отримання токену
-  //       },
-  //     }; */
-
-  //     const { token } = response.data;
-
-  //     dispatch(loginSuccess(token));
-
-  //     reset();
-  //     navigate('/tracker');
-  //   } catch (error) {
-  //     const errorMessage =
-  //       error.response?.data?.message ||
-  //       'Registration failed. Please try again.';
-  //     dispatch(loginFailure(errorMessage));
-  //     setNotification({
-  //       message: errorMessage,
-  //       type: 'error',
-  //     });
-
-  //     setTimeout(() => setNotification(null), 8000);
-  //   }
-  // };
-
   const onSubmit = async (data) => {
     try {
       const signupData = {
@@ -90,12 +54,20 @@ function SignUpForm() {
       };
 
       const result = await dispatch(fetchSignUp(signupData)).unwrap();
+      console.log('Signup success:', result);
 
       reset();
       navigate('/tracker');
     } catch (error) {
       setNotification({
         message: error || 'Registration failed. Please try again.',
+        type: 'error',
+      });
+
+      setNotification({
+        message:
+          error?.response?.data?.message ||
+          'Registration failed. Please try again.',
         type: 'error',
       });
 
@@ -120,10 +92,10 @@ function SignUpForm() {
               placeholder="Enter your email"
               className={`${css.inputUp} ${errors.email ? css.inputError : ''}`}
             />
-            {errors.email && (
-              <p className={css.errorText}>{errors.email.message}</p>
-            )}
           </div>
+          {errors.email && (
+            <p className={css.errorText}>{errors.email.message}</p>
+          )}
 
           <div>
             <label htmlFor="password" className={css.labelUp}>
@@ -139,9 +111,6 @@ function SignUpForm() {
                   errors.password ? css.inputError : ''
                 }  `}
               />
-              {errors.password && (
-                <p className={css.errorText}>{errors.password.message}</p>
-              )}
 
               <button
                 className={css.iconButton}
@@ -153,9 +122,16 @@ function SignUpForm() {
                     : 'Show repeat password'
                 }
               >
-                <Icon id={showPwd ? 'icon-eye' : 'icon-eye-off'} size={24} />
+                <Icon
+                  className={css.icon}
+                  id={showPwd ? 'icon-eye' : 'icon-eye-off'}
+                  size={24}
+                />
               </button>
             </div>
+            {errors.password && (
+              <p className={css.errorText}>{errors.password.message}</p>
+            )}
           </div>
           <div>
             <label htmlFor="password" className={css.labelUp}>
@@ -171,9 +147,7 @@ function SignUpForm() {
                   errors.repeatPassword ? css.inputError : ''
                 }`}
               />
-              {errors.repeatPassword && (
-                <p className={css.errorText}>{errors.repeatPassword.message}</p>
-              )}
+
               <button
                 className={css.iconButton}
                 type="button"
@@ -185,11 +159,15 @@ function SignUpForm() {
                 }
               >
                 <Icon
+                  className={css.icon}
                   id={showRepeatPwd ? 'icon-eye' : 'icon-eye-off'}
                   size={24}
                 />
               </button>
             </div>
+            {errors.repeatPassword && (
+              <p className={css.errorText}>{errors.repeatPassword.message}</p>
+            )}
           </div>
 
           <button type="submit" className={css.btnUp}>

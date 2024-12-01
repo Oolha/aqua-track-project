@@ -47,6 +47,7 @@
   border: 1px solid black;
   border-radius: 30px;
   padding: 14px 28px;
+
   font-size: 14px;
   width: 104px;
   height: 46px;
@@ -94,10 +95,9 @@
     background: #f0eff4;
     width: 672px;
     height: 736px;
-    margin-right: 32px;
   }
   .box {
-    padding: 188px 61px 188px 64px;
+    padding: 132px 61px 188px 29px;
     margin: 0;
   }
   .subtitle {

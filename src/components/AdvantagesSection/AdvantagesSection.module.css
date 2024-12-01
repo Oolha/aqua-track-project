@@ -5,6 +5,7 @@
   background-size: cover;
   padding: 20px;
 }
+
 .listBtn {
   position: relative;
   display: flex;
@@ -118,6 +119,7 @@
     height: 466px;
     padding: 32px;
   }
+
   .listStylesImg {
     display: flex;
     border-radius: 30px;
@@ -170,7 +172,8 @@
 /* ------------------------------------- */
 @media only screen and (min-width: 1440px) {
   .fontSection {
-    background-image: url('../../assets/images/imageDesktop@1x.jpg');
+    /*  background-image: url('../../assets/images/imageDesktop@1x.jpg'); */
+    background-image: url('../../assets/images/Desktop@2x.jpg');
     width: 672px;
     height: 736px;
   }

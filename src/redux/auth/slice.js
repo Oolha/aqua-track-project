@@ -24,21 +24,27 @@ const authSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(fetchSignUp.fulfilled, (state, { payload: userData }) => {
-        state.isLoading = false;
-        state.error = null;
-        state.user = payload.user;
-        state.token = payload.accessToken;
-        state.isLoggedIn = true;
-      })
-      .addCase(fetchSignIn.fulfilled, (state, { payload: userData }) => {
-        state.isLoading = false;
-        state.error = null;
-        state.user = payload.user;
-        state.token = payload.accessToken;
-        state.isLoggedIn = true;
-      })
-      .addCase(fetchLogOut.fulfilled, (state, { payload: userData }) => {
+      .addCase(
+        fetchSignUp.fulfilled,
+        (state, payload /* { payload: userData } */) => {
+          state.isLoading = false;
+          state.error = null;
+          state.user = payload.user;
+          state.token = payload.accessToken;
+          state.isLoggedIn = true;
+        }
+      )
+      .addCase(
+        fetchSignIn.fulfilled,
+        (state, payload /* { payload: userData } */) => {
+          state.isLoading = false;
+          state.error = null;
+          state.user = payload.user;
+          state.token = payload.accessToken;
+          state.isLoggedIn = true;
+        }
+      )
+      .addCase(fetchLogOut.fulfilled, (state /* { payload: userData } */) => {
         state.isLoading = false;
         state.error = null;
         state.user = null;
