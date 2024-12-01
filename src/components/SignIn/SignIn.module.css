@@ -5,36 +5,42 @@
   padding: 16px;
   padding-bottom: 50px;
   margin: auto;
-  /* justify-content: center; */
+
   height: 100vh;
   background-color: #f0eff4;
   border-radius: 30px;
   justify-content: flex-start;
   padding: 16px;
-}
 
+}
 
 
 .formWrapper {
   width: 100%;
-  padding: 126px 0 16px 0;
+  /* padding: 172x 16px 216px 16px; */
   margin: 0 auto;
   box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 172px; */
+
 }
 
+
+
 .title {
-  padding-bottom: 32px;
-  font-size: 32px;
-  font-weight: 700;
-  line-height: 1;
-  letter-spacing: -0.01em;
-  color: #323f47;
+    padding-bottom: 32px;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #323f47;
 }
 
 .form {
   width: 100%;
-    max-width: 436px;
-    margin: 0 auto;
+    /* max-width: 436px;
+    margin: 0 auto; */
 
 }
 
@@ -44,9 +50,9 @@
   gap: 8px;
   margin-bottom: 16px;
   width: 100%;
+  /* width: 311px; */
 
 }
-
 .field:nth-child(2) {
   margin-bottom: 32px;
 }
@@ -60,18 +66,15 @@
 
 .formInput {
   position: relative;
-  padding: 16px;
-  width: 100%;
-
-  font-size: 14px;
-  line-height: 1.28;
-  letter-spacing: -0.01em;
-
-  background-color: transparent;
-  outline: none;
-
-  border-radius: 15px;
-  border: 1px solid rgba(47, 47, 47, 0.2);
+    padding: 16px;
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.28;
+    letter-spacing: -0.01em;
+    background-color: transparent;
+    outline: none;
+    border-radius: 15px;
+    border: 1px solid rgba(47, 47, 47, 0.2);
 }
 
 .formInput:focus {
@@ -94,65 +97,91 @@
 .iconEye {
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 10px;
   transform: translateY(-50%);
-
   stroke: currentColor;
   fill: transparent;
+  pointer-events: none;
+    /* Заборонити клікати на саму іконку */
 }
 
 .formButton {
   width: 100%;
+
     height: 50px;
     border-radius: 30px;
     border: none;
     display: block;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
     letter-spacing: -0.01em;
     background: #9be1a0;
     cursor: pointer;
-    /* margin-bottom: 8px; */
-}
+    text-align: center;
+    transition: background-color 0.3s ease;
+    padding-top: 16px;
+      padding-bottom: 16px;
+      background-color: #9be1a0;
+        color: #323f47;
 
+}
 
 .formButton:hover {
   background-color: #87d28d;
 }
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
 
 .signinText {
-  margin-top: 8px;
-    font-weight: 400;
-    font-size: 14px;
+  display: flex;
+    margin-top: 16px;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.01em;
     color: rgba(47, 47, 47, 0.5);
-    text-align: center;
+    gap: 10px;
 }
 
 .signupLink {
-  font-weight: 700;
-  text-decoration: underline;
-  color: #2f2f2f;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: -0.14px;
+    font-weight: 700;
+    text-decoration: underline;
+    color: #2f2f2f;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.14px;
 }
 
 .passwordToggle {
   all: unset;
   position: absolute;
-  right: 16px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+    border: none;
 }
 
 .passwordWrapper {
   position: relative;
   width: 100%;
 }
+.passwordToggle:focus {
+  outline: none;
+  /* Приховати контур при фокусі */
+}
+
+
 
 .error {
   border: 1px solid red;
@@ -205,11 +234,12 @@
   .passwordWrapper {
     width: calc(100vw - 64px);
   }
-    .signinText {
+
+    /* .signinText {
       margin-top: 12px;
       flex-direction: column;
       text-align: center;
-    }
+    } */
 
   .btnWrapper {
     flex-direction: column;
@@ -226,15 +256,14 @@
       width: 100%;
   }
 
-  .errorMessage {
+      .errorMessage {
+    margin-top: 8px;
+    color: #ff6b6b;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.01em;
-  }
 
-  /* .logoWrapper {
-    padding-right: 32px;
-  } */
+  }
 }
 
 @media only screen and (min-width: 1440px) {
