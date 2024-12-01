@@ -70,13 +70,23 @@ export const refreshUser = createAsyncThunk(
     if (persistedToken === null) {
       return thunkAPI.rejectWithValue("Unable to fetch user");
     }
-
+    const BASE_URL = 'https://aqua-track-project-back.onrender.com';
+    const END_POINT = '/auth/refresh';
+    const url = BASE_URL + END_POINT;
+    
     try {
       setHeaders(persistedToken);
-      const res = await axios.get("/users/current");
+      const res = await axios.get(url);
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
-    }
+    }    
+
+
+
+
+
+
+    
   }
 );
