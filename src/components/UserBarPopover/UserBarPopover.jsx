@@ -3,15 +3,11 @@ import { Icon } from '../Icon/Icon';
 import css from './UserBarPopover.module.css';
 import ModalUserSettings from '../ModalUserSettings/ModalUserSettings';
 import { Modal } from '../Modal/Modal';
-import {useModal} from '../../hooks/useModalHook.js'
+import { useModal } from '../../hooks/useModalHook.js';
 
 const UserBarPopover = () => {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useModal();
   const [isLogOutModalOpen, setIsLogOutModalOpen] = useState(false);
-
-  
-
-  
 
   const openLogOutModal = () => {
     setIsLogOutModalOpen(true);
@@ -30,11 +26,15 @@ const UserBarPopover = () => {
         <Icon id="icon-settings" size={16} className={css.iconSetting} />
         <h4>Setting</h4>
       </button>
-      {isSettingsModalOpen && <Modal toggleModal={setIsSettingsModalOpen} isSettings = "false"  ><ModalUserSettings/></Modal>}
+      {isSettingsModalOpen && (
+        <Modal toggleModal={setIsSettingsModalOpen} isSettings="false">
+          <ModalUserSettings />
+        </Modal>
+      )}
 
       <button type="button" className={css.btnLogOut} onClick={openLogOutModal}>
         <Icon id="icon-log-out" size={16} className={css.iconLogOut} />
-        <h4>Log out</h4>
+        <h4 className={css.textLogOut}>Log out</h4>
       </button>
     </div>
 
