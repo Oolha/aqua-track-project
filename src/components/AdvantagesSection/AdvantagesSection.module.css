@@ -56,17 +56,17 @@
   color: #323f47;
 }
 .listStylesImg {
-  display: flex;
+  /* display: flex; */
   border-radius: 30px;
-  padding: 8px 5px;
-  width: 160px;
+  /* padding: 8px 5px; */
+  width: 188px;
   height: 48px;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin-top: 209px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
-.avatarGroup {
+/* .avatarGroup {
   display: flex;
   align-items: center;
 }
@@ -83,15 +83,15 @@
 
 .avatar:first-child {
   margin-left: 0;
-}
-.textParagraph {
+} */
+/* .textParagraph {
   font-weight: 700;
   font-size: 8px;
   line-height: 117%;
   color: #323f47;
 }
 .happy {
-}
+} */
 
 /* -------------------------------------------- */
 @media only screen and (min-width: 768px) {
@@ -107,18 +107,18 @@
   .listStylesImg {
     display: flex;
     border-radius: 30px;
-    padding: 10px 20px;
-    width: 250px;
+    /* padding: 10px 20px; */
+    width: 237px;
     height: 67px;
     box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     margin-top: 265px;
     margin-left: -22px;
   }
-  .avatar {
+  /* .avatar {
     width: 47px;
     height: 47px;
-  }
+  } */
   .listItemHabit {
     padding: 11px 16px;
     width: 111px;
@@ -141,10 +141,10 @@
     height: 34px;
     font-size: 12px;
   }
-  .textParagraph {
+  /* .textParagraph {
     font-size: 15px;
     line-height: 149%;
-  }
+  } */
   .listBtn {
     display: flex;
     justify-content: flex-start;
@@ -162,11 +162,12 @@
   }
 
   .listStylesImg {
-    width: 250px;
+    width: 237px;
     height: 67px;
     box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     margin-top: 537px;
     margin-left: 32px;
+    padding: 10px;
   }
 
   .listBtn {

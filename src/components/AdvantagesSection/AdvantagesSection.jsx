@@ -1,10 +1,12 @@
+import HappyCustomers from '../../components/HappyCustomers/HappyCustomers';
 import styles from './AdvantagesSection.module.css';
 
 function AdvantagesSection() {
   return (
     <div className={styles.fontSection}>
-      <div className={styles.listStylesImg}>
-        <div className={styles.avatarGroup}>
+      <div className={`${styles.listStylesImg} listStylesImg`}>
+      <HappyCustomers />
+        {/* <div className={styles.avatarGroup}>
           <img
             className={styles.avatar}
             // src="../../assets/images/MaleMemojis3.jpg"
@@ -20,10 +22,10 @@ function AdvantagesSection() {
             // src="../../assets/images/MaleMemojis1.jpg"
             alt="Av3"
           />
-        </div>
-        <p className={styles.textParagraph}>
+        </div> */}
+        {/* <p className={styles.textParagraph}>
           Our <span className={styles.happy}>happy</span> customers
-        </p>
+        </p> */}
       </div>
       <ul className={styles.listBtn}>
         <li className={styles.listItemHabit}>Habit drive</li>
