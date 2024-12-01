@@ -1,4 +1,4 @@
-import { fetchLogOut, fetchSignIn, fetchSignUp } from './operations';
+import { fetchLogOut, fetchSignIn, fetchSignUp,refreshUser } from './operations';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -7,6 +7,7 @@ const initialState = {
   error: null,
   isLoggedIn: false,
   token: null,
+  isRefreshing: false,
 };
 
 const handlePending = (state) => {
@@ -51,7 +52,18 @@ const authSlice = createSlice({
       .addCase(fetchSignIn.rejected, handleRejected)
 
       .addCase(fetchLogOut.pending, handlePending)
-      .addCase(fetchLogOut.rejected, handleRejected);
+      .addCase(fetchLogOut.rejected, handleRejected)
+      .addCase(refreshUser.pending, (state) => {
+        state.isRefreshing = true;
+      })
+      .addCase(refreshUser.fulfilled, (state, action) => {
+        state.user = action.payload;
+        state.isLoggedIn = true;
+        state.isRefreshing = false;
+      })
+      .addCase(refreshUser.rejected, (state) => {
+        state.isRefreshing = false;
+      });
   },
 });
 
