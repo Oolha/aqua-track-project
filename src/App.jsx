@@ -10,6 +10,7 @@ const SignUpPage = lazy(() => import('./pages/SignUpPage/SignUpPage'));
 const SignInPage = lazy(() => import('./pages/SignInPage/SignInPage'));
 const TrackerPage = lazy(() => import('./pages/TrackerPage/TrackerPage'));
 
+
 const App = () => {
   const date = new Date();
   return (
