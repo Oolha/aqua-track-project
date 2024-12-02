@@ -13,17 +13,18 @@ function AdvantagesSection() {
             alt="Av1"
           />
           <img
-            className={styles.avatar}
-            // src="../../assets/images/MaleMemojis2.jpg"
+            className={styles.avatar2}
+            src="../../assets/images/avatar1_mobile.png"
             alt="Av2"
           />
           <img
-            className={styles.avatar}
-            // src="../../assets/images/MaleMemojis1.jpg"
+            className={styles.avatar3}
+            src="../../assets/images/avatar1_mobile.png"
             alt="Av3"
           />
         </div> */}
         {/* <p className={styles.textParagraph}>
+
           Our <span className={styles.happy}>happy</span> customers
         </p> */}
       </div>
