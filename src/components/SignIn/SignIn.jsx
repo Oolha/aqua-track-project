@@ -39,7 +39,7 @@ function SignInForm() {
   const onSubmit = async (data) => {
     try {
       // const result = await dispatch(fetchSignIn(data)).unwrap();
-await dispatch(fetchSignIn(data)).unwrap();
+      await dispatch(fetchSignIn(data)).unwrap();
 
       reset();
       navigate('/tracker');
@@ -111,16 +111,15 @@ await dispatch(fetchSignIn(data)).unwrap();
             </div>
           </form>
 
-
-        <div>
-          <p className={css.signinText}>
-            Don&apos;t have an account?{' '}
-            <Link to="/signup" className={css.signupLink}>
-              Sign Up
-            </Link>
-          </p>
+          <div>
+            <p className={css.signinText}>
+              Don&apos;t have an account?{' '}
+              <Link to="/signup" className={css.signupLink}>
+                Sign Up
+              </Link>
+            </p>
           </div>
-          </div>
+        </div>
 
         {notification && <div className={css.notification}>{notification}</div>}
       </div>
