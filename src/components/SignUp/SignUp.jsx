@@ -47,6 +47,7 @@ function SignUpForm() {
   });
 
   const onSubmit = async (data) => {
+    console.log('Form data:', data);
     const { email, password } = data;
 
     /*

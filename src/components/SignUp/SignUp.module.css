@@ -70,6 +70,10 @@
   pointer-events: none;
 }
 
+.inputUp:hover {
+  border-color: #69e974;
+}
+
 .inputUp:focus {
   border-color: #87d28d;
 }
@@ -101,6 +105,7 @@
 }
 
 .btnUp:hover {
+  transform: translateY(-4px) scale(1.05);
   background: #87d28d;
 }
 
@@ -110,12 +115,18 @@
   color: rgba(47, 47, 47, 0.5);
   text-align: center;
   text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід */
 }
 
 .linkUp {
   font-weight: 700;
   color: #2f2f2f;
   cursor: pointer;
+  display: inline-block;
+}
+
+.linkUp:hover {
+  color: #519256;
 }
 
 .iconButton {
