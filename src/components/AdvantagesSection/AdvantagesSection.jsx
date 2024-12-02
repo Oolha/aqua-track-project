@@ -1,19 +1,15 @@
+import HappyCustomers from '../../components/HappyCustomers/HappyCustomers';
 import styles from './AdvantagesSection.module.css';
 
 function AdvantagesSection() {
   return (
     <div className={styles.fontSection}>
-      <div className={styles.listStylesImg}>
-        <div className={styles.avatarGroup}>
-          <div className={`${styles.avatar} ${styles.avatar1}`}></div>
-          <div className={`${styles.avatar} ${styles.avatar2}`}></div>
-          <div className={`${styles.avatar} ${styles.avatar3}`}></div>
-          {/* <div className={styles.avatar1}></div>
-          <div className={styles.avatar2}></div>
-          <div className={styles.avatar3}></div> */}
-          {/* <img
-            className={styles.avatar1}
-            src="/assets/images/avatar1_mobile.png"
+      <div className={`${styles.listStylesImg} listStylesImg`}>
+      <HappyCustomers />
+        {/* <div className={styles.avatarGroup}>
+          <img
+            className={styles.avatar}
+            // src="../../assets/images/MaleMemojis3.jpg"
             alt="Av1"
           />
           <img
@@ -25,11 +21,12 @@ function AdvantagesSection() {
             className={styles.avatar3}
             src="../../assets/images/avatar1_mobile.png"
             alt="Av3"
-          /> */}
-        </div>
-        <p className={styles.textParagraph}>
+          />
+        </div> */}
+        {/* <p className={styles.textParagraph}>
+
           Our <span className={styles.happy}>happy</span> customers
-        </p>
+        </p> */}
       </div>
       <div className={styles.listBtn}>
         <button className={styles.btnHabit} type="button">
