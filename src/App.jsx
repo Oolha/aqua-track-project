@@ -2,8 +2,8 @@ import './App.css';
 import { lazy } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import SharedLayout from './components/SharedLayout/SharedLayout';
-/* import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
-import PrivateRoute from './components/PrivateRoute/PrivateRoute'; */
+import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const SignUpPage = lazy(() => import('./pages/SignUpPage/SignUpPage'));

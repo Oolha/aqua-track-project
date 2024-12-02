@@ -17,11 +17,6 @@ export const fetchSignUp = createAsyncThunk(
 
     try {
       const response = await axios.post(url, userData);
-
-      /*       if (!response.data || !response.data.accessToken || !response.data.user) {
-        console.error('Invalid response format:', response.data);
-        throw new Error('Invalid response format');
-      } */
       const { accessToken, user } = response.data.data;
       setHeaders(accessToken);
       return { user, accessToken };
