@@ -110,7 +110,6 @@
   color: #9be1a0;
 }
 
-/* -------------------------------------------- */
 @media only screen and (min-width: 768px) {
   .fontSection {
     background-image: url('../../assets/images/imageTablet@2x.jpg');
@@ -167,7 +166,6 @@
     margin-left: 415px;
   }
 }
-/* ------------------------------------- */
 @media only screen and (min-width: 1440px) {
   .fontSection {
     background-image: url('../../assets/images/imageDesktop@1x.jpg');
