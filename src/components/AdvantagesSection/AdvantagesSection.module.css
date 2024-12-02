@@ -124,7 +124,7 @@
 }
 
 .happy {
-=======
+
   color: #9be1a0;
 }
 
@@ -134,8 +134,8 @@
   }
 }
 
-/* -------------------------------------------- */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
+
   .fontSection {
     background-image: url('../../assets/images/imageTablet@2x.jpg');
     width: calc(100vw - 64px);
@@ -196,7 +196,6 @@
     margin-left: 380px;
   }
 }
-/* ------------------------------------- */
 @media only screen and (min-width: 1440px) {
   .fontSection {
     background-image: url('../../assets/images/imageDesktop@1x.jpg');

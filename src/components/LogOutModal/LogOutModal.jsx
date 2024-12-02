@@ -1,11 +1,12 @@
-import { useDispatch, useSelector } from "react-redux";
-import clsx from "clsx";
+import { useDispatch, useSelector } from 'react-redux';
+import clsx from 'clsx';
 
-import Modal from "../Modal/Modal.jsx";
-import { toggleModal } from "../../hooks/useModalHook.js";
-import  Container  from "../Сontainer/Container.jsx";
+import Modal from '../Modal/Modal.jsx';
+import { toggleModal } from '../../hooks/useModalHook.js';
+import Container from '../Сontainer/Container.jsx';
 
-import css from "./LogOutModal.module.css";
+import css from './LogOutModal.module.css';
+import { fetchLogOut } from '../../redux/auth/operations.js';
 
 const LogOutModal = () => {
   const dispatch = useDispatch();
@@ -14,7 +15,6 @@ const LogOutModal = () => {
   const onCloseModal = () => {
     dispatch(toggleModal());
   };
-
 
   return (
     <>
@@ -26,10 +26,21 @@ const LogOutModal = () => {
               <p className={css.text}>Do you really want to leave?</p>
 
               <div className={css.boxButton}>
-                <button className={clsx(css.button, css.logoutButton)} type="button">Log out</button>
-                <button className={clsx(css.button, css.cancelButton)} type="button" onClick={onCloseModal}>Cancel</button>
+                <button
+                  className={clsx(css.button, css.logoutButton)}
+                  type="button"
+                  onClick={() => dispatch(fetchLogOut)}
+                >
+                  Log out
+                </button>
+                <button
+                  className={clsx(css.button, css.cancelButton)}
+                  type="button"
+                  onClick={onCloseModal}
+                >
+                  Cancel
+                </button>
               </div>
-
             </div>
           </Modal>
         )}
