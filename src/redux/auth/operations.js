@@ -1,45 +1,46 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
+export const instance = axios.create({
+  baseURL: 'https://aqua-track-project-back.onrender.com/',
+});
+
 const setHeaders = (token) => {
-  axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+  instance.defaults.headers.common.Authorization = `Bearer ${token}`;
 };
 
 const resetHeaders = () => {
-  axios.defaults.headers.common.Authorization = '';
+  instance.defaults.headers.common.Authorization = '';
 };
 export const fetchSignUp = createAsyncThunk(
   'auth/signUp',
   async (userData, thunkAPI) => {
-    const BASE_URL = 'https://aqua-track-project-back.onrender.com';
-    const END_POINT = '/auth/register';
-    const url = BASE_URL + END_POINT;
-
     try {
-      const response = await axios.post(url, userData);
-      const { accessToken, user } = response.data.data;
+      const response = await instance.post('auth/register', userData);
+
+      const { accessToken, user } = response.data;
       setHeaders(accessToken);
       return { user, accessToken };
     } catch (e) {
-      console.error('Signup Error:', e.response?.data || e.message);
-      return thunkAPI.rejectWithValue(e.response?.data || e.message);
+      const errorMessage =
+        e.response?.data?.message || e.message || 'Signup failed';
+      return thunkAPI.rejectWithValue(errorMessage);
     }
   }
 );
 export const fetchSignIn = createAsyncThunk(
   'auth/login',
   async (userData, thunkAPI) => {
-    const BASE_URL = 'https://aqua-track-project-back.onrender.com';
-    const END_POINT = '/auth/login';
-    const url = BASE_URL + END_POINT;
-
     try {
-      const response = await axios.post(url, userData);
-      const { accessToken, user } = response.data;
+      const response = await instance.post('auth/login', userData);
+
+      const { accessToken, user } = response.data.data;
       setHeaders(accessToken);
       return { user, accessToken };
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.response?.data || e.message);
+      const errorMessage =
+        e.response?.data?.message || e.message || 'Login failed';
+      return thunkAPI.rejectWithValue(errorMessage);
     }
   }
 );
@@ -47,16 +48,15 @@ export const fetchSignIn = createAsyncThunk(
 export const fetchLogOut = createAsyncThunk(
   'auth/logOut',
   async (_, thunkAPI) => {
-    const BASE_URL = 'https://aqua-track-project-back.onrender.com';
-    const END_POINT = '/auth/logout';
-    const url = BASE_URL + END_POINT;
-
     try {
-      const response = await axios.post(url);
+      const response = await instance.post('auth/logout');
+
       resetHeaders();
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      const errorMessage =
+        e.response?.data?.message || e.message || 'Logout failed';
+      return thunkAPI.rejectWithValue(errorMessage);
     }
   }
 );

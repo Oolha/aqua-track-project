@@ -20,10 +20,16 @@
 }
 .icon {
   stroke: #fff;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
 }
 .avatar {
   width: 38px;
   height: 38px;
+}
+.rotated {
+  transform: rotate(180deg);
 }
 @media only screen and (min-width: 768px) {
   .btn {
@@ -37,5 +43,9 @@
   .avatar {
     width: 44px;
     height: 44px;
+  }
+  .icon {
+    width: 20px;
+    height: 20px;
   }
 }
