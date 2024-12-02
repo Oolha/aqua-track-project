@@ -3,6 +3,7 @@ import axios from 'axios';
 
 export const instance = axios.create({
   baseURL: 'https://aqua-track-project-back.onrender.com/',
+  withCredentials: true,
 });
 
 const setHeaders = (token) => {
