@@ -74,7 +74,7 @@
 .listStylesImg {
   /* display: flex; */
   border-radius: 30px;
- 
+
   /* padding: 8px 5px; */
   width: 188px;
 
@@ -147,55 +147,55 @@
     border-radius: 30px;
 
     /* padding: 10px 20px; */
-
+/* 
     width: 237px;
     height: 67px;
     box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     margin-top: 265px;
-  }
-  .textParagraph {
-    width: 90px;
-  }
-  /* .avatar {
+  } */
+.textParagraph {
+  width: 90px;
+}
+/* .avatar {
     width: 47px;
     height: 47px;
   } */
-  .listItemHabit {
-    padding: 11px 16px;
-    width: 111px;
-    height: 34px;
-    background: #323f47;
-    font-weight: 700;
-    font-size: 12px;
-  }
-  .btnView {
-    padding: 11px 16px;
-    width: 121px;
-    height: 34px;
-    font-size: 11px;
-  }
-  .btnPersonal {
-    border-radius: 30px;
-    border: none;
-    padding: 11px 16px;
-    width: 160px;
-    height: 34px;
-    font-size: 11px;
-  }
-  /* .textParagraph {
+.listItemHabit {
+  padding: 11px 16px;
+  width: 111px;
+  height: 34px;
+  background: #323f47;
+  font-weight: 700;
+  font-size: 12px;
+}
+.btnView {
+  padding: 11px 16px;
+  width: 121px;
+  height: 34px;
+  font-size: 11px;
+}
+.btnPersonal {
+  border-radius: 30px;
+  border: none;
+  padding: 11px 16px;
+  width: 160px;
+  height: 34px;
+  font-size: 11px;
+}
+/* .textParagraph {
     font-size: 15px;
     line-height: 149%;
   } */
-  .listBtn {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
-    width: 242px;
-    margin-left: 380px;
-  }
+.listBtn {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 242px;
+  margin-left: 380px;
 }
+
 @media only screen and (min-width: 1440px) {
   .fontSection {
     background-image: url('../../assets/images/imageDesktop@1x.jpg');
@@ -209,7 +209,6 @@
     margin-top: 537px;
     margin-left: 32px;
     padding: 10px;
-
   }
   .listBtn {
     margin-top: -30px;

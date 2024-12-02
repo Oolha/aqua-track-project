@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
-import Container from '../Container/Container';
-
+import Container from '../Сontainer/Container';
 
 const SharedLayout = () => {
   return (
@@ -12,8 +11,5 @@ const SharedLayout = () => {
     </Container>
   );
 };
-
-
-
 
 export default SharedLayout;
