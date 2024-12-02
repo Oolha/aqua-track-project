@@ -3,6 +3,12 @@
   width: 303px;
 }
 
+@media only screen and (min-width: 768px) {
+  .waterForm {
+    width: 438px;
+  }
+}
+
 .valuePickerContainer {
   margin-top: 20px;
 }
@@ -35,6 +41,13 @@
   width: 40px;
 }
 
+@media only screen and (min-width: 768px) {
+  .adjustmentButton {
+    height: 43px;
+    width: 43px;
+  }
+}
+
 .icon {
   stroke: #323f47;
 }
@@ -48,6 +61,12 @@
   outline: none;
   margin-top: 8px;
   width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  .inputField {
+    height: 56px;
+  }
 }
 
 .inputField:active {
@@ -70,6 +89,15 @@
   background: #9be1a0;
   margin-top: 24px;
   cursor: pointer;
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .saveBtn {
+    height: 60px;
+    padding: 0 50px;
+    font-size: 16px;
+  }
 }
 
 .waterForm > p,
@@ -78,4 +106,26 @@
   font-size: 16px;
   line-height: 125%;
   letter-spacing: -0.01em;
+}
+
+@media only screen and (min-width: 768px) {
+  .waterForm > p,
+  .amountBlockLabel {
+    font-size: 18px;
+  }
+}
+
+.inputError {
+  border: 1px solid #ef5050;
+  color: #ef5050;
+}
+
+.errorMessage {
+  display: block;
+  height: 18px;
+  font-size: 14px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+  color: #ef5050;
+  margin-top: 10px;
 }
