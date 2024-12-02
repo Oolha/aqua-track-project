@@ -62,13 +62,13 @@
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .welcomFont {
     width: calc(100vw - 64px);
-    padding: 0px 93px 50px 0px;
+    padding: 32px 93px 50px 32px;
   }
 
   .box {
     width: 517px;
     margin-top: 50px;
-    margin-left: 64px;
+    margin-left: 32px;
   }
 
   .subtitle {
@@ -100,13 +100,13 @@
     background: #f0eff4;
     width: 672px;
     height: 736px;
-    padding: 0 61px 188px 0;
+    padding: 32px 61px 188px 32px;
     margin-right: 32px;
   }
   .box {
     width: 547px;
     margin-top: 132px;
-    margin-left: 64px;
+    margin-left: 32px;
   }
 
   .subtitle {
