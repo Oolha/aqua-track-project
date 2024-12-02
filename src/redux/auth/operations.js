@@ -62,22 +62,22 @@ export const fetchLogOut = createAsyncThunk(
 );
 
 export const refreshUser = createAsyncThunk(
-  "auth/current",
+  'auth/refresh',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
-    console.log(state.auth.token)
+    console.log("persistedToken^",state.auth.token)
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
       return thunkAPI.rejectWithValue("Unable to fetch user");
     }
-    const BASE_URL = 'https://aqua-track-project-back.onrender.com';
-    const END_POINT = '/auth/refresh';
-    const url = BASE_URL + END_POINT;
+   
     
     try {
+     
       setHeaders(persistedToken);
-      const res = await axios.post(url);
+      console.log(instance.defaults.headers.common.Authorization);
+      const res = await instance.post('auth/refresh');
       console.log(res.data)
       return res.data;
     } catch (error) {
