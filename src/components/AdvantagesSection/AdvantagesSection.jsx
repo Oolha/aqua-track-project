@@ -5,21 +5,27 @@ function AdvantagesSection() {
     <div className={styles.fontSection}>
       <div className={styles.listStylesImg}>
         <div className={styles.avatarGroup}>
-          <img
-            className={styles.avatar}
-            // src="../../assets/images/MaleMemojis3.jpg"
+          <div className={`${styles.avatar} ${styles.avatar1}`}></div>
+          <div className={`${styles.avatar} ${styles.avatar2}`}></div>
+          <div className={`${styles.avatar} ${styles.avatar3}`}></div>
+          {/* <div className={styles.avatar1}></div>
+          <div className={styles.avatar2}></div>
+          <div className={styles.avatar3}></div> */}
+          {/* <img
+            className={styles.avatar1}
+            src="/assets/images/avatar1_mobile.png"
             alt="Av1"
           />
           <img
-            className={styles.avatar}
-            // src="../../assets/images/MaleMemojis2.jpg"
+            className={styles.avatar2}
+            src="../../assets/images/avatar1_mobile.png"
             alt="Av2"
           />
           <img
-            className={styles.avatar}
-            // src="../../assets/images/MaleMemojis1.jpg"
+            className={styles.avatar3}
+            src="../../assets/images/avatar1_mobile.png"
             alt="Av3"
-          />
+          /> */}
         </div>
         <p className={styles.textParagraph}>
           Our <span className={styles.happy}>happy</span> customers
