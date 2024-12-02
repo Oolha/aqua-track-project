@@ -36,6 +36,11 @@ const UserBarPopover = () => {
         <Icon id="icon-log-out" size={16} className={css.iconLogOut} />
         <h4 className={css.textLogOut}>Log out</h4>
       </button>
+
+      {isSettingsModalOpen && (
+          <Modal toggleModal={setIsSettingsModalOpen} isSettings="false">
+          <ModalUserSettings toggleModal={setIsSettingsModalOpen}/>
+          </Modal>)}
     </div>
 
     //   {isSettingsModalOpen && (
