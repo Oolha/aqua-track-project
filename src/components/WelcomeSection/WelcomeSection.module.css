@@ -6,7 +6,7 @@
   padding-left: 16px;
 }
 .box {
-  padding-top: 118px;
+  padding-top: 74px;
   padding-right: 16px;
   padding-bottom: 67px;
   margin-bottom: 16px;
@@ -34,35 +34,55 @@
   gap: 10px;
 }
 
-.tryTrackerBtn {
-  border-radius: 30px;
-  padding: 14px 19px;
-  font-size: 14px;
+.linkGreen {
   width: 116px;
   height: 46px;
-  color: #323f47;
-  background-color: #9be1a0;
-}
-.signInBtn {
-  border: 1px solid black;
-  border-radius: 30px;
-  padding: 14px 28px;
   font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  border: none;
+  border-radius: 30px;
+  background-color: #9BE1A0;
+  color: #323F47;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.linkGreen:hover {
+  background-color: #87d28d;
+}
+
+.linkWhite {
   width: 104px;
   height: 46px;
-  color: #323f47;
-  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  border: 1px solid #323F47;
+  border-radius: 30px;
+  background-color: #fff;
+  color: #323F47;
+  padding: 12px 24px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.linkWhite:hover {
+  color: #87d28d;
+  border-color: #87d28d;
 }
 
 /* -------------------------------------------- */
 @media only screen and (min-width: 768px) {
   .welcomFont {
-    width: 736px;
+    width: 704px;
     padding-top: 32px;
     padding-left: 32px;
   }
   .box {
-    padding: 106px 93px 50px 32px;
+    padding: 50px 93px 50px 32px;
     margin-bottom: 16px;
   }
   .subtitle {
@@ -76,16 +96,43 @@
   .links {
     gap: 16px;
   }
-  .tryTrackerBtn {
-    padding: 18px 40px;
-    font-size: 14px;
+  .linkGreen {
     width: 169px;
     height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #9BE1A0;
+    color: #323F47;
+    padding: 15px 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
-  .signInBtn {
-    padding: 18px 40px;
+  .linkGreen:hover {
+    background-color: #87d28d;
+  }
+
+
+  .linkWhite {
     width: 135px;
     height: 60px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    border: 1px solid #323F47;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #323F47;
+    padding: 15px 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .linkWhite:hover {
+    color: #87d28d;
+    border-color: #87d28d;
   }
 }
 /* ------------------------------------- */
@@ -97,17 +144,19 @@
     margin-right: 32px;
   }
   .box {
-    padding: 188px 61px 188px 64px;
+    padding: 132px 61px 188px 32px;
     margin: 0;
   }
   .subtitle {
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
   }
   .title {
+    width: 547px;
+    height: auto;
     font-weight: 700;
     font-size: 80px;
-    line-height: 95%;
+    line-height: 76px;
     letter-spacing: -0.01em;
     margin-bottom: 32px;
   }
@@ -115,19 +164,45 @@
     display: flex;
     gap: 16px;
   }
-
-  .tryTrackerBtn {
+  
+  
+  .linkGreen {
+    width: 169px;
+    height: 60px;
     font-size: 16px;
-    width: 168px;
+    font-weight: bold;
+    line-height: 30px;
+    border: none;
+    border-radius: 30px;
+    background-color: #9BE1A0;
+    color: #323F47;
+    padding: 15px 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease; 
+  }
+  .linkGreen:hover {
+    background-color: #87d28d;
   }
 
-  .signInBtn {
-    border: 1px solid black;
-    border-radius: 30px;
-    font-size: 16px;
+
+  .linkWhite {
     width: 135px;
     height: 60px;
-    color: #323f47;
-    background-color: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 30px;
+    border: 1px solid #323F47;
+    border-radius: 30px;
+    background-color: #fff;
+    color: #323F47;
+    padding: 15px 35px;
+    cursor: pointer;
+    margin-left: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
   }
+  .linkWhite:hover {
+    color: #87d28d;
+    border-color: #87d28d;
+  }
+
 }
