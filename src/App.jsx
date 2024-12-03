@@ -5,8 +5,6 @@ import SharedLayout from './components/SharedLayout/SharedLayout';
 import RestrictedRoute from './components/RestrictedRoute/RestrictedRoute';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
-
-
 const HomePage = lazy(() => import('./pages/HomePage/HomePage'));
 const SignUpPage = lazy(() => import('./pages/SignUpPage/SignUpPage'));
 const SignInPage = lazy(() => import('./pages/SignInPage/SignInPage'));
@@ -52,6 +50,8 @@ const App = () => {
         />
       </Route>
     </Routes>
+
+
 
   );
 };

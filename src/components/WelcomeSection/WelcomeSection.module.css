@@ -11,6 +11,11 @@
   padding-bottom: 67px;
   margin-bottom: 16px;
 }
+.box {
+  width: 311px;
+  margin-top: 74px;
+}
+
 .subtitle {
   font-family: var(--font-family);
   font-weight: 400;
@@ -32,6 +37,7 @@
 .links {
   display: flex;
   gap: 10px;
+  margin-bottom: 67px;
 }
 
 .linkGreen {
@@ -73,18 +79,25 @@
   color: #87d28d;
   border-color: #87d28d;
 }
-
-/* -------------------------------------------- */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 375px) {
   .welcomFont {
     width: 704px;
     padding-top: 32px;
     padding-left: 32px;
   }
+}
+/* -------------------------------------------- */
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+  .welcomFont {
+    width: calc(100vw - 64px);
+    padding: 32px 93px 50px 32px;
+  }
+
   .box {
     padding: 50px 93px 50px 32px;
     margin-bottom: 16px;
   }
+
   .subtitle {
     font-size: 16px;
     line-height: 150%;
@@ -136,17 +149,19 @@
   }
 }
 /* ------------------------------------- */
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .welcomFont {
     background: #f0eff4;
     width: 672px;
     height: 736px;
+    padding: 32px 61px 188px 32px;
     margin-right: 32px;
   }
   .box {
     padding: 132px 61px 188px 32px;
     margin: 0;
   }
+
   .subtitle {
     font-size: 16px;
     line-height: 24px;
