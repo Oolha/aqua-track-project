@@ -23,7 +23,7 @@ const TourGuide = () => {
                     style={{
                         position: 'fixed',
                         bottom: '20px',
-                        right: '20px',
+                        left: '10px',
                         backgroundColor: '#9BE1A0',
                         color: '#323F47',
                         border: 'none',
