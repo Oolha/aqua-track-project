@@ -1,7 +1,7 @@
 .fontSection {
   background-image: url('../../assets/images/imageMobile@1x.jpg');
   border-radius: 30px;
-  width: 343px;
+  width: 320px;
   background-size: cover;
   padding: 20px;
 }
@@ -12,7 +12,7 @@
   flex-wrap: wrap;
   flex-direction: row;
   gap: 8px;
-  margin-left: 120px;
+  margin-left: 60px;
   margin-top: 12px;
 }
 
@@ -72,117 +72,144 @@
   cursor: not-allowed;
 }
 .listStylesImg {
-  display: flex;
+  /* display: flex; */
   border-radius: 30px;
-  padding: 8px 5px;
-  width: 160px;
+
+  /* padding: 8px 5px; */
+  width: 188px;
+
   height: 48px;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin-top: 209px;
-  margin-left: 10px;
+  /* margin-left: 10px; */
 }
-.avatarGroup {
+/* .avatarGroup {
   display: flex;
   align-items: center;
+  margin-right: 3px;
 }
-
 .avatar {
-  width: 40px;
-  height: 40px;
+  width: 26px;
+  height: 28px;
   border-radius: 50%;
-  border: 2px solid white;
-  margin-left: -10px;
-  position: relative;
+}
+.avatar1 {
+  z-index: 3;
+  background: url('../../assets/images/avatar1_mobile.png');
+  background-size: cover;
+}
+.avatar2 {
+  margin-left: -12px;
+  z-index: 2;
+  background: url('../../assets/images/avatar2_mobile.png');
+  background-size: cover;
+}
+.avatar3 {
+  margin-left: -12px;
   z-index: 1;
+  background: url('../../assets/images/avatar3_mobile.png');
+  background-size: cover;
 }
 
 .avatar:first-child {
   margin-left: 0;
-}
-.textParagraph {
+} */
+/* .textParagraph {
+
   font-weight: 700;
-  font-size: 8px;
+  font-size: 11px;
   line-height: 117%;
   color: #323f47;
 }
+
 .happy {
+
   color: #9be1a0;
 }
 
-/* -------------------------------------------- */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  .fontSection {
+    width: calc(100vw - 32px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px) {
+
   .fontSection {
     background-image: url('../../assets/images/imageTablet@2x.jpg');
-    width: 736px;
+    width: calc(100vw - 64px);
     height: 466px;
     padding: 32px;
   }
   .listStylesImg {
     display: flex;
     border-radius: 30px;
-    padding: 10px 20px;
-    width: 250px;
+
+    /* padding: 10px 20px; */
+/* 
+    width: 237px;
     height: 67px;
     box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     margin-top: 265px;
-    margin-left: -22px;
-  }
-  .avatar {
+  } */
+.textParagraph {
+  width: 90px;
+}
+/* .avatar {
     width: 47px;
     height: 47px;
-  }
-  .btnHabit {
-    padding: 11px 16px;
-    width: 111px;
-    height: 34px;
-    background: #323f47;
-    font-weight: 700;
-    font-size: 12px;
-  }
-  .btnView {
-    padding: 11px 16px;
-    width: 130px;
-    height: 34px;
-    font-size: 12px;
-  }
-  .btnPersonal {
-    border-radius: 30px;
-    border: none;
-    padding: 11px 16px;
-    width: 170px;
-    height: 34px;
-    font-size: 12px;
-  }
-  .textParagraph {
+  } */
+.listItemHabit {
+  padding: 11px 16px;
+  width: 111px;
+  height: 34px;
+  background: #323f47;
+  font-weight: 700;
+  font-size: 12px;
+}
+.btnView {
+  padding: 11px 16px;
+  width: 121px;
+  height: 34px;
+  font-size: 11px;
+}
+.btnPersonal {
+  border-radius: 30px;
+  border: none;
+  padding: 11px 16px;
+  width: 160px;
+  height: 34px;
+  font-size: 11px;
+}
+/* .textParagraph {
     font-size: 15px;
     line-height: 149%;
-  }
-  .listBtn {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-left: 415px;
-  }
+  } */
+.listBtn {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  width: 242px;
+  margin-left: 380px;
 }
-/* ------------------------------------- */
+
 @media only screen and (min-width: 1440px) {
   .fontSection {
     background-image: url('../../assets/images/imageDesktop@1x.jpg');
     width: 672px;
     height: 736px;
   }
-
   .listStylesImg {
-    width: 250px;
+    width: 237px;
     height: 67px;
-    box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
+    align-items: center;
     margin-top: 537px;
     margin-left: 32px;
+    padding: 10px;
   }
-
   .listBtn {
     margin-top: -30px;
     margin-left: 355px;

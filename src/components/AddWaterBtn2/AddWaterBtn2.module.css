@@ -12,9 +12,11 @@
   height: 30px;
 }
 .icon {
+  transition: opacity 0.3s;
   width: 30px;
   height: 30px;
 }
+
 .addWaterText {
   font-weight: 700;
   font-size: 16px;

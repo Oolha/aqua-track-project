@@ -22,6 +22,7 @@
   transition: all 0.2s ease;
   color: #323f47;
   font-size: 14px;
+  transition: color 0.3s, background-color 0.3s;
 }
 .btnLogOut {
   color: rgba(50, 63, 71, 0.4);
@@ -29,8 +30,18 @@
 
 .iconLogOut {
   stroke: rgba(50, 63, 71, 0.4);
+  transition: color 0.3s;
 }
+/* .iconLogOut:focus,
+.iconLogOut:hover {
+  stroke: #323f47;
+} */
 
+.btnLogOut:hover .iconLogOut,
+.btnLogOut:hover .textLogOut {
+  color: #323f47;
+  stroke: #323f47;
+}
 .mainBox {
   animation: slideIn 0.2s ease;
 }

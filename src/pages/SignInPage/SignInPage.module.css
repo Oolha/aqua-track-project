@@ -1,4 +1,4 @@
-.login {
+/* .login {
   width: 343px;
   margin: auto;
   background-color: #f0eff4;
@@ -16,5 +16,33 @@
 @media (min-width: 1440px) {
   .login {
     width: 672px;
+  }
+} */
+
+/* .advantages {
+  display: none;
+
+}
+
+@media only screen and (min-width: 1024px) {
+  .advantages {
+    display: block;
+
+  }
+} */
+
+.advantages {
+  display: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .advantages {
+    display: block;
+    border-radius: 30px;
+  }
+
+  .login {
+    display: flex;
+    gap: 32px;
   }
 }
