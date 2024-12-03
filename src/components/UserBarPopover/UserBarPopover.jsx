@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Icon } from '../Icon/Icon';
 import css from './UserBarPopover.module.css';
-import ModalUserSettings from '../ModalUserSettings/ModalUserSettings';
+import { ModalUserSettings } from '../ModalUserSettings/ModalUserSettings.jsx';
 import { Modal } from '../Modal/Modal';
 import { useModal } from '../../hooks/useModalHook.js';
 
@@ -36,6 +36,8 @@ const UserBarPopover = () => {
         <Icon id="icon-log-out" size={16} className={css.iconLogOut} />
         <h4 className={css.textLogOut}>Log out</h4>
       </button>
+
+      
     </div>
 
     //   {isSettingsModalOpen && (

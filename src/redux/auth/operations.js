@@ -60,3 +60,34 @@ export const fetchLogOut = createAsyncThunk(
     }
   }
 );
+
+export const fetchUpdateUser = createAsyncThunk(
+  'auth/updateUser',
+  async (userData, thunkAPI) => {
+    try {
+      const response = await instance.patch('/auth/update-user', userData);
+      return response.data;
+    } catch (e) {
+      const errorMessage =
+        e.response?.data?.message || e.message;
+      return thunkAPI.rejectWithValue(errorMessage);
+    }
+  }
+);
+
+export const fetchCurrentUser = createAsyncThunk(
+  'auth/currentUser',
+  async (_, thunkAPI) => {
+    try {
+      const token = thunkAPI.getState().auth.token;
+      setHeaders(token);
+
+      const response = await instance.get('/auth/current-user');
+      return response.data;
+    } catch (e) {
+      const errorMessage =
+        e.response?.data?.message || e.message;
+      return thunkAPI.rejectWithValue(errorMessage);
+    }
+  }
+);
