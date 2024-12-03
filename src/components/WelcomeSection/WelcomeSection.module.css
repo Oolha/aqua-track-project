@@ -2,18 +2,14 @@
   background: #f0eff4;
   border-radius: 30px;
   width: 343px;
-  padding-top: 24px;
-  padding-left: 16px;
-}
-.box {
-  padding-top: 74px;
-  padding-right: 16px;
-  padding-bottom: 67px;
+  height: 411px;
+  padding: 24px 16px 67px 16px;
   margin-bottom: 16px;
 }
+
 .box {
   width: 311px;
-  margin-top: 74px;
+  padding: 74px 16px 22px 2px;
 }
 
 .subtitle {
@@ -25,15 +21,17 @@
   color: #2f2f2f;
   margin-bottom: 16px;
 }
+
 .title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: bold;
   font-size: 38px;
   line-height: 100%;
   letter-spacing: -0.01em;
   color: #323f47;
   margin-bottom: 32px;
 }
+
 .links {
   display: flex;
   gap: 10px;
@@ -41,29 +39,14 @@
 }
 
 .linkGreen {
-  width: 116px;
-  height: 46px;
-
-  color: #323f47;
-  background-color: #9be1a0;
-}
-.signInBtn {
-  border: 1px solid black;
   border-radius: 30px;
-  padding: 14px 28px;
-  line-height: 129%;
-  letter-spacing: -0.01em;
-
+  padding: 14px 19px;
   font-size: 14px;
   font-weight: bold;
-  line-height: 24px;
-  border: none;
-  border-radius: 30px;
-  background-color: #9be1a0;
+  line-height: 18px;
+  height: 46px;
   color: #323f47;
-  padding: 12px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: #9be1a0;
 }
 
 .linkGreen:hover {
@@ -71,6 +54,13 @@
 }
 
 .linkWhite {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 24px;
+  border: 1px solid#323F47;
+  font-weight: bold;
   width: 104px;
   height: 46px;
   font-size: 14px;
@@ -80,32 +70,28 @@
   border-radius: 30px;
   background-color: #fff;
   color: #323f47;
-  padding: 12px 24px;
-  cursor: pointer;
   margin-left: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease,
-    border-color 0.3s ease;
+  background-color: transparent;
 }
 
 .linkWhite:hover {
   color: #87d28d;
   border-color: #87d28d;
 }
-@media only screen and (min-width: 320px) and (max-width: 375px) {
-  .welcomFont {
-    width: 704px;
-    padding-top: 32px;
-    padding-left: 32px;
-  }
-}
+
 /* -------------------------------------------- */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .welcomFont {
-    width: calc(100vw - 64px);
-    padding: 32px 93px 50px 32px;
+    background: #f0eff4;
+    border-radius: 30px;
+    width: 704px;
+    height: 498px;
+    padding-top: 32px;
+    padding-left: 32px;
   }
 
   .box {
+    width: 517px;
     padding: 50px 93px 50px 32px;
     margin-bottom: 16px;
   }
@@ -114,52 +100,51 @@
     font-size: 16px;
     line-height: 150%;
   }
+
   .title {
     font-size: 64px;
     line-height: 109%;
   }
+
   .links {
     gap: 16px;
   }
+
   .linkGreen {
+    border-radius: 30px;
+    padding: 18px 36px;
+    font-size: 16px;
+    line-height: 24px;
     width: 169px;
     height: 60px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 30px;
-    border: none;
-    border-radius: 30px;
-    background-color: #9be1a0;
     color: #323f47;
-    padding: 15px 35px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #9be1a0;
   }
+  
   .linkGreen:hover {
     background-color: #87d28d;
   }
-
+  
   .linkWhite {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 18px 36px;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid#323F47;
+    font-weight: bold;
     width: 135px;
     height: 60px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 30px;
-    border: 1px solid #323f47;
-    border-radius: 30px;
-    background-color: #fff;
     color: #323f47;
-    padding: 15px 35px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease,
-      border-color 0.3s ease;
+    background-color: transparent;
   }
-
+  
   .linkWhite:hover {
     color: #87d28d;
     border-color: #87d28d;
   }
 }
+
 /* ------------------------------------- */
 @media screen and (min-width: 1440px) {
   .welcomFont {
@@ -174,19 +159,18 @@
     padding: 32px 61px 188px 32px;
     margin-right: 32px;
   }
+
   .box {
     width: 547px;
-    margin-top: 132px;
-    margin-left: 32px;
-
-    padding: 132px 61px 188px 32px;
-    margin: 0;
+    padding: 132px 16px 22px 16px;
+    margin-left: 16px;
   }
 
   .subtitle {
     font-size: 16px;
     line-height: 24px;
   }
+
   .title {
     width: 547px;
     height: auto;
@@ -196,45 +180,41 @@
     letter-spacing: -0.01em;
     margin-bottom: 32px;
   }
+
   .links {
     display: flex;
     gap: 16px;
   }
 
   .linkGreen {
+    border-radius: 30px;
+    padding: 18px 36px;
+    font-size: 16px;
+    line-height: 24px;
     width: 169px;
     height: 60px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 30px;
-    border: none;
-    border-radius: 30px;
-    background-color: #9be1a0;
     color: #323f47;
-    padding: 15px 35px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #9be1a0;
   }
+  
   .linkGreen:hover {
     background-color: #87d28d;
   }
-
+  
   .linkWhite {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 18px 36px;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid#323F47;
+    font-weight: bold;
     width: 135px;
     height: 60px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 30px;
-    border: 1px solid #323f47;
-    border-radius: 30px;
-    background-color: #fff;
     color: #323f47;
-    padding: 15px 35px;
-    cursor: pointer;
-    margin-left: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease,
-      border-color 0.3s ease;
+    background-color: transparent;
   }
+  
   .linkWhite:hover {
     color: #87d28d;
     border-color: #87d28d;
