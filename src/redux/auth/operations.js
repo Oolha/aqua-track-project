@@ -64,15 +64,13 @@ export const fetchLogOut = createAsyncThunk(
 export const fetchUpdateUser = createAsyncThunk(
   'auth/updateUser',
   async (userData, thunkAPI) => {
-    const BASE_URL = 'https://aqua-track-project-back.onrender.com';
-    const END_POINT = '/auth/update-user';
-    const url = BASE_URL + END_POINT;
-
     try {
-      const response = await axios.patch(url, userData);
+      const response = await instance.patch('/auth/update-user', userData);
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.response?.data || e.message);
+      const errorMessage =
+        e.response?.data?.message || e.message;
+      return thunkAPI.rejectWithValue(errorMessage);
     }
   }
 );
@@ -80,15 +78,16 @@ export const fetchUpdateUser = createAsyncThunk(
 export const fetchCurrentUser = createAsyncThunk(
   'auth/currentUser',
   async (_, thunkAPI) => {
-    const BASE_URL = 'https://aqua-track-project-back.onrender.com';
-    const END_POINT = '/auth/current-user';
-    const url = BASE_URL + END_POINT;
-
     try {
-      const response = await axios.get(url);
+      const token = thunkAPI.getState().auth.token;
+      setHeaders(token);
+
+      const response = await instance.get('/auth/current-user');
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.response?.data || e.message);
+      const errorMessage =
+        e.response?.data?.message || e.message;
+      return thunkAPI.rejectWithValue(errorMessage);
     }
   }
 );

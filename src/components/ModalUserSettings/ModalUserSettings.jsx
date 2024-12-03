@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
@@ -6,6 +6,8 @@ import style from "./ModalUserSettings.module.css";
 import { Icon } from '../Icon/Icon';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCurrentUser } from '../../redux/auth/operations';
+import { selectAuthUser, selectIsLoading } from '../../redux/auth/selectors';
+import Loader from '../Loader/Loader';
 
 const validationSchema = Yup.object().shape({
     gender: Yup.string().required('Gender is required'),
@@ -16,14 +18,15 @@ const validationSchema = Yup.object().shape({
     waterIntake: Yup.number().required('Water intake is required').positive(),
 });
 
-const ModalUserSettings = () => {
+export const ModalUserSettings = () => {
     const dispatch = useDispatch();
-    const user = useSelector((state) => state.auth.user);
     const [avatar, setAvatar] = useState(null);
-    const [selectedGender, setSelectedGender] = useState(null);
+    const [selectedGender, setSelectedGender] = useState('female');
     const [formData, setFormData] = useState({ weight: '', activeTime: '', waterIntake: '' });
     const [waterIntake, setWaterIntake] = useState(0);
-    const genders = ['Woman', 'Man'];
+    const genders = ['female', 'male'];
+const user  = useSelector(selectAuthUser);
+const IsLoading  = useSelector(selectIsLoading);
 
     const { handleSubmit, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema),
@@ -32,19 +35,19 @@ const ModalUserSettings = () => {
     useEffect(() => {
         dispatch(fetchCurrentUser());
     }, [dispatch]);
-
     useEffect(() => {
         if (user) {
             setFormData({
-                name: user.name || '',
-                email: user.email || '',
-                weight: user.weight || '',
-                activeTime: user.activeTime || '',
-                waterIntake: user.waterIntake || '',
+                avatar: user.data.avatar ,
+                name: user.data.name || '',
+                email: user.data.email || '',
+                weight: user.data.weight || '',
+                activeTime: user.data.activeTime || '',
+                waterIntake: user.data.waterIntake || '',
             });
-            setSelectedGender(user.gender || null);
+            setSelectedGender(user.data.gender || null);
         }
-    }, [user]);
+    }, [user, avatar]);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
@@ -62,9 +65,9 @@ const ModalUserSettings = () => {
             const activeTime = parseFloat(updatedData.activeTime) || 0;
             let calculatedWaterIntake = 0;
 
-            if (selectedGender === 'Woman') {
+            if (selectedGender === 'female') {
                 calculatedWaterIntake = weight * 0.03 + activeTime * 0.4;
-            } else if (selectedGender === 'Man') {
+            } else if (selectedGender === 'male') {
                 calculatedWaterIntake = weight * 0.04 + activeTime * 0.6;
             }
             setWaterIntake(calculatedWaterIntake.toFixed(1));
@@ -85,9 +88,11 @@ const ModalUserSettings = () => {
     };
 
     return (
+    <>
+      {IsLoading &&  <Loader />}
         <div className={style.wrapper}>
             <h2 className={style.title}>Setting</h2>
-            <img src="src/assets/images/imageUserAvatar.jpg" alt="User's avatar" className={style.user_avatar}/>
+            <img src={formData.avatar} alt="User's avatar" className={style.user_avatar}/>
             <div className={style.upload_photo}>
                 <label className={style.upload_label}>
                     <Icon id="icon-upload" size={18} className={style.icon_upload} />Upload a photo
@@ -117,11 +122,11 @@ const ModalUserSettings = () => {
                                             <div className={`${style.custom_checkbox} ${selectedGender === gender ? style.active_checkbox : ""}`}>
                                                 <span></span>
                                             </div>
-                                            {gender}
+                                            {gender === "female" ? "Woman" : "Man"}
                                         </label>
                                     ))} 
                                 </div>
-                                {errors.name && <p className={style.error_message}>{errors.gender.message}</p>}
+                                {errors.gender && <p className={style.error_message}>{errors.gender.message}</p>}
                             </div>
                             <div className={style.name_email_wrapper}>
                                 <div className={style.name_email_group}>
@@ -129,7 +134,7 @@ const ModalUserSettings = () => {
                                     <input type="text"
                                         name="name"
                                         value={formData.name}
-                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                         className={style.name_email_input}
                                     /> 
                                     {errors.name && <p className={style.error_message}>{errors.name.message}</p>}
@@ -202,8 +207,8 @@ const ModalUserSettings = () => {
                     <button type="submit" className={style.btn_submit}>Save</button>
                 </form>
             </div>
-        </div>
+        </div></>
     );
 };
 
-export default ModalUserSettings;
+
