@@ -17,6 +17,10 @@
   margin-bottom: 16px;
 }
 
+.logo {
+  text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.5);
+}
+
 .titleUp {
   color: #323f47;
   font-weight: 700;
@@ -24,6 +28,7 @@
   line-height: 100%;
   letter-spacing: -0.01em;
   margin-bottom: 32px;
+  text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.5);
 }
 
 .labelUp {
@@ -33,38 +38,61 @@
   color: #2f2f2f;
   display: block;
   margin-bottom: 8px;
+  text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.4);
+}
+
+.inputWrapper {
+  position: relative;
+  align-items: center;
 }
 
 .inputUp {
-  border: 1px solid rgba(47, 47, 47, 0.2);
+  border: 1px solid rgba(248, 246, 246, 0.863);
   border-radius: 15px;
   padding-right: 40px;
   padding-left: 16px;
   width: 100%;
   max-width: 100%;
-
+  background-color: #fff;
   height: 50px;
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
   letter-spacing: -0.01em;
-  color: rgba(47, 47, 47, 0.6);
+  color: rgba(10, 10, 10, 0.911);
   box-sizing: border-box;
+  box-shadow: 0 10px 12px rgba(28, 61, 15, 0.2);
+  transition: all 0.3s ease;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.icon {
+  pointer-events: none;
+}
+
+.inputUp:hover {
+  border-color: #69e974;
+}
+
+.inputUp:focus {
+  border-color: #87d28d;
+}
+
+.inputUp:active {
+  border-color: #69e974;
 }
 
 .errorText {
   color: #ef5050;
   font-weight: 400;
   font-size: 14px;
-  position: absolute;
-  margin-top: 2px;
+  /* position: absolute; */
 }
 
 .btnUp {
   border-radius: 30px;
   border: none;
   width: 100%;
-
   height: 50px;
   font-size: 14px;
   font-weight: 700;
@@ -72,6 +100,13 @@
   background: #9be1a0;
   margin: 16px 0 16px 0;
   cursor: pointer;
+  box-shadow: 0 10px 12px rgba(28, 61, 15, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btnUp:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: #87d28d;
 }
 
 .textUp {
@@ -79,12 +114,19 @@
   font-size: 14px;
   color: rgba(47, 47, 47, 0.5);
   text-align: center;
+  text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавний перехід */
 }
 
 .linkUp {
   font-weight: 700;
   color: #2f2f2f;
   cursor: pointer;
+  display: inline-block;
+}
+
+.linkUp:hover {
+  color: #519256;
 }
 
 .iconButton {
@@ -99,12 +141,12 @@
   justify-content: center;
 }
 
-.inputWrapper {
-  position: relative;
-  align-items: center;
+.inputError {
+  border: 0.1px solid rgb(243, 188, 188);
+  background-color: #ffe6e6;
 }
 
-.inputError {
+.inputError:focus {
   border: 1px solid red;
   background-color: #ffe6e6;
 }

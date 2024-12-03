@@ -83,16 +83,29 @@
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin-top: 209px;
+<<<<<<< HEAD
 
 }
 
+=======
+}
+
+@media only screen and (min-width: 320px) and (max-width: 375px) {
+  .fontSection {
+    width: calc(100vw - 32px);
+  }
+}
+>>>>>>> main
 
 @media screen and (min-width: 768px) and (max-width: 1439px) {
-
   .fontSection {
     background-image: url('../../assets/images/RectangleT.jpg');
     width: 704px;
+<<<<<<< HEAD
     height: 446px;
+=======
+    height: 466px;
+>>>>>>> main
     padding: 32px;
   }
 
@@ -104,6 +117,7 @@
     box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     margin-top: 265px;
+<<<<<<< HEAD
   }
 
   .textParagraph {
@@ -111,6 +125,12 @@
   }
 
   .listItemHabit {
+=======
+    margin-left: -22px;
+  }
+
+  .btnHabit {
+>>>>>>> main
     padding: 11px 16px;
     width: 111px;
     height: 34px;
@@ -118,6 +138,7 @@
     font-weight: 700;
     font-size: 12px;
   }
+<<<<<<< HEAD
 
   .btnView {
     border-radius: 30px;
@@ -177,12 +198,45 @@
     font-size: 12px;
   }
 
+=======
+  .btnView {
+    padding: 11px 16px;
+    width: 130px;
+    height: 34px;
+    font-size: 12px;
+  }
+  .btnPersonal {
+    border-radius: 30px;
+    border: none;
+    padding: 11px 16px;
+    width: 170px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .listBtn {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: -30px;
+    margin-left: 380px;
+  }
+>>>>>>> main
 }
 
 
 @media only screen and (min-width: 1440px) {
   .fontSection {
+<<<<<<< HEAD
     background-image: url('../../assets/images/RectangleD.jpg');
+=======
+    /*  background-image: url('../../assets/images/imageDesktop@1x.jpg'); */
+    background-image: url('../../assets/images/Desktop@2x.jpg');
+
+    background-image: url('../../assets/images/RectangleD.jpg');
+
+>>>>>>> main
     width: 672px;
     height: 736px;
   }
