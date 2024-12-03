@@ -7,8 +7,8 @@ function WelcomeSection() {
     <div className={styles.welcomFont}>
       <Logo />
       <div className={styles.box}>
-        <h2 className={styles.subtitle}>Record daily water intake and track</h2>
-        <h1 className={`${styles.title} title`}>Water consumption tracker</h1>
+        <p className={styles.subtitle}>Record daily water intake and track</p>
+        <h2 className={`${styles.title} title`}>Water consumption tracker</h2>
         <div className={styles.links}>
           <Link to="/signup" className={`${styles.linkGreen} linkGreen`}>
             Try Tracker

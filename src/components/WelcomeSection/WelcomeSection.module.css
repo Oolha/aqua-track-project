@@ -1,13 +1,15 @@
 .welcomFont {
   background: #f0eff4;
   border-radius: 30px;
-  width: 320px;
+  width: 343px;
+  height: 411px;
   padding: 24px 16px 67px 16px;
   margin-bottom: 16px;
 }
+
 .box {
   width: 311px;
-  margin-top: 74px;
+  padding: 74px 16px 22px 2px;
 }
 
 .subtitle {
@@ -19,81 +21,124 @@
   color: #2f2f2f;
   margin-bottom: 16px;
 }
+
 .title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: bold;
   font-size: 38px;
   line-height: 100%;
   letter-spacing: -0.01em;
   color: #323f47;
   margin-bottom: 32px;
 }
+
 .links {
   display: flex;
   gap: 10px;
   margin-bottom: 67px;
 }
 
-.tryTrackerBtn {
+.linkGreen {
   border-radius: 30px;
   padding: 14px 19px;
   font-size: 14px;
-  width: 116px;
+  font-weight: bold;
+  line-height: 18px;
   height: 46px;
   color: #323f47;
   background-color: #9be1a0;
 }
-.signInBtn {
+
+.linkGreen:hover {
+  background-color: #87d28d;
+}
+
+.linkWhite {
   border: 1px solid black;
   border-radius: 30px;
-  padding: 14px 28px;
+  padding: 12px 24px;
   font-size: 14px;
+  line-height: 24px;
+  border: 1px solid#323F47;
+  font-weight: bold;
   width: 104px;
   height: 46px;
   color: #323f47;
+  margin-left: 10px;
   background-color: transparent;
 }
-@media only screen and (min-width: 320px) and (max-width: 375px) {
-  .welcomFont {
-    width: calc(100vw - 32px);
-  }
+
+.linkWhite:hover {
+  color: #87d28d;
+  border-color: #87d28d;
 }
+
 /* -------------------------------------------- */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .welcomFont {
-    width: calc(100vw - 64px);
-    padding: 32px 93px 50px 32px;
+    background: #f0eff4;
+    border-radius: 30px;
+    width: 704px;
+    height: 498px;
+    padding-top: 32px;
+    padding-left: 32px;
   }
 
   .box {
     width: 517px;
-    margin-top: 50px;
-    margin-left: 32px;
+    padding: 50px 93px 50px 32px;
+    margin-bottom: 16px;
   }
 
   .subtitle {
     font-size: 16px;
     line-height: 150%;
   }
+
   .title {
     font-size: 64px;
     line-height: 109%;
   }
+
   .links {
     gap: 16px;
   }
-  .tryTrackerBtn {
-    padding: 18px 40px;
-    font-size: 14px;
+
+  .linkGreen {
+    border-radius: 30px;
+    padding: 18px 36px;
+    font-size: 16px;
+    line-height: 24px;
     width: 169px;
     height: 60px;
+    color: #323f47;
+    background-color: #9be1a0;
   }
-  .signInBtn {
-    padding: 18px 40px;
+  
+  .linkGreen:hover {
+    background-color: #87d28d;
+  }
+  
+  .linkWhite {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 18px 36px;
+    font-size: 16px;
+    line-height: 24px;
+    border: 1px solid#323F47;
+    font-weight: bold;
     width: 135px;
     height: 60px;
+    color: #323f47;
+    background-color: transparent;
+  }
+  
+  .linkWhite:hover {
+    color: #87d28d;
+    border-color: #87d28d;
   }
 }
+
 /* ------------------------------------- */
 @media screen and (min-width: 1440px) {
   .welcomFont {
@@ -103,16 +148,18 @@
     padding: 32px 61px 188px 32px;
     margin-right: 32px;
   }
+
   .box {
     width: 547px;
-    margin-top: 132px;
-    margin-left: 32px;
+    padding: 132px 16px 22px 16px;
+    margin-left: 16px;
   }
 
   .subtitle {
     font-size: 16px;
     line-height: 150%;
   }
+
   .title {
     font-weight: 700;
     font-size: 80px;
@@ -120,22 +167,43 @@
     letter-spacing: -0.01em;
     margin-bottom: 32px;
   }
+
   .links {
     display: flex;
     gap: 16px;
   }
 
-  .tryTrackerBtn {
+  .linkGreen {
+    border-radius: 30px;
+    padding: 18px 36px;
     font-size: 16px;
+    line-height: 24px;
     width: 169px;
-    padding: 18px 40px;
     height: 60px;
+    color: #323f47;
+    background-color: #9be1a0;
   }
-
-  .signInBtn {
+  
+  .linkGreen:hover {
+    background-color: #87d28d;
+  }
+  
+  .linkWhite {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 18px 36px;
     font-size: 16px;
-    padding: 18px 40px;
+    line-height: 24px;
+    border: 1px solid#323F47;
+    font-weight: bold;
     width: 135px;
     height: 60px;
+    color: #323f47;
+    background-color: transparent;
+  }
+  
+  .linkWhite:hover {
+    color: #87d28d;
+    border-color: #87d28d;
   }
 }
