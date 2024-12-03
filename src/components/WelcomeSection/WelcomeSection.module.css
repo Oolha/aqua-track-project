@@ -43,13 +43,24 @@
 .linkGreen {
   width: 116px;
   height: 46px;
+
+  color: #323f47;
+  background-color: #9be1a0;
+}
+.signInBtn {
+  border: 1px solid black;
+  border-radius: 30px;
+  padding: 14px 28px;
+  line-height: 129%;
+  letter-spacing: -0.01em;
+
   font-size: 14px;
   font-weight: bold;
   line-height: 24px;
   border: none;
   border-radius: 30px;
-  background-color: #9BE1A0;
-  color: #323F47;
+  background-color: #9be1a0;
+  color: #323f47;
   padding: 12px 15px;
   cursor: pointer;
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -65,14 +76,15 @@
   font-size: 14px;
   font-weight: bold;
   line-height: 24px;
-  border: 1px solid #323F47;
+  border: 1px solid #323f47;
   border-radius: 30px;
   background-color: #fff;
-  color: #323F47;
+  color: #323f47;
   padding: 12px 24px;
   cursor: pointer;
   margin-left: 10px;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
 }
 
 .linkWhite:hover {
@@ -117,8 +129,8 @@
     line-height: 30px;
     border: none;
     border-radius: 30px;
-    background-color: #9BE1A0;
-    color: #323F47;
+    background-color: #9be1a0;
+    color: #323f47;
     padding: 15px 35px;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -127,20 +139,20 @@
     background-color: #87d28d;
   }
 
-
   .linkWhite {
     width: 135px;
     height: 60px;
     font-size: 16px;
     font-weight: bold;
     line-height: 30px;
-    border: 1px solid #323F47;
+    border: 1px solid #323f47;
     border-radius: 30px;
     background-color: #fff;
-    color: #323F47;
+    color: #323f47;
     padding: 15px 35px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      border-color 0.3s ease;
   }
 
   .linkWhite:hover {
@@ -154,10 +166,19 @@
     background: #f0eff4;
     width: 672px;
     height: 736px;
+  }
+  .box {
+    padding: 132px 61px 188px 29px;
+    margin: 0;
+
     padding: 32px 61px 188px 32px;
     margin-right: 32px;
   }
   .box {
+    width: 547px;
+    margin-top: 132px;
+    margin-left: 32px;
+
     padding: 132px 61px 188px 32px;
     margin: 0;
   }
@@ -179,8 +200,7 @@
     display: flex;
     gap: 16px;
   }
-  
-  
+
   .linkGreen {
     width: 169px;
     height: 60px;
@@ -189,16 +209,15 @@
     line-height: 30px;
     border: none;
     border-radius: 30px;
-    background-color: #9BE1A0;
-    color: #323F47;
+    background-color: #9be1a0;
+    color: #323f47;
     padding: 15px 35px;
     cursor: pointer;
-    transition: background-color 0.3s ease, color 0.3s ease; 
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
   .linkGreen:hover {
     background-color: #87d28d;
   }
-
 
   .linkWhite {
     width: 135px;
@@ -206,18 +225,18 @@
     font-size: 16px;
     font-weight: bold;
     line-height: 30px;
-    border: 1px solid #323F47;
+    border: 1px solid #323f47;
     border-radius: 30px;
     background-color: #fff;
-    color: #323F47;
+    color: #323f47;
     padding: 15px 35px;
     cursor: pointer;
     margin-left: 16px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease,
+      border-color 0.3s ease;
   }
   .linkWhite:hover {
     color: #87d28d;
     border-color: #87d28d;
   }
-
 }
