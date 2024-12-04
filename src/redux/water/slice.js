@@ -1,13 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
   createWaterEntry,
- 
   patchWaterEntry,
   fetchMonthlyWaterEntries,
   deleteWaterEntry,
 } from './operations';
-
-
 
 const initialState = {
   items: [],
@@ -28,17 +25,13 @@ const waterSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(createWaterEntry.fulfilled, (state, { payload }) => {
+      .addCase(createWaterEntry.fulfilled, (state, action) => {
         state.isLoading = false;
         state.error = null;
-        console.log(action.payload)
-        state.dailyEntries.unshift(payload.data);
-        state.waterAmount += payload.data.volume;
+        state.items.unshift(action.payload.data);
       })
       .addCase(fetchMonthlyWaterEntries.fulfilled, (state, { payload }) => {
-        
-        state.items=payload.data;
-       
+        state.items = payload.data;
       })
       .addCase(patchWaterEntry.fulfilled, (state, { payload }) => {
         const updatedEntry = payload.data;

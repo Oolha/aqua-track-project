@@ -18,3 +18,8 @@
     scrollbar-width: 235px;
   }
 }
+@media only screen and (min-width: 1440px) {
+  .list {
+    gap: 22px;
+  }
+}
