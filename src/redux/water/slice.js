@@ -40,10 +40,9 @@ const waterSlice = createSlice({
         );
       })
       .addCase(deleteWaterEntry.fulfilled, (state, { payload }) => {
-        state.dailyEntries = state.dailyEntries.filter(
-          (entry) => entry._id !== payload.id
-        );
-        state.waterAmount -= payload.volume;
+        state.isLoading = false;
+        state.error = null;
+        state.items = state.items.filter((item) => item._id !== payload.id);
       })
       .addCase(createWaterEntry.pending, handlePending)
       .addCase(createWaterEntry.rejected, handleRejected)

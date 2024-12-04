@@ -21,30 +21,24 @@ const UserBarPopover = () => {
       </button>
       {isSettingsModalOpen && (
         <Modal toggleModal={setIsSettingsModalOpen} isSettings="false">
-          <ModalUserSettings toggleModal={setIsSettingsModalOpen}/>
+          <ModalUserSettings toggleModal={setIsSettingsModalOpen} />
         </Modal>
       )}
 
-      <button type="button" className={css.btnLogOut} onClick={setIsLogOutModalOpen}>
+      <button
+        type="button"
+        className={css.btnLogOut}
+        onClick={setIsLogOutModalOpen}
+      >
         <Icon id="icon-log-out" size={16} className={css.iconLogOut} />
         <h4 className={css.textLogOut}>Log out</h4>
       </button>
       {isLogOutModalOpen && (
         <Modal toggleModal={setIsLogOutModalOpen}>
-          <LogOutModal toggleModal={setIsLogOutModalOpen}/>
+          <LogOutModal toggleModal={setIsLogOutModalOpen} />
         </Modal>
       )}
-      
     </div>
-
-    //   {isSettingsModalOpen && (
-    //     <UserSettingsModal onClose={closeSettingsModal} />
-    //   )}
-
-    //   {isLogOutModalOpen && (
-    //     <LogOutModal onClose={closeLogOutModal} />
-    // )
-    // }
   );
 };
 

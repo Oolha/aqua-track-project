@@ -12,8 +12,12 @@ const WaterItem = ({ item }) => {
           <p className={css.itemTextTime}>{parseTime(item.date)}</p>
         </div>
         <div className={css.itemIconsBox}>
-          <Icon id="icon-pencil" className={css.icons} />
-          <Icon id="icon-bin" className={css.icons} />
+          <button type="button">
+            <Icon id="icon-pencil" className={css.icons} />
+          </button>
+          <button type="button">
+            <Icon id="icon-bin" className={css.icons} />
+          </button>
         </div>
       </div>
     </div>
