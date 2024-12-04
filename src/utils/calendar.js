@@ -41,6 +41,7 @@ return (+month<10)?`0${month}`:month;
 }
 export function getWaterItemsperDay(waterData, initialDate) {
   const waterItemsperDay = [];
+ 
 
   waterData.forEach((item) => {
     let createdAtField = item.date;
@@ -57,7 +58,7 @@ export function getWaterItemsperDay(waterData, initialDate) {
       waterItemsperDay.push(item);
     }
   });
-  return waterItemsperDay;
+  return waterItemsperDay.map(item=>item);
 }
 
 export function amountWaterPerDay(waterItems) {
@@ -75,3 +76,10 @@ export function parseDate(initialDate) {
   const year = date.getFullYear();
   return `${year}-${month}`
 }
+
+export function parseTime(serialazeDate) {
+  const date = new Date(serialazeDate);
+
+
+  return`${date.getHours()}:${date.getMinutes()}`
+}  

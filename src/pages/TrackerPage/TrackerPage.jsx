@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {fetchMonthlyWaterEntries} from '../../redux/water/operations';
 import {selectIsLoading} from '../../redux/water/selectors.js';
-import {selectCurrentDate,selectCurrentMonth} from '../../redux/date/selectors.js'
+import {selectCurrentDate} from '../../redux/date/selectors.js'
 import {getNumberMonth} from '../../utils/calendar.js'
  // import {parseDate} from '../../utils/calendar.js'
 
@@ -20,7 +20,7 @@ const TrackerPage = () => {
 
   useEffect(() => {
     dispatch(fetchMonthlyWaterEntries(date));
-  }, [dispatch,selectCurrentDate]);
+  }, [dispatch,date]);
 
 
 

@@ -1,5 +1,6 @@
 import { Icon } from '../Icon/Icon';
 import css from './WaterItem.module.css';
+import {parseTime} from '../../utils/calendar.js'
 
 const WaterItem = ({ item }) => {
   return (
@@ -11,7 +12,7 @@ const WaterItem = ({ item }) => {
           <Icon id="icon-pencil" size={14} />
         </div>
         <div className={css.item}>
-          <p className={css.itemText}>{item.date}</p>
+          <p className={css.itemText}>{parseTime(item.date)}</p>
           <Icon id="icon-bin" size={14} />
         </div>
       </div>
