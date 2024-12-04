@@ -1,98 +1,139 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
-import style from "./ModalUserSettings.module.css";
+import style from './ModalUserSettings.module.css';
 import { Icon } from '../Icon/Icon';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchCurrentUser } from '../../redux/auth/operations';
+import { fetchCurrentUser, fetchUpdateUser } from '../../redux/auth/operations';
 import { selectAuthUser, selectIsLoading } from '../../redux/auth/selectors';
 import Loader from '../Loader/Loader';
 
 const validationSchema = Yup.object().shape({
-    gender: Yup.string().required('Gender is required'),
-    name: Yup.string().min(3).max(30).required('Name is required'),
-    email: Yup.string().email('Email is invalid').required('Email is required'),
-    weight: Yup.number().required('Weight is required').positive().integer().typeError('Weight must be a number'),
-    activeTime: Yup.number().required('Active time is required').positive().integer().typeError('Active time must be a number'),
-    waterIntake: Yup.number().required('Water intake is required').positive(),
+    name: Yup.string().matches(/^[a-zA-Z ]+$/, 'Name can only contain letters').required('Name is required'),
+email: Yup.string().email('Email must be a valid email address').required('Email is required'),
+gender: Yup.string().oneOf(['male', 'female', 'other']),
+weight: Yup.number().min(10, 'Weight should be at least 10 kg').max(250, 'Weight should not exceed 250 kg').required('Weight is required').typeError('Weight must be a number'),
+activeTime: Yup.number().min(0, 'Daily activity time cannot be a negative number').required('Active time is required').typeError('Active time must be a number'),
+dailyNorm: Yup.number().min(0, 'Daily water norm cannot be a negative number').required('Water intake is required').typeError('Daily norm must be a number'),
 });
 
-export const ModalUserSettings = () => {
+export const ModalUserSettings = ({toggleModal}) => {
     const dispatch = useDispatch();
     const [avatar, setAvatar] = useState(null);
-    const [selectedGender, setSelectedGender] = useState('female');
-    const [formData, setFormData] = useState({ weight: '', activeTime: '', waterIntake: '' });
-    const [waterIntake, setWaterIntake] = useState(0);
+    const [formData, setFormData] = useState({ weight: '', activeTime: '', dailyNorm: '' });
+    const [dailyNorm, setDailyNorm] = useState();
+    const user = useSelector(selectAuthUser);
+    const [selectedGender, setSelectedGender] = useState('');
+    const isLoading = useSelector(selectIsLoading);
     const genders = ['female', 'male'];
-const user  = useSelector(selectAuthUser);
-const IsLoading  = useSelector(selectIsLoading);
 
-    const { handleSubmit, formState: { errors } } = useForm({
+    const { register, handleSubmit, setValue, watch, formState: { errors } } = useForm({
         resolver: yupResolver(validationSchema),
+        defaultValues: {
+            gender: '',
+            name: '',
+            email: '',
+            weight: '',
+            activeTime: '',
+            dailyNorm: '',
+        },
     });
-
-    useEffect(() => {
-        dispatch(fetchCurrentUser());
-    }, [dispatch]);
-    useEffect(() => {
-        if (user) {
-            setFormData({
-                avatar: user.data.avatar ,
-                name: user.data.name || '',
-                email: user.data.email || '',
-                weight: user.data.weight || '',
-                activeTime: user.data.activeTime || '',
-                waterIntake: user.data.waterIntake || '',
-            });
-            setSelectedGender(user.data.gender || null);
-        }
-    }, [user, avatar]);
 
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         if (file) {
             setAvatar(URL.createObjectURL(file));
+            setValue('avatar', event.target.files); 
         }
     };
+    useEffect(() => {
+        console.log(errors);
+    }, [errors]);
+    const avatarFile = watch('avatar');
 
-    const handleInputChange = (e, selectedGender) => {
-        const { name, value } = e.target;
+    useEffect(() => {
+        dispatch(fetchCurrentUser());
+    }, [dispatch]);
 
-        setFormData((prevData) => {
-            const updatedData = { ...prevData, [name]: value };
-            const weight = parseFloat(updatedData.weight) || 0;
-            const activeTime = parseFloat(updatedData.activeTime) || 0;
-            let calculatedWaterIntake = 0;
-
-            if (selectedGender === 'female') {
-                calculatedWaterIntake = weight * 0.03 + activeTime * 0.4;
-            } else if (selectedGender === 'male') {
-                calculatedWaterIntake = weight * 0.04 + activeTime * 0.6;
-            }
-            setWaterIntake(calculatedWaterIntake.toFixed(1));
-            return updatedData;
-        });
-    };
+    useEffect(() => {
+        if (user && user.data) {
+            setValue('name', user.data.name || '');
+            setValue('email', user.data.email || '');
+            setValue('weight', user.data.weight || '');
+            setValue('activeTime', user.data.activeTime || '');
+            setValue('dailyNorm', user.data.dailyNorm || '');
+            setValue('gender', user.data.gender || '');
+            setSelectedGender(user.data.gender || ''); 
+            setAvatar(user.data.avatar || ''); 
+        }
+    }, [user, setValue]);
+ 
 
     const onSubmit = async (data) => {
-        const formData = new FormData();
-        formData.append('gender', data.gender);
-        formData.append('name', data.name);
-        formData.append('email', data.email);
-        formData.append('weight', data.weight);
-        formData.append('activeTime', data.activeTime);
-        formData.append('waterIntake', waterIntake || data.waterIntake);
-
-        console.log(formData);
+      
+        try {
+            const formData = new FormData();
+            formData.append('gender', selectedGender);
+            formData.append('name', data.name);
+            formData.append('email', data.email);
+            formData.append('weight', data.weight);
+            formData.append('activeTime', data.activeTime);
+            formData.append('dailyNorm', parseFloat(data.dailyNorm)); 
+            if (data.avatar && data.avatar[0]) {
+                formData.append('avatar', data.avatar[0]);
+            }
+            await dispatch(fetchUpdateUser(formData));
+            toggleModal();
+        } catch (error) {
+            console.error('Failed to update user:', error);
+        } 
     };
+    const handleInputChange = (e, selectedGender) => {
+                const { name, value } = e.target;
+                setValue(name, value);
+        
+                setFormData((prevData) => {
+                 
+                    const updatedData = { ...prevData, [name]: value };
+                    
+                    const weight = parseFloat(updatedData.weight ) || 0;
+                    const activeTime = parseFloat(updatedData.activeTime) || 0;
+              
+            
+                    let calculatedDailyNorm = 0;
+        
+                    if (selectedGender === 'female') {
+                        calculatedDailyNorm = weight * 0.03 + activeTime * 0.4;
+                    } else if (selectedGender === 'male') {
+                        calculatedDailyNorm = weight * 0.04 + activeTime * 0.6;
+                }
+                    const roundedDailyNorm = calculatedDailyNorm.toFixed(1);
 
+        setValue('dailyNorm', roundedDailyNorm); 
+        setValue('gender', selectedGender); 
+        
+        return { ...updatedData, dailyNorm: roundedDailyNorm};
+                });
+            };
     return (
     <>
-      {IsLoading &&  <Loader />}
+      { isLoading &&  <Loader />}
         <div className={style.wrapper}>
             <h2 className={style.title}>Setting</h2>
-            <img src={formData.avatar} alt="User's avatar" className={style.user_avatar}/>
+                {avatarFile && avatarFile[0] ? (
+                    <img
+                        src={URL.createObjectURL(avatarFile[0])}
+                        alt="User's avatar"
+                        className={style.user_avatar}
+                    />
+                ) : (
+                    <img
+                        src={user?.data?.avatar || 'src/assets/images/imageUserAvatar.jpg'}
+                        alt="User's avatar"
+                        className={style.user_avatar}
+                    />
+                )}
             <div className={style.upload_photo}>
                 <label className={style.upload_label}>
                     <Icon id="icon-upload" size={18} className={style.icon_upload} />Upload a photo
@@ -113,6 +154,7 @@ const IsLoading  = useSelector(selectIsLoading);
                                                 type="radio"
                                                 name="gender"
                                                 value={gender}
+                                                {...register('gender')}
                                                 checked={selectedGender === gender}
                                                 onChange={(e) => {
                                                     setSelectedGender(e.target.value);
@@ -126,7 +168,7 @@ const IsLoading  = useSelector(selectIsLoading);
                                         </label>
                                     ))} 
                                 </div>
-                                {errors.gender && <p className={style.error_message}>{errors.gender.message}</p>}
+{errors.gender && <p className={style.error_message}>{errors.gender.message}</p>}
                             </div>
                             <div className={style.name_email_wrapper}>
                                 <div className={style.name_email_group}>
@@ -134,8 +176,9 @@ const IsLoading  = useSelector(selectIsLoading);
                                     <input type="text"
                                         name="name"
                                         value={formData.name}
-                                                                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                                        className={style.name_email_input}
+                                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                                        className={`${style.name_email_input} ${errors.name ? style.error_input : ''}`}
+                                        {...register('name')}
                                     /> 
                                     {errors.name && <p className={style.error_message}>{errors.name.message}</p>}
                                 </div>
@@ -144,8 +187,9 @@ const IsLoading  = useSelector(selectIsLoading);
                                     <input type="email"
                                         name="email"
                                         value={formData.email}
+                                        {...register('email')}
                                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                        className={style.name_email_input}
+                                        className={`${style.name_email_input} ${errors.email ? style.error_input : ''}`}
                                     />
                                     {errors.email && <p className={style.error_message}>{errors.email.message}</p>}
                                 </div>
@@ -168,8 +212,9 @@ const IsLoading  = useSelector(selectIsLoading);
                                         type="number"
                                         name="weight"
                                         value={formData.weight}
+                                        {...register('weight')}
                                         onChange={(e) => handleInputChange(e, selectedGender)}
-                                        className={style.input_weight}
+                                        className={`${style.input_weight} ${errors.weight ? style.error_input : ''}`}
                                         min="0"
                                     />
                                     {errors.weight && <p className={style.error_message}>{errors.weight.message}</p>}
@@ -180,8 +225,9 @@ const IsLoading  = useSelector(selectIsLoading);
                                         type="number"
                                         name="activeTime"
                                         value={formData.activeTime}
+                                        {...register('activeTime')}
                                         onChange={(e) => handleInputChange(e, selectedGender)}
-                                        className={style.input_active_time}
+                                        className={`${style.input_active_time} ${errors.activeTime ? style.error_input : ''}`}
                                         min="0"
                                     />
                                     {errors.activeTime && <p className={style.error_message}>{errors.activeTime.message}</p>}
@@ -194,12 +240,16 @@ const IsLoading  = useSelector(selectIsLoading);
                                 </div>
                                 <div className={style.water_intake_input_group}>
                                     <label className={style.label_title}>Write down how much water you will drink:</label>
-                                    <input type="number"
-                                        name="waterIntake"
-                                        value={waterIntake}
-                                        onChange={(e) => setWaterIntake(e.target.value)}
-                                        className={style.input_drunk_water}
+                                    <input 
+                                    // type="number"
+                                        name="dailyNorm"
+                                        value={dailyNorm}
+                                        {...register('dailyNorm')}
+                                        onChange={(e) => setFormData({ ...formData, dailyNorm: e.target.value })}
+                                        // onChange={(e) => setValue('dailyNorm', e.target.value)}
+                                                                           className={`${style.input_drunk_water} ${errors.dailyNorm ? style.error_input : ''}`}
                                     />
+                                       {errors.dailyNorm && <p className={style.error_message}>{errors.dailyNorm.message}</p>}
                                 </div>
                             </div>
                         </div>
@@ -210,5 +260,6 @@ const IsLoading  = useSelector(selectIsLoading);
         </div></>
     );
 };
+
 
 
