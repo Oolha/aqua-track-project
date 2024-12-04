@@ -120,11 +120,11 @@
     color: #323f47;
     background-color: #9be1a0;
   }
-  
+
   .linkGreen:hover {
     background-color: #87d28d;
   }
-  
+
   .linkWhite {
     border: 1px solid black;
     border-radius: 30px;
@@ -138,7 +138,7 @@
     color: #323f47;
     background-color: transparent;
   }
-  
+
   .linkWhite:hover {
     color: #87d28d;
     border-color: #87d28d;
@@ -196,11 +196,11 @@
     color: #323f47;
     background-color: #9be1a0;
   }
-  
+
   .linkGreen:hover {
     background-color: #87d28d;
   }
-  
+
   .linkWhite {
     border: 1px solid black;
     border-radius: 30px;
@@ -214,7 +214,7 @@
     color: #323f47;
     background-color: transparent;
   }
-  
+
   .linkWhite:hover {
     color: #87d28d;
     border-color: #87d28d;
