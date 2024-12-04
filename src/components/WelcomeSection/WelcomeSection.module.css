@@ -1,13 +1,11 @@
-
 .welcomFont {
   background: #f0eff4;
   border-radius: 30px;
   width: 343px;
   height: 411px;
   padding: 16px;
-  position: relative; 
+  position: relative;
   margin-bottom: 16px;
-  
 }
 
 .logoContainer {
@@ -20,7 +18,6 @@
   margin-top: 118px;
   width: 311px;
 }
-
 
 .subtitle {
   font-family: var(--font-family);
@@ -64,21 +61,14 @@
 }
 
 .linkWhite {
-  border: 1px solid black;
   border-radius: 30px;
   padding: 12px 24px;
-  font-size: 14px;
   line-height: 24px;
   border: 1px solid#323F47;
-  font-weight: bold;
   width: 104px;
   height: 46px;
   font-size: 14px;
   font-weight: bold;
-  line-height: 24px;
-  border: 1px solid #323f47;
-  border-radius: 30px;
-  background-color: #fff;
   color: #323f47;
   margin-left: 10px;
   background-color: transparent;
@@ -92,27 +82,21 @@
 /* -------------------------------------------- */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .welcomFont {
-  background: #f0eff4;
-  border-radius: 30px;
-  width: 704px;
-  height: 498px;
-  padding: 32px;
-  position: relative; 
-  margin-bottom: 16px;
-  
-}
+    width: 704px;
+    height: 498px;
+    padding: 32px;
+  }
 
-.logoContainer {
-  position: absolute;
-  top: 32px;
-  left: 32px;
-}
+  .logoContainer {
+    top: 32px;
+    left: 32px;
+  }
 
-.box {
-  margin-top: 74px;
-  width: 547px;
-  height: 342px;
-}
+  .box {
+    margin-top: 74px;
+    width: 547px;
+    height: 342px;
+  }
 
   .subtitle {
     font-size: 16px;
@@ -130,44 +114,24 @@
   }
 
   .linkGreen {
-    border-radius: 30px;
     padding: 18px 36px;
     font-size: 16px;
     line-height: 24px;
     width: 169px;
     height: 60px;
-    color: #323f47;
-    background-color: #9be1a0;
-  }
-
-  .linkGreen:hover {
-    background-color: #87d28d;
   }
 
   .linkWhite {
-    border: 1px solid black;
-    border-radius: 30px;
     padding: 18px 36px;
     font-size: 16px;
-    line-height: 24px;
-    border: 1px solid#323F47;
-    font-weight: bold;
     width: 135px;
     height: 60px;
-    color: #323f47;
-    background-color: transparent;
-  }
-
-  .linkWhite:hover {
-    color: #87d28d;
-    border-color: #87d28d;
   }
 }
 
 /* ------------------------------------- */
 @media screen and (min-width: 1440px) {
   .welcomFont {
-    background: #f0eff4;
     width: 672px;
     height: 736px;
     margin-bottom: 0;
@@ -194,28 +158,20 @@
   .title {
     width: 547px;
     height: auto;
-    font-weight: 700;
     font-size: 80px;
     line-height: 76px;
-    letter-spacing: -0.01em;
-    margin-bottom: 32px;
   }
 
   .links {
-    display: flex;
-    gap: 16px;
     margin-bottom: 188px;
   }
 
   .linkGreen {
-    border-radius: 30px;
     padding: 18px 36px;
     font-size: 16px;
     line-height: 24px;
     width: 169px;
     height: 60px;
-    color: #323f47;
-    background-color: #9be1a0;
   }
 
   .linkGreen:hover {
@@ -223,17 +179,10 @@
   }
 
   .linkWhite {
-    border: 1px solid black;
-    border-radius: 30px;
     padding: 18px 36px;
     font-size: 16px;
-    line-height: 24px;
-    border: 1px solid#323F47;
-    font-weight: bold;
     width: 135px;
     height: 60px;
-    color: #323f47;
-    background-color: transparent;
   }
 
   .linkWhite:hover {
