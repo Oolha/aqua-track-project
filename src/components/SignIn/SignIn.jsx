@@ -58,7 +58,11 @@ function SignInForm() {
         <Logo />
         <div className={css.formWrapper}>
           <h2 className={css.title}>Sign In</h2>
-          <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className={css.form}
+            noValidate
+          >
             <div className={css.field}>
               <label htmlFor="email" className={css.formLabel}>
                 Email
@@ -87,9 +91,7 @@ function SignInForm() {
                     errors.password ? css.error : ''
                   }`}
                 />
-                {errors.password && (
-                  <p className={css.errorMessage}>{errors.password.message}</p>
-                )}
+
                 <button
                   type="button"
                   className={css.passwordToggle}
@@ -104,6 +106,9 @@ function SignInForm() {
                 </button>
               </div>
             </div>
+            {errors.password && (
+              <p className={css.errorMessage}>{errors.password.message}</p>
+            )}
             <div className={css.btnWrapper}>
               <button type="submit" className={css.formButton}>
                 Sign In

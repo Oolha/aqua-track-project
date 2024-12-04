@@ -1,0 +1,2607 @@
+[
+    {
+        "id": "94eac1a8-5056-4866-8c52-120dec45fd3a",
+        "amount": 53,
+        "createdAt": "2024-09-01T00:30:00"
+    },
+    {
+        "id": "c2e92af3-8532-44c9-a333-5dada48937dc",
+        "amount": 428,
+        "createdAt": "2024-09-01T12:14:00"
+    },
+    {
+        "id": "646a671a-5cf8-48cc-81ef-1a850d095f74",
+        "amount": 128,
+        "createdAt": "2024-09-01T02:34:00"
+    },
+    {
+        "id": "c99f44b6-c02d-4e94-a8bf-09694b053d24",
+        "amount": 119,
+        "createdAt": "2024-09-01T04:54:00"
+    },
+    {
+        "id": "09fa8a7b-6a25-4a42-a36c-d76c1e88e777",
+        "amount": 208,
+        "createdAt": "2024-09-01T04:03:00"
+    },
+    {
+        "id": "355525df-dbb8-4b8b-b020-11f71880d4c3",
+        "amount": 294,
+        "createdAt": "2024-09-01T17:38:00"
+    },
+    {
+        "id": "6800c463-3bfc-4c17-92b6-c76693193c8b",
+        "amount": 108,
+        "createdAt": "2024-09-01T23:24:00"
+    },
+    {
+        "id": "f12cae53-9ebc-4316-8278-3e2c02c613fd",
+        "amount": 215,
+        "createdAt": "2024-09-02T00:46:00"
+    },
+    {
+        "id": "43ef9aa0-3fea-46cf-b101-0a2d7005a869",
+        "amount": 324,
+        "createdAt": "2024-09-02T06:43:00"
+    },
+    {
+        "id": "9d543137-e242-404f-b8d9-1ca9890f5365",
+        "amount": 211,
+        "createdAt": "2024-09-02T08:53:00"
+    },
+    {
+        "id": "de889e8b-b7b1-430c-9177-ac26dab5b43b",
+        "amount": 154,
+        "createdAt": "2024-09-02T15:29:00"
+    },
+    {
+        "id": "766fd87b-567e-4a75-a63a-10bac271f6a9",
+        "amount": 325,
+        "createdAt": "2024-09-02T15:01:00"
+    },
+    {
+        "id": "89414d41-f75d-46b6-b7f7-8c068a55d047",
+        "amount": 181,
+        "createdAt": "2024-09-02T04:01:00"
+    },
+    {
+        "id": "40551f02-f78a-46e2-be9b-7e06377e59c4",
+        "amount": 224,
+        "createdAt": "2024-09-02T04:48:00"
+    },
+    {
+        "id": "647700b8-7f87-41d1-8187-8b683a1621ff",
+        "amount": 443,
+        "createdAt": "2024-09-03T15:43:00"
+    },
+    {
+        "id": "28ba14c7-c5c7-4d3d-a92a-767154b2cfa6",
+        "amount": 403,
+        "createdAt": "2024-09-03T11:22:00"
+    },
+    {
+        "id": "a25d184c-9fb4-4c62-8108-a55ad5e405c5",
+        "amount": 473,
+        "createdAt": "2024-09-03T02:02:00"
+    },
+    {
+        "id": "89d7b836-8c2b-4e30-820b-5207127b6150",
+        "amount": 59,
+        "createdAt": "2024-09-03T11:58:00"
+    },
+    {
+        "id": "399b9aa4-8856-4422-a207-772d6642489c",
+        "amount": 56,
+        "createdAt": "2024-09-03T21:35:00"
+    },
+    {
+        "id": "ed6116fd-127a-4205-8b49-e406e1c5b02c",
+        "amount": 291,
+        "createdAt": "2024-09-03T13:03:00"
+    },
+    {
+        "id": "cfa34b31-c9e9-4b22-9307-38fc15ddf4f2",
+        "amount": 428,
+        "createdAt": "2024-09-04T15:20:00"
+    },
+    {
+        "id": "4e87cd41-0fc2-4df9-ba01-59d864d9bc91",
+        "amount": 338,
+        "createdAt": "2024-09-04T16:04:00"
+    },
+    {
+        "id": "f9ff9313-dfcd-4c7f-b93a-20f1f9f4a1a4",
+        "amount": 364,
+        "createdAt": "2024-09-04T19:40:00"
+    },
+    {
+        "id": "178e3d6c-add9-491c-b834-4c1f63c5397a",
+        "amount": 398,
+        "createdAt": "2024-09-04T04:12:00"
+    },
+    {
+        "id": "d8785862-c0f3-45a8-99f5-65c917c501d6",
+        "amount": 422,
+        "createdAt": "2024-09-04T10:23:00"
+    },
+    {
+        "id": "b277ec1e-9a27-4a18-91db-01c6bfd8e64b",
+        "amount": 63,
+        "createdAt": "2024-09-05T01:56:00"
+    },
+    {
+        "id": "70bd787c-9044-47a5-a51c-c22f7d785169",
+        "amount": 482,
+        "createdAt": "2024-09-05T08:01:00"
+    },
+    {
+        "id": "40ee39e8-2e8d-413f-90e4-2e6eeae1e0dc",
+        "amount": 384,
+        "createdAt": "2024-09-05T23:01:00"
+    },
+    {
+        "id": "6480774b-26ba-4aeb-baff-dc2cca6344c9",
+        "amount": 105,
+        "createdAt": "2024-09-05T23:16:00"
+    },
+    {
+        "id": "62502f70-f439-4cfb-86fc-07ad3f32e00d",
+        "amount": 313,
+        "createdAt": "2024-09-05T09:51:00"
+    },
+    {
+        "id": "988645fa-0bb2-4d26-96ee-f83e21bb3498",
+        "amount": 448,
+        "createdAt": "2024-09-05T10:07:00"
+    },
+    {
+        "id": "3b910a40-62fa-458c-b79e-c0acdb1b8cbb",
+        "amount": 189,
+        "createdAt": "2024-09-06T00:56:00"
+    },
+    {
+        "id": "15adc042-91db-4d5c-9d07-5b4eecb2359a",
+        "amount": 405,
+        "createdAt": "2024-09-06T11:37:00"
+    },
+    {
+        "id": "0c68fd30-7c82-42c7-bc03-8cc18a147dbf",
+        "amount": 89,
+        "createdAt": "2024-09-06T03:42:00"
+    },
+    {
+        "id": "b1724676-d709-4418-9a70-586d775e0a3f",
+        "amount": 294,
+        "createdAt": "2024-09-06T00:50:00"
+    },
+    {
+        "id": "ae575fcd-5b35-40a7-8c52-b2599e8fde00",
+        "amount": 410,
+        "createdAt": "2024-09-07T17:44:00"
+    },
+    {
+        "id": "4a68e826-d56b-4e75-98c1-97ee78fde2d9",
+        "amount": 246,
+        "createdAt": "2024-09-07T11:10:00"
+    },
+    {
+        "id": "e1b52df4-00b7-4fda-a264-5c17f7f70191",
+        "amount": 190,
+        "createdAt": "2024-09-07T08:24:00"
+    },
+    {
+        "id": "cf947beb-61d9-4246-a515-deae13891fad",
+        "amount": 106,
+        "createdAt": "2024-09-07T08:47:00"
+    },
+    {
+        "id": "50ce4b7b-164c-4127-bf59-740114a7e75b",
+        "amount": 447,
+        "createdAt": "2024-09-07T22:34:00"
+    },
+    {
+        "id": "f6a0cbca-9fe4-48ae-96e4-c90e681c8d19",
+        "amount": 98,
+        "createdAt": "2024-09-07T18:14:00"
+    },
+    {
+        "id": "cf3a4f41-4785-4b0d-8271-757800b4cb06",
+        "amount": 183,
+        "createdAt": "2024-09-08T05:23:00"
+    },
+    {
+        "id": "68f3fe0a-9ee4-463a-ba41-6c943ecaa173",
+        "amount": 467,
+        "createdAt": "2024-09-08T12:55:00"
+    },
+    {
+        "id": "37c856ee-063e-46de-9f3d-a12f0a40d96c",
+        "amount": 66,
+        "createdAt": "2024-09-08T01:06:00"
+    },
+    {
+        "id": "9eca1a7d-8988-43fb-bc8f-84b11ce909ec",
+        "amount": 149,
+        "createdAt": "2024-09-08T21:50:00"
+    },
+    {
+        "id": "852d4d55-19d0-421f-847e-5974fb09afbf",
+        "amount": 285,
+        "createdAt": "2024-09-08T18:01:00"
+    },
+    {
+        "id": "b415b7f6-92cf-4479-a4be-cd36723b4e1b",
+        "amount": 86,
+        "createdAt": "2024-09-09T19:06:00"
+    },
+    {
+        "id": "bd8b32dc-f250-417a-82d1-6ceaceafb684",
+        "amount": 385,
+        "createdAt": "2024-09-09T12:04:00"
+    },
+    {
+        "id": "9ef61b45-309e-4a07-b984-171a336d07d8",
+        "amount": 55,
+        "createdAt": "2024-09-09T08:20:00"
+    },
+    {
+        "id": "ba21d532-f7ed-4233-88bc-cf01f7a3bae9",
+        "amount": 268,
+        "createdAt": "2024-09-09T04:20:00"
+    },
+    {
+        "id": "d52e8dd5-7980-42bb-8597-2563df3558e4",
+        "amount": 178,
+        "createdAt": "2024-09-09T01:59:00"
+    },
+    {
+        "id": "02ac2e40-d13a-4e03-9e91-301fdf1fc645",
+        "amount": 182,
+        "createdAt": "2024-09-09T23:04:00"
+    },
+    {
+        "id": "639985c5-72ea-4a4d-bd65-92e331291b51",
+        "amount": 328,
+        "createdAt": "2024-09-09T09:30:00"
+    },
+    {
+        "id": "f02983fb-be06-4a5f-8797-502317a8eb13",
+        "amount": 254,
+        "createdAt": "2024-09-10T23:29:00"
+    },
+    {
+        "id": "e2a614e5-6061-4147-b98e-18d18dd786ea",
+        "amount": 321,
+        "createdAt": "2024-09-10T07:59:00"
+    },
+    {
+        "id": "0934acd8-59b7-4756-8092-4e06bdb43dba",
+        "amount": 74,
+        "createdAt": "2024-09-10T16:21:00"
+    },
+    {
+        "id": "92caa1ba-d3a8-494e-8581-6b79cdfd736e",
+        "amount": 149,
+        "createdAt": "2024-09-10T08:36:00"
+    },
+    {
+        "id": "e8f33430-4d95-4be3-b0a1-970a9876c0e1",
+        "amount": 91,
+        "createdAt": "2024-09-10T05:23:00"
+    },
+    {
+        "id": "466af03b-41d0-4ad6-b394-e703a533b382",
+        "amount": 203,
+        "createdAt": "2024-09-10T16:16:00"
+    },
+    {
+        "id": "41a7de4e-5fa3-46c0-9479-ceee40859183",
+        "amount": 494,
+        "createdAt": "2024-09-10T19:58:00"
+    },
+    {
+        "id": "91b4ee53-aac0-4f93-bc1b-ea325c1c2f33",
+        "amount": 119,
+        "createdAt": "2024-09-10T20:54:00"
+    },
+    {
+        "id": "141ca193-b370-4e24-b3f2-ebe8473d4095",
+        "amount": 448,
+        "createdAt": "2024-09-11T15:54:00"
+    },
+    {
+        "id": "e95326f7-3995-44c4-a017-2c610c70a37e",
+        "amount": 490,
+        "createdAt": "2024-09-11T09:25:00"
+    },
+    {
+        "id": "1d3453ce-51fc-4f56-a710-fba1aff6077d",
+        "amount": 217,
+        "createdAt": "2024-09-11T22:15:00"
+    },
+    {
+        "id": "05e3790a-e590-445d-8877-8db58bd3482d",
+        "amount": 132,
+        "createdAt": "2024-09-12T17:53:00"
+    },
+    {
+        "id": "b2b51287-2003-466b-bd2a-ba841186f438",
+        "amount": 342,
+        "createdAt": "2024-09-12T00:37:00"
+    },
+    {
+        "id": "52ca2033-55bc-42be-89a6-7657bab36b0b",
+        "amount": 103,
+        "createdAt": "2024-09-12T12:06:00"
+    },
+    {
+        "id": "54bb07db-cd9d-49c5-8043-d1fa50f0d71c",
+        "amount": 121,
+        "createdAt": "2024-09-12T03:19:00"
+    },
+    {
+        "id": "d7e5d78b-adab-4db6-8446-d14bed9cc6e5",
+        "amount": 139,
+        "createdAt": "2024-09-12T20:54:00"
+    },
+    {
+        "id": "5492b677-42fe-45cf-b28c-d0735a184cba",
+        "amount": 133,
+        "createdAt": "2024-09-13T05:32:00"
+    },
+    {
+        "id": "4e2c66c9-8809-4067-9c5b-a88ba7107039",
+        "amount": 353,
+        "createdAt": "2024-09-13T03:07:00"
+    },
+    {
+        "id": "bab6d466-c342-4faa-8839-ea1ed0829144",
+        "amount": 145,
+        "createdAt": "2024-09-13T13:55:00"
+    },
+    {
+        "id": "0f0e42a2-e34c-45ce-b942-7ba5f1d6cb85",
+        "amount": 107,
+        "createdAt": "2024-09-13T12:05:00"
+    },
+    {
+        "id": "ae837b65-40f5-4506-91e0-bb4b3f6d6398",
+        "amount": 260,
+        "createdAt": "2024-09-13T06:17:00"
+    },
+    {
+        "id": "c9233422-7c25-4436-a6f6-002b41e4c44b",
+        "amount": 418,
+        "createdAt": "2024-09-13T22:51:00"
+    },
+    {
+        "id": "c3c10a94-dc1d-4a7f-bcc7-5881f9503f35",
+        "amount": 441,
+        "createdAt": "2024-09-13T02:42:00"
+    },
+    {
+        "id": "45d5038a-3cdf-4b02-bab7-3bf783b72471",
+        "amount": 193,
+        "createdAt": "2024-09-14T18:17:00"
+    },
+    {
+        "id": "bfe0065e-12f2-4121-b19a-ff45da3022b4",
+        "amount": 296,
+        "createdAt": "2024-09-14T04:56:00"
+    },
+    {
+        "id": "290f85f6-7986-4f13-acef-0cee4447ef9e",
+        "amount": 132,
+        "createdAt": "2024-09-14T15:23:00"
+    },
+    {
+        "id": "c20388bf-f24d-4f87-bbdb-4fff71727906",
+        "amount": 347,
+        "createdAt": "2024-09-14T22:07:00"
+    },
+    {
+        "id": "b999a8c2-098c-49c3-8299-c629b7ebed7c",
+        "amount": 281,
+        "createdAt": "2024-09-14T22:03:00"
+    },
+    {
+        "id": "9095146c-40b0-48ef-9402-df1c2f6aabfb",
+        "amount": 471,
+        "createdAt": "2024-09-14T22:06:00"
+    },
+    {
+        "id": "55d71d27-eaf3-4fdb-b590-726dcc3246d9",
+        "amount": 109,
+        "createdAt": "2024-09-14T06:20:00"
+    },
+    {
+        "id": "7cba91d9-4cb3-4f7c-862a-1c0467bae49e",
+        "amount": 440,
+        "createdAt": "2024-09-15T00:30:00"
+    },
+    {
+        "id": "12a353d3-61ad-4a7e-b511-9ded5de386aa",
+        "amount": 463,
+        "createdAt": "2024-09-15T09:48:00"
+    },
+    {
+        "id": "61e4f64e-8c21-4733-9445-92cfcd6116fc",
+        "amount": 113,
+        "createdAt": "2024-09-15T17:03:00"
+    },
+    {
+        "id": "0c96c1f3-af7e-40e6-b282-338b899dc1b3",
+        "amount": 91,
+        "createdAt": "2024-09-15T08:36:00"
+    },
+    {
+        "id": "363e9c88-b973-4798-8252-37fb3bc311fc",
+        "amount": 291,
+        "createdAt": "2024-09-15T22:36:00"
+    },
+    {
+        "id": "6d1645bd-1864-43bf-af28-dc05f88adbc8",
+        "amount": 404,
+        "createdAt": "2024-09-15T19:17:00"
+    },
+    {
+        "id": "378fb846-b77b-4c7a-bb9f-61173502efc5",
+        "amount": 176,
+        "createdAt": "2024-09-16T12:37:00"
+    },
+    {
+        "id": "bd3de146-2b74-4f1e-b709-b4ef61e018e8",
+        "amount": 114,
+        "createdAt": "2024-09-16T05:00:00"
+    },
+    {
+        "id": "9d1dab8f-060c-4f3e-941f-eacfce45332c",
+        "amount": 225,
+        "createdAt": "2024-09-16T21:18:00"
+    },
+    {
+        "id": "8e6ce2f9-cc0d-4b3c-8bd2-f1b72139031f",
+        "amount": 187,
+        "createdAt": "2024-09-16T05:28:00"
+    },
+    {
+        "id": "d29dad33-9ce5-4f1f-9337-426c14f57813",
+        "amount": 207,
+        "createdAt": "2024-09-16T19:19:00"
+    },
+    {
+        "id": "246daa77-635c-4119-9844-b1402a6807a5",
+        "amount": 124,
+        "createdAt": "2024-09-16T12:06:00"
+    },
+    {
+        "id": "1a2918f4-1ecb-4d02-9c2f-8680a1ff0d59",
+        "amount": 356,
+        "createdAt": "2024-09-16T12:11:00"
+    },
+    {
+        "id": "d5f13cfa-daff-4831-80ba-4420db11f687",
+        "amount": 386,
+        "createdAt": "2024-09-16T16:02:00"
+    },
+    {
+        "id": "4ea85a91-5a8e-4074-a604-b347e045313b",
+        "amount": 420,
+        "createdAt": "2024-09-17T06:24:00"
+    },
+    {
+        "id": "72ea082a-79d2-4367-aa1f-1085a58318ac",
+        "amount": 127,
+        "createdAt": "2024-09-17T21:06:00"
+    },
+    {
+        "id": "5592b389-31d2-40cf-9030-8d016a586458",
+        "amount": 229,
+        "createdAt": "2024-09-17T13:41:00"
+    },
+    {
+        "id": "f7cca60d-6ec2-4c68-b905-dc164ee37758",
+        "amount": 429,
+        "createdAt": "2024-09-17T18:03:00"
+    },
+    {
+        "id": "61280bc1-1802-4d49-b304-441c611bdda2",
+        "amount": 222,
+        "createdAt": "2024-09-17T01:05:00"
+    },
+    {
+        "id": "99c7b06d-b47a-4c33-b286-887a0bb34e5d",
+        "amount": 416,
+        "createdAt": "2024-09-18T09:49:00"
+    },
+    {
+        "id": "107d98cd-aa23-42da-960c-46a0d9598da2",
+        "amount": 462,
+        "createdAt": "2024-09-18T00:20:00"
+    },
+    {
+        "id": "cf0f6dab-904e-4e8c-bc93-e61d6946cf5a",
+        "amount": 276,
+        "createdAt": "2024-09-18T14:54:00"
+    },
+    {
+        "id": "e72b9a10-0fd7-4434-8402-7f9004eadf1c",
+        "amount": 334,
+        "createdAt": "2024-09-18T00:40:00"
+    },
+    {
+        "id": "736c1080-a079-41e4-ad8d-7776ee0961ba",
+        "amount": 173,
+        "createdAt": "2024-09-19T13:15:00"
+    },
+    {
+        "id": "2b2c7660-19a0-4875-bdc6-a966f10b2c2d",
+        "amount": 359,
+        "createdAt": "2024-09-19T14:43:00"
+    },
+    {
+        "id": "aca9ab72-6eaa-42dc-82a4-a9ff2ed93c61",
+        "amount": 473,
+        "createdAt": "2024-09-19T01:06:00"
+    },
+    {
+        "id": "c616e54a-c69b-4b0f-8869-bbdb0c10538a",
+        "amount": 285,
+        "createdAt": "2024-09-19T11:13:00"
+    },
+    {
+        "id": "321e5424-a877-4283-b316-9d860473215d",
+        "amount": 252,
+        "createdAt": "2024-09-19T15:37:00"
+    },
+    {
+        "id": "059c9846-eed3-493a-8275-34d5d8de8294",
+        "amount": 422,
+        "createdAt": "2024-09-19T13:34:00"
+    },
+    {
+        "id": "8dbb7e4f-7c9c-4e50-9bf0-a9e41b851ea3",
+        "amount": 430,
+        "createdAt": "2024-09-19T12:16:00"
+    },
+    {
+        "id": "726796bc-6a23-41c6-99e8-48246adf61c3",
+        "amount": 94,
+        "createdAt": "2024-09-20T22:52:00"
+    },
+    {
+        "id": "fb3079bf-89c8-48c7-aaf9-dbc091231d5b",
+        "amount": 114,
+        "createdAt": "2024-09-20T02:51:00"
+    },
+    {
+        "id": "d300e4c0-1153-45d5-89fb-41945fc5fead",
+        "amount": 452,
+        "createdAt": "2024-09-20T23:21:00"
+    },
+    {
+        "id": "d6a054b5-c348-41eb-9ae3-e09e8d63aa55",
+        "amount": 271,
+        "createdAt": "2024-09-20T08:03:00"
+    },
+    {
+        "id": "bab0cb5a-4fed-46e8-988a-85973fd26ee6",
+        "amount": 458,
+        "createdAt": "2024-09-20T06:33:00"
+    },
+    {
+        "id": "2555b250-4778-4a48-965f-c1d92a91b16d",
+        "amount": 327,
+        "createdAt": "2024-09-20T13:05:00"
+    },
+    {
+        "id": "826cc516-9b84-459c-a145-46ef5faf2805",
+        "amount": 55,
+        "createdAt": "2024-09-21T16:43:00"
+    },
+    {
+        "id": "33c327c0-9b3a-406b-b745-4d030611c76c",
+        "amount": 472,
+        "createdAt": "2024-09-21T10:42:00"
+    },
+    {
+        "id": "9109ce41-78d5-4100-a897-8d20eed04a85",
+        "amount": 381,
+        "createdAt": "2024-09-21T22:54:00"
+    },
+    {
+        "id": "e7992daf-214e-413c-96e6-f00a0d749010",
+        "amount": 56,
+        "createdAt": "2024-09-21T17:09:00"
+    },
+    {
+        "id": "a2b21a74-1954-4e88-abbe-1be0df5196b0",
+        "amount": 256,
+        "createdAt": "2024-09-22T23:28:00"
+    },
+    {
+        "id": "c0824446-63bd-49c6-a399-65063d2951a2",
+        "amount": 109,
+        "createdAt": "2024-09-22T09:05:00"
+    },
+    {
+        "id": "901e5343-330e-4733-b6d3-ba00a2b94710",
+        "amount": 145,
+        "createdAt": "2024-09-22T20:55:00"
+    },
+    {
+        "id": "ccc974bf-7cd4-4390-9300-68e54f61b902",
+        "amount": 351,
+        "createdAt": "2024-09-22T21:31:00"
+    },
+    {
+        "id": "c927230e-b1bc-4302-8ec4-a2f550b8f452",
+        "amount": 188,
+        "createdAt": "2024-09-22T16:55:00"
+    },
+    {
+        "id": "21d65170-f2bb-45c1-919b-12da6ecf7dd7",
+        "amount": 81,
+        "createdAt": "2024-09-22T16:19:00"
+    },
+    {
+        "id": "f608881a-777f-478f-96b2-4c6f48d5af63",
+        "amount": 65,
+        "createdAt": "2024-09-22T15:20:00"
+    },
+    {
+        "id": "7190dec4-38f7-4a46-9b82-de8e05ccba7c",
+        "amount": 86,
+        "createdAt": "2024-09-22T19:41:00"
+    },
+    {
+        "id": "d50d559f-a599-4093-9574-90136beed647",
+        "amount": 145,
+        "createdAt": "2024-09-23T05:54:00"
+    },
+    {
+        "id": "004eca15-a6d9-4ce8-bdbf-1bbbcddf0bd5",
+        "amount": 150,
+        "createdAt": "2024-09-23T18:52:00"
+    },
+    {
+        "id": "1d148127-3b5b-4ba7-9e07-36674ff7545a",
+        "amount": 499,
+        "createdAt": "2024-09-23T11:35:00"
+    },
+    {
+        "id": "ab4de9ec-e4dd-44fd-8764-3f5f296432b2",
+        "amount": 440,
+        "createdAt": "2024-09-23T16:09:00"
+    },
+    {
+        "id": "795b0f5a-a697-4461-85ec-c1a1855194e8",
+        "amount": 59,
+        "createdAt": "2024-09-23T19:13:00"
+    },
+    {
+        "id": "2c261fa4-993a-4d32-9d3c-2b5e5b6a2159",
+        "amount": 130,
+        "createdAt": "2024-09-23T18:40:00"
+    },
+    {
+        "id": "12db23be-7bea-443a-85bd-d8e10b1ba812",
+        "amount": 72,
+        "createdAt": "2024-09-24T05:13:00"
+    },
+    {
+        "id": "2d630025-af4f-402a-a32c-d10cf61be15f",
+        "amount": 133,
+        "createdAt": "2024-09-24T03:08:00"
+    },
+    {
+        "id": "09b92845-4b40-4d2c-a437-9a4284472ffe",
+        "amount": 156,
+        "createdAt": "2024-09-24T23:45:00"
+    },
+    {
+        "id": "6928c57e-298c-4384-9c28-fb9d3f0e8ad9",
+        "amount": 77,
+        "createdAt": "2024-09-24T16:12:00"
+    },
+    {
+        "id": "c6e526e0-80a7-4932-bc11-044c10af4a72",
+        "amount": 458,
+        "createdAt": "2024-09-24T10:10:00"
+    },
+    {
+        "id": "7ac44626-61d9-403c-9089-51f4a42b33a1",
+        "amount": 280,
+        "createdAt": "2024-09-25T04:10:00"
+    },
+    {
+        "id": "897a55ff-69bc-4b5b-9897-009283f6e635",
+        "amount": 295,
+        "createdAt": "2024-09-25T21:45:00"
+    },
+    {
+        "id": "2ab81168-c9e6-4a0d-ada2-3299e3a701f8",
+        "amount": 360,
+        "createdAt": "2024-09-25T23:01:00"
+    },
+    {
+        "id": "82fbaa9f-8a7b-4a9e-8795-d4eec2c3f04b",
+        "amount": 438,
+        "createdAt": "2024-09-26T04:41:00"
+    },
+    {
+        "id": "b878ddcb-22fb-4ea6-8cd4-ad4498fb098f",
+        "amount": 337,
+        "createdAt": "2024-09-26T17:11:00"
+    },
+    {
+        "id": "7055a4b1-e8ed-4fc1-b70b-77408f330b09",
+        "amount": 343,
+        "createdAt": "2024-09-26T22:04:00"
+    },
+    {
+        "id": "119ef79d-7720-4d7f-990b-93e7531b8e64",
+        "amount": 332,
+        "createdAt": "2024-09-26T09:30:00"
+    },
+    {
+        "id": "c7b3d7ec-8e2b-4854-932f-e72efe4bbae9",
+        "amount": 213,
+        "createdAt": "2024-09-26T21:52:00"
+    },
+    {
+        "id": "5280a9e8-ef14-4b0f-a248-b34ad6483bc8",
+        "amount": 284,
+        "createdAt": "2024-09-26T12:35:00"
+    },
+    {
+        "id": "c36fa8ac-b16e-4f43-be3c-9e519745aa56",
+        "amount": 274,
+        "createdAt": "2024-09-27T23:24:00"
+    },
+    {
+        "id": "a97ea26b-5f85-492b-a9ae-6728790e9e6e",
+        "amount": 224,
+        "createdAt": "2024-09-27T20:43:00"
+    },
+    {
+        "id": "45201e06-c0b3-4b32-b8be-a402a87bb04d",
+        "amount": 425,
+        "createdAt": "2024-09-27T04:48:00"
+    },
+    {
+        "id": "04f3bc64-208f-42d6-b648-348ba2ea54ef",
+        "amount": 185,
+        "createdAt": "2024-09-27T05:55:00"
+    },
+    {
+        "id": "aed84e18-1afb-42cb-a703-58a83d57b403",
+        "amount": 466,
+        "createdAt": "2024-09-28T08:47:00"
+    },
+    {
+        "id": "52c282d4-79e2-4926-acad-ae952bfab1ae",
+        "amount": 322,
+        "createdAt": "2024-09-28T06:38:00"
+    },
+    {
+        "id": "922add47-ad0f-4d9d-9308-34d8b15bc1c5",
+        "amount": 134,
+        "createdAt": "2024-09-28T16:34:00"
+    },
+    {
+        "id": "9c255249-2579-4c32-9d89-efb625038523",
+        "amount": 174,
+        "createdAt": "2024-09-28T09:14:00"
+    },
+    {
+        "id": "7063798f-55a5-4f32-82e5-cbf21b4d4c2e",
+        "amount": 309,
+        "createdAt": "2024-09-28T03:30:00"
+    },
+    {
+        "id": "35744b96-bd21-43f8-b770-d605647f4561",
+        "amount": 472,
+        "createdAt": "2024-09-28T21:27:00"
+    },
+    {
+        "id": "d3e75d97-e810-47db-846c-33f68bce2221",
+        "amount": 351,
+        "createdAt": "2024-09-28T11:01:00"
+    },
+    {
+        "id": "2312213a-3763-494d-8f8e-1decb5fe1a03",
+        "amount": 244,
+        "createdAt": "2024-09-29T09:12:00"
+    },
+    {
+        "id": "d1d56ee3-47f9-48b1-aabc-ac8ab999efd7",
+        "amount": 268,
+        "createdAt": "2024-09-29T06:30:00"
+    },
+    {
+        "id": "aafbc913-8c81-4dae-a1dc-363b8f6754dd",
+        "amount": 178,
+        "createdAt": "2024-09-29T07:08:00"
+    },
+    {
+        "id": "b813f417-5a15-4a5c-836b-2b661f7f8cce",
+        "amount": 457,
+        "createdAt": "2024-09-29T23:17:00"
+    },
+    {
+        "id": "d25d555b-11e6-4124-9c34-93e589a0a42a",
+        "amount": 307,
+        "createdAt": "2024-09-30T06:16:00"
+    },
+    {
+        "id": "cc58202e-6024-4312-8f36-993675215704",
+        "amount": 375,
+        "createdAt": "2024-09-30T20:53:00"
+    },
+    {
+        "id": "d39c3f44-1ca5-4c5d-a81c-936a8a98fdf1",
+        "amount": 248,
+        "createdAt": "2024-09-30T05:38:00"
+    },
+    {
+        "id": "ac06d279-8979-4680-b586-2838728253dd",
+        "amount": 230,
+        "createdAt": "2024-09-30T12:39:00"
+    },
+    {
+        "id": "9a47762a-f124-4bd2-ad65-9cf80700c05d",
+        "amount": 312,
+        "createdAt": "2024-10-01T02:35:00"
+    },
+    {
+        "id": "9298eadb-f975-44e2-9542-637607e8378b",
+        "amount": 431,
+        "createdAt": "2024-10-01T07:53:00"
+    },
+    {
+        "id": "cedbecb2-ced8-4d86-ac0b-2a781efc01fd",
+        "amount": 421,
+        "createdAt": "2024-10-01T11:53:00"
+    },
+    {
+        "id": "c50e34b0-2f3a-4c1d-82b3-2a8c411697e8",
+        "amount": 374,
+        "createdAt": "2024-10-01T12:24:00"
+    },
+    {
+        "id": "3a00de3f-d545-42ad-9bec-1e34100a2fe0",
+        "amount": 152,
+        "createdAt": "2024-10-01T05:20:00"
+    },
+    {
+        "id": "77cee4e2-eb4b-4a45-a209-5873383ff639",
+        "amount": 140,
+        "createdAt": "2024-10-02T23:22:00"
+    },
+    {
+        "id": "a619744d-b934-401d-84ec-dccf7934a878",
+        "amount": 101,
+        "createdAt": "2024-10-02T11:50:00"
+    },
+    {
+        "id": "f314eb41-7055-4cfa-a2d1-1190d8635aff",
+        "amount": 489,
+        "createdAt": "2024-10-02T05:52:00"
+    },
+    {
+        "id": "2230de34-0110-4e7a-92e6-4b0df47c1b71",
+        "amount": 430,
+        "createdAt": "2024-10-02T18:08:00"
+    },
+    {
+        "id": "54720ddd-7a1b-4663-9224-aa149a3ea615",
+        "amount": 121,
+        "createdAt": "2024-10-02T10:06:00"
+    },
+    {
+        "id": "37e5ba8c-a9fb-4433-bb48-853636345777",
+        "amount": 426,
+        "createdAt": "2024-10-02T13:06:00"
+    },
+    {
+        "id": "a8bcbc51-2cc4-43c8-bab3-01c5f701f8f6",
+        "amount": 97,
+        "createdAt": "2024-10-02T19:22:00"
+    },
+    {
+        "id": "9566308a-fae7-49d8-8b0a-f9a00f464deb",
+        "amount": 429,
+        "createdAt": "2024-10-03T09:03:00"
+    },
+    {
+        "id": "ee320e9b-3063-4922-949f-fa7c1119dd69",
+        "amount": 290,
+        "createdAt": "2024-10-03T04:17:00"
+    },
+    {
+        "id": "e9aa621a-9593-409f-94e9-094c6be8a9fc",
+        "amount": 385,
+        "createdAt": "2024-10-03T07:39:00"
+    },
+    {
+        "id": "1009e524-fea9-47f3-8c49-03612ebdd039",
+        "amount": 392,
+        "createdAt": "2024-10-03T01:19:00"
+    },
+    {
+        "id": "fb2d49f8-2243-46ca-ac22-12b307ed095a",
+        "amount": 271,
+        "createdAt": "2024-10-04T16:48:00"
+    },
+    {
+        "id": "aded0184-8802-494d-9279-f8812af8f7c7",
+        "amount": 348,
+        "createdAt": "2024-10-04T14:34:00"
+    },
+    {
+        "id": "460bb36a-0474-401d-abb3-3afae4dd4fdc",
+        "amount": 306,
+        "createdAt": "2024-10-04T08:57:00"
+    },
+    {
+        "id": "bb101ee0-2380-43af-b956-866b41e592b9",
+        "amount": 266,
+        "createdAt": "2024-10-04T22:32:00"
+    },
+    {
+        "id": "98e3a9a2-5caa-45a8-a96e-579ade05ea3c",
+        "amount": 364,
+        "createdAt": "2024-10-05T04:53:00"
+    },
+    {
+        "id": "dd662ba5-1012-46d4-b10d-9cfad1c1d0c6",
+        "amount": 255,
+        "createdAt": "2024-10-05T09:00:00"
+    },
+    {
+        "id": "586710de-a848-4a44-8de2-c8e9194a886a",
+        "amount": 327,
+        "createdAt": "2024-10-05T08:13:00"
+    },
+    {
+        "id": "efe99f7a-21e3-4ad9-846e-b11368d31d12",
+        "amount": 53,
+        "createdAt": "2024-10-05T06:46:00"
+    },
+    {
+        "id": "58d2d484-9ab2-454a-9405-dde5b28dbd84",
+        "amount": 132,
+        "createdAt": "2024-10-05T05:12:00"
+    },
+    {
+        "id": "ca4d4ac7-df43-45e6-83eb-1560f2634746",
+        "amount": 127,
+        "createdAt": "2024-10-06T00:00:00"
+    },
+    {
+        "id": "c76553b1-f7b3-4ed9-88e1-e40f9b40078d",
+        "amount": 51,
+        "createdAt": "2024-10-06T13:26:00"
+    },
+    {
+        "id": "972d8db5-4813-40fe-b62d-6b6374cc5838",
+        "amount": 271,
+        "createdAt": "2024-10-06T20:28:00"
+    },
+    {
+        "id": "2e37fdd9-b579-42ea-a244-a01574f52ed3",
+        "amount": 168,
+        "createdAt": "2024-10-06T17:11:00"
+    },
+    {
+        "id": "350681bb-1905-4e36-a4e2-bc44c109dfeb",
+        "amount": 450,
+        "createdAt": "2024-10-06T21:59:00"
+    },
+    {
+        "id": "648a3339-8a42-43c0-8814-bfa792210bc4",
+        "amount": 475,
+        "createdAt": "2024-10-06T00:39:00"
+    },
+    {
+        "id": "9dcad405-3eae-4559-bc59-38dd9d598f79",
+        "amount": 411,
+        "createdAt": "2024-10-07T08:04:00"
+    },
+    {
+        "id": "13580f80-8b8f-4914-a614-e2a9053bae17",
+        "amount": 421,
+        "createdAt": "2024-10-07T15:52:00"
+    },
+    {
+        "id": "52fe361b-5aaa-44b1-83b4-121efa157c2e",
+        "amount": 80,
+        "createdAt": "2024-10-07T18:51:00"
+    },
+    {
+        "id": "7cd6decf-0112-4d1f-a36a-deb71a7c5fac",
+        "amount": 92,
+        "createdAt": "2024-10-07T02:10:00"
+    },
+    {
+        "id": "e4d015e5-4a18-4c9d-94e5-d151628730bb",
+        "amount": 306,
+        "createdAt": "2024-10-07T05:30:00"
+    },
+    {
+        "id": "04cc014a-cc07-4fdd-86f9-2ade3121da9e",
+        "amount": 117,
+        "createdAt": "2024-10-07T16:57:00"
+    },
+    {
+        "id": "3b2346c2-4598-4932-aff2-3cd991d82b53",
+        "amount": 77,
+        "createdAt": "2024-10-08T18:57:00"
+    },
+    {
+        "id": "b6474386-f310-491b-89af-1ea8e229510f",
+        "amount": 377,
+        "createdAt": "2024-10-08T02:41:00"
+    },
+    {
+        "id": "580ad3d3-d4fb-4264-b586-a21d431eee11",
+        "amount": 262,
+        "createdAt": "2024-10-08T17:02:00"
+    },
+    {
+        "id": "1123e2bd-68df-405a-8b59-cffd22a7cc2e",
+        "amount": 231,
+        "createdAt": "2024-10-09T00:30:00"
+    },
+    {
+        "id": "77f7cae2-f3db-4bc9-a5c4-36b0cae1dddf",
+        "amount": 370,
+        "createdAt": "2024-10-09T21:19:00"
+    },
+    {
+        "id": "56a59432-a224-4e0e-be6c-ce437733903b",
+        "amount": 366,
+        "createdAt": "2024-10-09T02:46:00"
+    },
+    {
+        "id": "b53eb69c-b922-4bfa-8ffc-9051e8cc78d1",
+        "amount": 317,
+        "createdAt": "2024-10-10T21:05:00"
+    },
+    {
+        "id": "f0f102a9-7cdd-4671-b79f-3d4ae8126580",
+        "amount": 424,
+        "createdAt": "2024-10-10T17:47:00"
+    },
+    {
+        "id": "6208c559-a08c-418d-b79e-f776500dad29",
+        "amount": 196,
+        "createdAt": "2024-10-10T05:43:00"
+    },
+    {
+        "id": "aa4243b5-29c4-4d29-92eb-0132cc685315",
+        "amount": 318,
+        "createdAt": "2024-10-10T07:04:00"
+    },
+    {
+        "id": "0b2fbc60-4702-4d8e-ad20-a2caf11216ac",
+        "amount": 155,
+        "createdAt": "2024-10-10T15:02:00"
+    },
+    {
+        "id": "e662ca97-9ab7-474f-8dd1-289a66894609",
+        "amount": 453,
+        "createdAt": "2024-10-10T01:16:00"
+    },
+    {
+        "id": "bb0cee90-e80c-49e2-805e-4d1bb696571a",
+        "amount": 148,
+        "createdAt": "2024-10-11T21:38:00"
+    },
+    {
+        "id": "4cf238e0-361b-4d30-8b60-beb88d09766a",
+        "amount": 59,
+        "createdAt": "2024-10-11T04:07:00"
+    },
+    {
+        "id": "69173d03-c675-4435-a15b-df29c93a417e",
+        "amount": 292,
+        "createdAt": "2024-10-11T12:34:00"
+    },
+    {
+        "id": "ed6f2a1f-93de-454d-a401-6aec3c3177ce",
+        "amount": 379,
+        "createdAt": "2024-10-11T05:44:00"
+    },
+    {
+        "id": "542c4b53-1f42-4644-b07f-6a37bd8cb570",
+        "amount": 199,
+        "createdAt": "2024-10-12T05:20:00"
+    },
+    {
+        "id": "f1eb70de-06c9-40d8-be2b-20bd2ddb7670",
+        "amount": 489,
+        "createdAt": "2024-10-12T22:37:00"
+    },
+    {
+        "id": "ec4ed80e-a242-49c5-b119-dff7973641d7",
+        "amount": 445,
+        "createdAt": "2024-10-12T09:28:00"
+    },
+    {
+        "id": "9a701821-875c-4ba2-85fa-a1a19fd5ea63",
+        "amount": 491,
+        "createdAt": "2024-10-12T10:15:00"
+    },
+    {
+        "id": "57dc12d5-1276-4612-898d-4570512d912e",
+        "amount": 354,
+        "createdAt": "2024-10-12T16:47:00"
+    },
+    {
+        "id": "8c209957-a4ac-4a3f-92ca-94e035353962",
+        "amount": 83,
+        "createdAt": "2024-10-13T19:55:00"
+    },
+    {
+        "id": "acc1e958-555f-4e97-8cce-346551ee0cbe",
+        "amount": 416,
+        "createdAt": "2024-10-13T13:12:00"
+    },
+    {
+        "id": "a2295142-79f4-4d8a-a2b6-82b1ec76271e",
+        "amount": 319,
+        "createdAt": "2024-10-13T10:11:00"
+    },
+    {
+        "id": "063b1d66-fef5-488a-96c4-0ed336cd5f0e",
+        "amount": 331,
+        "createdAt": "2024-10-13T17:32:00"
+    },
+    {
+        "id": "b8ce3cac-344a-4239-a4f5-0d1fd2a6a12f",
+        "amount": 474,
+        "createdAt": "2024-10-13T21:02:00"
+    },
+    {
+        "id": "7ae3f212-29b3-4a22-b21c-c299ffba214c",
+        "amount": 278,
+        "createdAt": "2024-10-13T20:42:00"
+    },
+    {
+        "id": "7b82932d-d3f4-4b75-a83d-56eb28c61752",
+        "amount": 472,
+        "createdAt": "2024-10-13T00:31:00"
+    },
+    {
+        "id": "b0e4e55b-b7f4-4521-a92a-657ebfe49f04",
+        "amount": 334,
+        "createdAt": "2024-10-14T18:26:00"
+    },
+    {
+        "id": "7b90e34f-a3d5-4d35-b5e7-c38be8e37b2d",
+        "amount": 343,
+        "createdAt": "2024-10-14T19:39:00"
+    },
+    {
+        "id": "7eb365b4-926a-42f9-b134-2df6b9030149",
+        "amount": 453,
+        "createdAt": "2024-10-14T12:03:00"
+    },
+    {
+        "id": "f34eae1c-fba5-4c00-bb7b-296f0c20353f",
+        "amount": 270,
+        "createdAt": "2024-10-14T17:22:00"
+    },
+    {
+        "id": "07dcd87a-9ec6-4d6c-95e0-d5be8a1e8cfc",
+        "amount": 164,
+        "createdAt": "2024-10-14T15:17:00"
+    },
+    {
+        "id": "80305b49-fbc9-4d9e-9acf-05083e9ff7f5",
+        "amount": 333,
+        "createdAt": "2024-10-15T00:35:00"
+    },
+    {
+        "id": "841b42f9-a716-416f-9de6-417d805605f2",
+        "amount": 81,
+        "createdAt": "2024-10-15T05:54:00"
+    },
+    {
+        "id": "af6cbe3f-ca2b-4ca9-90e3-e34182a8ae61",
+        "amount": 297,
+        "createdAt": "2024-10-15T15:31:00"
+    },
+    {
+        "id": "90ec056d-311e-4b89-b477-4d7b0fb4112d",
+        "amount": 63,
+        "createdAt": "2024-10-16T06:05:00"
+    },
+    {
+        "id": "5a3230a3-ae81-4680-a071-8ac284bc721e",
+        "amount": 355,
+        "createdAt": "2024-10-16T03:03:00"
+    },
+    {
+        "id": "85ca1530-2b26-4b13-9380-ba415771b555",
+        "amount": 445,
+        "createdAt": "2024-10-16T14:48:00"
+    },
+    {
+        "id": "44224340-31c0-4aad-b771-9812b9d02e16",
+        "amount": 226,
+        "createdAt": "2024-10-16T14:38:00"
+    },
+    {
+        "id": "23274b95-f45f-41d1-9313-736653d24924",
+        "amount": 430,
+        "createdAt": "2024-10-16T17:03:00"
+    },
+    {
+        "id": "4d6f9fb5-1291-4808-aef0-c2f0c6e754a0",
+        "amount": 117,
+        "createdAt": "2024-10-16T15:20:00"
+    },
+    {
+        "id": "40eab4eb-fb34-49ac-8631-051988083375",
+        "amount": 428,
+        "createdAt": "2024-10-16T23:21:00"
+    },
+    {
+        "id": "87ceacb2-2614-40c9-8fe6-d6e4bf4f21fc",
+        "amount": 296,
+        "createdAt": "2024-10-16T03:37:00"
+    },
+    {
+        "id": "541bd001-6f59-4c32-b328-eca593bd1b9c",
+        "amount": 90,
+        "createdAt": "2024-10-17T21:06:00"
+    },
+    {
+        "id": "04109fc9-2520-4ddb-a77b-c8c00541138b",
+        "amount": 235,
+        "createdAt": "2024-10-17T22:01:00"
+    },
+    {
+        "id": "0cd3c004-c0e5-4f51-80b6-5606d0d1d5f4",
+        "amount": 296,
+        "createdAt": "2024-10-17T16:24:00"
+    },
+    {
+        "id": "379bc39f-0fb3-4d44-a35e-d52fc0cd8675",
+        "amount": 140,
+        "createdAt": "2024-10-17T16:26:00"
+    },
+    {
+        "id": "04b98758-a372-46fe-a84c-67f548f2c69c",
+        "amount": 363,
+        "createdAt": "2024-10-17T04:37:00"
+    },
+    {
+        "id": "4c539280-0525-4f9c-8e8c-fc0f23912121",
+        "amount": 340,
+        "createdAt": "2024-10-17T07:37:00"
+    },
+    {
+        "id": "e88aaf43-b4d8-43e7-b0d0-afc67cdd088a",
+        "amount": 446,
+        "createdAt": "2024-10-18T10:19:00"
+    },
+    {
+        "id": "458738e2-bfb5-48b2-90fa-6e98aa35f501",
+        "amount": 203,
+        "createdAt": "2024-10-18T11:18:00"
+    },
+    {
+        "id": "3465c7cc-9086-4804-aafd-c95688f45a4c",
+        "amount": 161,
+        "createdAt": "2024-10-18T06:13:00"
+    },
+    {
+        "id": "9bc8dbba-b53f-4069-ac5d-b4247fe222f9",
+        "amount": 67,
+        "createdAt": "2024-10-18T18:07:00"
+    },
+    {
+        "id": "fe29f5c2-a044-4f68-b403-a453a24c4cbf",
+        "amount": 415,
+        "createdAt": "2024-10-18T04:12:00"
+    },
+    {
+        "id": "bcb0323a-6f31-4cf0-ac70-a243ffc38c15",
+        "amount": 475,
+        "createdAt": "2024-10-18T16:10:00"
+    },
+    {
+        "id": "e10bb8d9-b024-4254-aee6-957b59f66d93",
+        "amount": 379,
+        "createdAt": "2024-10-18T17:21:00"
+    },
+    {
+        "id": "7f60e050-763e-490c-be39-0641733b474a",
+        "amount": 431,
+        "createdAt": "2024-10-19T12:33:00"
+    },
+    {
+        "id": "8a2c4557-fb4b-4d45-acf7-f3eab09f869e",
+        "amount": 189,
+        "createdAt": "2024-10-19T23:52:00"
+    },
+    {
+        "id": "3239c6e8-6098-43f3-9599-abb6fb324b63",
+        "amount": 215,
+        "createdAt": "2024-10-19T15:20:00"
+    },
+    {
+        "id": "3b1293e5-74ef-4205-8092-bc86a0821690",
+        "amount": 187,
+        "createdAt": "2024-10-19T19:17:00"
+    },
+    {
+        "id": "d285da43-38ce-4b53-a97b-ea017f0bff1b",
+        "amount": 303,
+        "createdAt": "2024-10-20T19:09:00"
+    },
+    {
+        "id": "fd4c7bca-3424-441a-a0e2-6ceb21e57c1f",
+        "amount": 135,
+        "createdAt": "2024-10-20T02:35:00"
+    },
+    {
+        "id": "0a320fc4-2869-434a-90e0-4096bdc79de0",
+        "amount": 218,
+        "createdAt": "2024-10-20T14:20:00"
+    },
+    {
+        "id": "f0f073fc-776c-4339-9e8a-6b74cc4fa6d9",
+        "amount": 480,
+        "createdAt": "2024-10-20T14:28:00"
+    },
+    {
+        "id": "a2a0b1a3-5a4a-462c-9af1-6945fe980655",
+        "amount": 432,
+        "createdAt": "2024-10-20T02:41:00"
+    },
+    {
+        "id": "0d62f8e6-bd31-4750-90ca-75b3f30e27cf",
+        "amount": 61,
+        "createdAt": "2024-10-20T23:15:00"
+    },
+    {
+        "id": "b295b6c7-eb19-4fc7-88b9-be407f0454a8",
+        "amount": 451,
+        "createdAt": "2024-10-20T01:15:00"
+    },
+    {
+        "id": "c686eaae-9a4b-4626-bd7c-10246d4cc92f",
+        "amount": 79,
+        "createdAt": "2024-10-21T11:15:00"
+    },
+    {
+        "id": "61fe8039-859d-4b1c-b2e3-e1135b970cd4",
+        "amount": 211,
+        "createdAt": "2024-10-21T01:24:00"
+    },
+    {
+        "id": "fb434d0d-f61b-4cd6-9c67-6c656f35ff09",
+        "amount": 255,
+        "createdAt": "2024-10-21T13:45:00"
+    },
+    {
+        "id": "ec277568-97e4-4671-9308-1419f827e0cb",
+        "amount": 282,
+        "createdAt": "2024-10-21T21:33:00"
+    },
+    {
+        "id": "e777e817-e82d-45b4-99f0-4e2b7164a813",
+        "amount": 475,
+        "createdAt": "2024-10-21T17:28:00"
+    },
+    {
+        "id": "ea79a9a7-2bcf-43d1-94e7-2436b2dab622",
+        "amount": 484,
+        "createdAt": "2024-10-22T19:05:00"
+    },
+    {
+        "id": "5e68cfa3-76c5-4c98-ac52-3935c39e2d4c",
+        "amount": 176,
+        "createdAt": "2024-10-22T08:57:00"
+    },
+    {
+        "id": "5ac3fe86-1282-4199-aad3-ae1978bcd9db",
+        "amount": 257,
+        "createdAt": "2024-10-22T19:22:00"
+    },
+    {
+        "id": "c9ccd82a-2fd9-417a-bfff-614f25f59328",
+        "amount": 112,
+        "createdAt": "2024-10-22T12:07:00"
+    },
+    {
+        "id": "4a034fd9-6357-4231-b9ba-b38f75984f80",
+        "amount": 187,
+        "createdAt": "2024-10-22T13:40:00"
+    },
+    {
+        "id": "9b77cf0c-9a66-478a-8cfc-cab4e2268b2c",
+        "amount": 296,
+        "createdAt": "2024-10-22T13:02:00"
+    },
+    {
+        "id": "b98c7332-26a3-4c8c-8d23-33acc46a46ff",
+        "amount": 305,
+        "createdAt": "2024-10-22T19:45:00"
+    },
+    {
+        "id": "4920dc61-6160-477d-be29-fc4e6b094d66",
+        "amount": 316,
+        "createdAt": "2024-10-22T09:12:00"
+    },
+    {
+        "id": "aa3fed07-ae4c-424b-98e2-cb0df32edec9",
+        "amount": 96,
+        "createdAt": "2024-10-23T07:40:00"
+    },
+    {
+        "id": "87f0d861-10dd-40e7-9351-ee1bffddc731",
+        "amount": 162,
+        "createdAt": "2024-10-23T19:59:00"
+    },
+    {
+        "id": "a0454951-d95d-453c-a7d9-29d960d04869",
+        "amount": 338,
+        "createdAt": "2024-10-23T19:08:00"
+    },
+    {
+        "id": "8b986d7f-4635-4fb8-9dcb-0e1380706c60",
+        "amount": 418,
+        "createdAt": "2024-10-23T16:45:00"
+    },
+    {
+        "id": "5687bd10-8ea8-4ba4-832a-a27bb597403f",
+        "amount": 124,
+        "createdAt": "2024-10-23T15:34:00"
+    },
+    {
+        "id": "7b19106d-82f7-4ba0-aa8a-edda9a719e5a",
+        "amount": 63,
+        "createdAt": "2024-10-23T14:47:00"
+    },
+    {
+        "id": "2d046c98-3b0c-4e69-a432-7b943099aaeb",
+        "amount": 169,
+        "createdAt": "2024-10-23T15:40:00"
+    },
+    {
+        "id": "0bde6e30-9f09-4aec-b895-3aa5ef1e5b3d",
+        "amount": 243,
+        "createdAt": "2024-10-24T18:50:00"
+    },
+    {
+        "id": "b9265196-2879-4607-8157-d9adf74b7a7d",
+        "amount": 74,
+        "createdAt": "2024-10-24T11:11:00"
+    },
+    {
+        "id": "932ae5b3-da25-46fa-9eee-0c75385e949b",
+        "amount": 58,
+        "createdAt": "2024-10-24T20:30:00"
+    },
+    {
+        "id": "e634124f-1eff-48b3-8f79-af37422e3c91",
+        "amount": 381,
+        "createdAt": "2024-10-24T13:13:00"
+    },
+    {
+        "id": "a5c9de28-ba68-444e-ba27-4ef6e891b9dd",
+        "amount": 481,
+        "createdAt": "2024-10-24T00:53:00"
+    },
+    {
+        "id": "ab576a24-cfda-42fa-b89d-020f0bf9d628",
+        "amount": 456,
+        "createdAt": "2024-10-25T23:35:00"
+    },
+    {
+        "id": "6d3d095e-6469-4b54-bcb5-d4b1662a0530",
+        "amount": 479,
+        "createdAt": "2024-10-25T10:02:00"
+    },
+    {
+        "id": "16de0e3e-a872-47b2-a4dd-27f86116247d",
+        "amount": 314,
+        "createdAt": "2024-10-25T06:16:00"
+    },
+    {
+        "id": "f89370d3-bd7b-4a88-b9e2-2fe8cf4efa4b",
+        "amount": 464,
+        "createdAt": "2024-10-25T12:22:00"
+    },
+    {
+        "id": "ab70ded5-f03b-4c63-a903-f1b15f63e866",
+        "amount": 320,
+        "createdAt": "2024-10-25T10:57:00"
+    },
+    {
+        "id": "b42e1174-fd0d-45da-a971-40816314a37f",
+        "amount": 138,
+        "createdAt": "2024-10-25T01:07:00"
+    },
+    {
+        "id": "33fe03ea-6603-4025-80de-a44f60d63d46",
+        "amount": 95,
+        "createdAt": "2024-10-25T06:05:00"
+    },
+    {
+        "id": "dc071e0c-86a8-4665-a8be-0be79bcedb24",
+        "amount": 201,
+        "createdAt": "2024-10-25T19:12:00"
+    },
+    {
+        "id": "8f4d812a-d1ff-4510-90b4-6ec2ab2256c6",
+        "amount": 418,
+        "createdAt": "2024-10-26T09:49:00"
+    },
+    {
+        "id": "087527fe-02ba-4308-a1d3-2f2c861b4642",
+        "amount": 107,
+        "createdAt": "2024-10-26T02:05:00"
+    },
+    {
+        "id": "8dd6658e-3dd1-444e-b8d6-d5604bf70c97",
+        "amount": 475,
+        "createdAt": "2024-10-26T10:42:00"
+    },
+    {
+        "id": "8062a9f1-5320-41e6-a7e9-d1b7f389dd7d",
+        "amount": 381,
+        "createdAt": "2024-10-26T01:33:00"
+    },
+    {
+        "id": "cda58cc3-b37c-454d-a2da-03dadde9b7e8",
+        "amount": 424,
+        "createdAt": "2024-10-26T22:41:00"
+    },
+    {
+        "id": "5c5c23ef-7cbf-4820-878a-e3d753f82deb",
+        "amount": 451,
+        "createdAt": "2024-10-26T12:44:00"
+    },
+    {
+        "id": "2c498244-dfd5-42bb-9f47-f18cec61ba81",
+        "amount": 250,
+        "createdAt": "2024-10-27T21:15:00"
+    },
+    {
+        "id": "04d0fa55-0326-404c-8be4-03aebeca107e",
+        "amount": 192,
+        "createdAt": "2024-10-27T23:06:00"
+    },
+    {
+        "id": "f34d4247-3344-4715-a0a2-d48e5d0bf0ae",
+        "amount": 117,
+        "createdAt": "2024-10-27T15:21:00"
+    },
+    {
+        "id": "f989e8de-d25c-4a59-8d0f-2d674bbdfce3",
+        "amount": 422,
+        "createdAt": "2024-10-27T02:24:00"
+    },
+    {
+        "id": "895a3baf-8577-475d-9975-2c3bb350fbc1",
+        "amount": 409,
+        "createdAt": "2024-10-27T23:44:00"
+    },
+    {
+        "id": "1e76e89e-6d50-4bdf-a0ec-4faaf95f30fc",
+        "amount": 237,
+        "createdAt": "2024-10-27T06:53:00"
+    },
+    {
+        "id": "6472592f-b5e9-4faa-b1f5-d056b3e71d0a",
+        "amount": 460,
+        "createdAt": "2024-10-27T03:16:00"
+    },
+    {
+        "id": "28c8b712-730e-47d2-83d8-5370a2da59b5",
+        "amount": 181,
+        "createdAt": "2024-10-27T22:13:00"
+    },
+    {
+        "id": "9a3241e1-051d-411a-9837-7e9677cd22a3",
+        "amount": 445,
+        "createdAt": "2024-10-28T03:16:00"
+    },
+    {
+        "id": "f63c8cff-bde5-4d1a-b871-32607004c704",
+        "amount": 197,
+        "createdAt": "2024-10-28T04:47:00"
+    },
+    {
+        "id": "64d5e66a-6bf4-40e6-b862-a000fa9da284",
+        "amount": 381,
+        "createdAt": "2024-10-28T19:57:00"
+    },
+    {
+        "id": "74fbddb0-e155-485b-badd-f9a89e73c843",
+        "amount": 341,
+        "createdAt": "2024-10-28T14:04:00"
+    },
+    {
+        "id": "938fa15d-377a-482f-8556-e61ec344e5c8",
+        "amount": 144,
+        "createdAt": "2024-10-28T21:10:00"
+    },
+    {
+        "id": "990a1066-fe06-4f6f-aae3-7e4fab0627d8",
+        "amount": 221,
+        "createdAt": "2024-10-29T03:50:00"
+    },
+    {
+        "id": "2f40fd21-5335-4fba-a22b-d68dc951935d",
+        "amount": 467,
+        "createdAt": "2024-10-29T17:25:00"
+    },
+    {
+        "id": "91a1e610-9bb7-440e-8062-4b8c6bcad0e7",
+        "amount": 361,
+        "createdAt": "2024-10-29T07:27:00"
+    },
+    {
+        "id": "3c06c572-bc5e-43f3-ab8e-3bc34f968216",
+        "amount": 329,
+        "createdAt": "2024-10-29T10:49:00"
+    },
+    {
+        "id": "fcc4673d-5aff-4d70-9400-b2fdb7e560d8",
+        "amount": 481,
+        "createdAt": "2024-10-29T12:53:00"
+    },
+    {
+        "id": "a48b1e81-ae8e-4769-85c8-15ff51bd72aa",
+        "amount": 262,
+        "createdAt": "2024-10-30T22:12:00"
+    },
+    {
+        "id": "2629e77e-ffc9-4b92-aea2-c22eba679e10",
+        "amount": 344,
+        "createdAt": "2024-10-30T22:59:00"
+    },
+    {
+        "id": "8d4b44aa-641a-438f-b2fb-dc80c76ef9f0",
+        "amount": 466,
+        "createdAt": "2024-10-30T11:59:00"
+    },
+    {
+        "id": "5eb3ffd0-a34f-44b6-bf0f-ee3f5ce1096f",
+        "amount": 482,
+        "createdAt": "2024-10-31T17:20:00"
+    },
+    {
+        "id": "3cb5672a-bb4c-40df-a96f-4bdf2bf7d364",
+        "amount": 491,
+        "createdAt": "2024-10-31T09:45:00"
+    },
+    {
+        "id": "92673e25-ad68-41b6-832f-3c2746e3e6db",
+        "amount": 79,
+        "createdAt": "2024-10-31T09:16:00"
+    },
+    {
+        "id": "011d2735-0ccd-491c-bc72-2dad5b668692",
+        "amount": 457,
+        "createdAt": "2024-10-31T09:27:00"
+    },
+    {
+        "id": "f2e0dd17-2348-475b-826b-eb6352e6408b",
+        "amount": 55,
+        "createdAt": "2024-10-31T16:18:00"
+    },
+    {
+        "id": "dea47f7e-3e6c-47f6-9e34-144dc86c3ff3",
+        "amount": 333,
+        "createdAt": "2024-11-01T16:17:00"
+    },
+    {
+        "id": "d7f32a09-bb7b-4ce8-a393-ec2ca52e1699",
+        "amount": 448,
+        "createdAt": "2024-11-01T03:27:00"
+    },
+    {
+        "id": "82a6bc8f-8176-4276-87ab-13af78bb5a9c",
+        "amount": 86,
+        "createdAt": "2024-11-01T11:46:00"
+    },
+    {
+        "id": "264b3f81-03c1-49f8-a602-bab2ca27eaaa",
+        "amount": 151,
+        "createdAt": "2024-11-01T12:24:00"
+    },
+    {
+        "id": "56559d5b-24d5-452e-8a95-7f91f0542926",
+        "amount": 53,
+        "createdAt": "2024-11-01T23:50:00"
+    },
+    {
+        "id": "e41384b9-6187-4db6-b74d-c1fe5c67bfbd",
+        "amount": 302,
+        "createdAt": "2024-11-02T15:19:00"
+    },
+    {
+        "id": "c03673ba-dd6e-483a-b2a9-d2fdb9789bc2",
+        "amount": 333,
+        "createdAt": "2024-11-02T02:03:00"
+    },
+    {
+        "id": "e6c97b5e-dc61-430e-92f5-8ed0412f2477",
+        "amount": 449,
+        "createdAt": "2024-11-02T20:25:00"
+    },
+    {
+        "id": "1922d1ba-063c-4bca-ab6b-b3ca1e2aaa3e",
+        "amount": 196,
+        "createdAt": "2024-11-02T07:18:00"
+    },
+    {
+        "id": "fe01767c-247a-45dc-bb50-ea9d0789857e",
+        "amount": 190,
+        "createdAt": "2024-11-02T14:58:00"
+    },
+    {
+        "id": "97518ede-b87d-4816-ab9c-c844897c82da",
+        "amount": 246,
+        "createdAt": "2024-11-02T12:56:00"
+    },
+    {
+        "id": "23f826e8-55f1-41de-8ff1-09c9461f8b5f",
+        "amount": 237,
+        "createdAt": "2024-11-02T22:04:00"
+    },
+    {
+        "id": "60ea8069-0cb4-464d-b833-b2d69fcfa8e7",
+        "amount": 288,
+        "createdAt": "2024-11-03T14:23:00"
+    },
+    {
+        "id": "97beecbc-8f83-49f5-b2ec-e2969fee3c01",
+        "amount": 381,
+        "createdAt": "2024-11-03T08:58:00"
+    },
+    {
+        "id": "95a9a8cc-34fd-4e4f-bd0c-cf590a939b97",
+        "amount": 217,
+        "createdAt": "2024-11-03T07:14:00"
+    },
+    {
+        "id": "59fff04c-ca52-4099-9272-d83bed9e4159",
+        "amount": 281,
+        "createdAt": "2024-11-03T01:45:00"
+    },
+    {
+        "id": "d5d2f802-a0fe-450d-8cc6-2623ead7d878",
+        "amount": 148,
+        "createdAt": "2024-11-03T13:23:00"
+    },
+    {
+        "id": "de9517e3-dd83-493e-a507-55b0ac51587d",
+        "amount": 82,
+        "createdAt": "2024-11-03T19:28:00"
+    },
+    {
+        "id": "f7cbd7ee-bd7a-4e97-b40c-9755b8a38dcf",
+        "amount": 403,
+        "createdAt": "2024-11-04T12:30:00"
+    },
+    {
+        "id": "b3b6edb9-4187-4d41-b154-bce5137bbbe5",
+        "amount": 252,
+        "createdAt": "2024-11-04T00:28:00"
+    },
+    {
+        "id": "f5211834-0ecf-4d10-ab29-458bf57a4104",
+        "amount": 450,
+        "createdAt": "2024-11-04T22:23:00"
+    },
+    {
+        "id": "44ff01d6-e96b-427c-a73f-0425d9b40db7",
+        "amount": 473,
+        "createdAt": "2024-11-04T00:41:00"
+    },
+    {
+        "id": "15c42d14-13ea-45c3-9d73-5b7e7aeeb7f4",
+        "amount": 231,
+        "createdAt": "2024-11-04T03:31:00"
+    },
+    {
+        "id": "cda9fd36-73b1-4151-bc36-ea2e16fba8f1",
+        "amount": 407,
+        "createdAt": "2024-11-04T03:12:00"
+    },
+    {
+        "id": "189c1610-8b2e-4b4e-af0a-be117256a299",
+        "amount": 429,
+        "createdAt": "2024-11-05T19:43:00"
+    },
+    {
+        "id": "f4eff472-d77a-4b82-bb6a-e5e1b7199d07",
+        "amount": 282,
+        "createdAt": "2024-11-05T04:49:00"
+    },
+    {
+        "id": "d5889e02-b161-4bbb-bead-5f14f79aa874",
+        "amount": 339,
+        "createdAt": "2024-11-05T18:51:00"
+    },
+    {
+        "id": "f57ca97e-a087-4784-b5a9-12c5b898a262",
+        "amount": 286,
+        "createdAt": "2024-11-05T04:53:00"
+    },
+    {
+        "id": "13dce6f8-facb-46c6-9179-dc831551e4f5",
+        "amount": 226,
+        "createdAt": "2024-11-06T13:11:00"
+    },
+    {
+        "id": "a5be4eb6-122a-49ce-8e68-c5ed06207c71",
+        "amount": 415,
+        "createdAt": "2024-11-06T23:19:00"
+    },
+    {
+        "id": "b906cf25-0062-4abc-8db1-5ad78d55767e",
+        "amount": 77,
+        "createdAt": "2024-11-06T19:55:00"
+    },
+    {
+        "id": "cf53bb4e-a629-4dd3-9b4f-41add48c650b",
+        "amount": 343,
+        "createdAt": "2024-11-06T23:33:00"
+    },
+    {
+        "id": "0735ddb8-3399-48e4-b48c-bc39dffc764b",
+        "amount": 379,
+        "createdAt": "2024-11-06T08:42:00"
+    },
+    {
+        "id": "489cd9e5-530d-40f1-a598-d8e90aee8f8e",
+        "amount": 122,
+        "createdAt": "2024-11-06T07:56:00"
+    },
+    {
+        "id": "705ca81d-b224-460a-8045-2c92652502cd",
+        "amount": 319,
+        "createdAt": "2024-11-06T09:19:00"
+    },
+    {
+        "id": "f1b410ae-65e0-4601-87e4-d446abf0d691",
+        "amount": 140,
+        "createdAt": "2024-11-06T22:02:00"
+    },
+    {
+        "id": "718e1392-80aa-49da-8973-34add212f5b2",
+        "amount": 263,
+        "createdAt": "2024-11-07T06:09:00"
+    },
+    {
+        "id": "93a128c2-a7a6-4a8d-b143-91379275f55d",
+        "amount": 219,
+        "createdAt": "2024-11-07T23:45:00"
+    },
+    {
+        "id": "c0e4595a-0f29-454f-9726-80c64703a9de",
+        "amount": 307,
+        "createdAt": "2024-11-07T16:05:00"
+    },
+    {
+        "id": "5a405d33-743c-4b10-aafb-3f3338eec699",
+        "amount": 418,
+        "createdAt": "2024-11-07T09:26:00"
+    },
+    {
+        "id": "3b71d080-bdf2-42f0-9e56-e69ee8bedc81",
+        "amount": 182,
+        "createdAt": "2024-11-07T02:47:00"
+    },
+    {
+        "id": "2c658742-7140-4eb4-a659-0f4774a09913",
+        "amount": 209,
+        "createdAt": "2024-11-07T19:17:00"
+    },
+    {
+        "id": "9e23e599-b842-40d4-bdd0-9cb5cbaec584",
+        "amount": 270,
+        "createdAt": "2024-11-08T16:13:00"
+    },
+    {
+        "id": "93214bac-1f2f-423c-b682-cbc0cf25cd95",
+        "amount": 238,
+        "createdAt": "2024-11-08T11:03:00"
+    },
+    {
+        "id": "29290a45-2cec-4b35-9c96-792d46022848",
+        "amount": 214,
+        "createdAt": "2024-11-08T05:25:00"
+    },
+    {
+        "id": "ead70d56-d8d9-4424-b744-a5f5340c0dda",
+        "amount": 491,
+        "createdAt": "2024-11-08T04:41:00"
+    },
+    {
+        "id": "53509f47-32c5-4ce2-983f-de012f6ff88d",
+        "amount": 254,
+        "createdAt": "2024-11-08T23:05:00"
+    },
+    {
+        "id": "536dfc72-6401-4620-b105-21c98f43aa2a",
+        "amount": 265,
+        "createdAt": "2024-11-08T15:10:00"
+    },
+    {
+        "id": "a7ad8676-87f6-431b-a0e3-5a26235e2ff7",
+        "amount": 434,
+        "createdAt": "2024-11-09T12:37:00"
+    },
+    {
+        "id": "2121e452-2b24-437a-9f91-6b12064705d6",
+        "amount": 376,
+        "createdAt": "2024-11-09T12:57:00"
+    },
+    {
+        "id": "e231fecd-2fc5-466b-a657-bb020c566251",
+        "amount": 383,
+        "createdAt": "2024-11-09T14:10:00"
+    },
+    {
+        "id": "61317d47-181a-4686-a52f-f8816bbbd774",
+        "amount": 54,
+        "createdAt": "2024-11-09T09:11:00"
+    },
+    {
+        "id": "db0d35cc-8473-40f4-b291-fad12120c478",
+        "amount": 299,
+        "createdAt": "2024-11-09T06:24:00"
+    },
+    {
+        "id": "29a93149-3a0a-4023-abad-6a398b5056cb",
+        "amount": 428,
+        "createdAt": "2024-11-09T09:08:00"
+    },
+    {
+        "id": "e9bcbf99-e49d-4e03-8398-29bd8ad51195",
+        "amount": 83,
+        "createdAt": "2024-11-09T10:54:00"
+    },
+    {
+        "id": "6a47a7c8-67c4-4323-9d99-9ab63d495cd9",
+        "amount": 121,
+        "createdAt": "2024-11-09T19:33:00"
+    },
+    {
+        "id": "bfa1addd-7c58-4dca-86ef-e23486de38f7",
+        "amount": 360,
+        "createdAt": "2024-11-10T13:20:00"
+    },
+    {
+        "id": "ec36fac8-06ba-4a36-b04d-62a2b10b9e1d",
+        "amount": 383,
+        "createdAt": "2024-11-10T15:19:00"
+    },
+    {
+        "id": "30c60e12-f1a6-4671-b1f9-5fc7c5294a15",
+        "amount": 464,
+        "createdAt": "2024-11-10T18:02:00"
+    },
+    {
+        "id": "fa9a2c83-396e-4b98-aaa9-d29ec819a891",
+        "amount": 374,
+        "createdAt": "2024-11-10T00:12:00"
+    },
+    {
+        "id": "9538bd09-2322-4e88-b467-391724605609",
+        "amount": 363,
+        "createdAt": "2024-11-11T23:21:00"
+    },
+    {
+        "id": "b1440a3d-4d23-4baa-a96b-93443da898f1",
+        "amount": 199,
+        "createdAt": "2024-11-11T16:44:00"
+    },
+    {
+        "id": "e6f55229-ad3c-4df8-a848-13d30875624c",
+        "amount": 389,
+        "createdAt": "2024-11-11T17:24:00"
+    },
+    {
+        "id": "1a2c6c50-0a73-4d39-8e0b-a6cffb531123",
+        "amount": 233,
+        "createdAt": "2024-11-11T00:05:00"
+    },
+    {
+        "id": "d6ef6bc1-b6c0-4eea-9126-aa7ff4e5379a",
+        "amount": 368,
+        "createdAt": "2024-11-12T22:04:00"
+    },
+    {
+        "id": "91cffafe-25b8-419c-99be-b66bcebe69e2",
+        "amount": 115,
+        "createdAt": "2024-11-12T23:05:00"
+    },
+    {
+        "id": "10431858-0859-4bf7-9db2-f83aef22fade",
+        "amount": 379,
+        "createdAt": "2024-11-12T02:54:00"
+    },
+    {
+        "id": "75410fe5-ed61-48e8-983a-79b48ea243c7",
+        "amount": 422,
+        "createdAt": "2024-11-12T04:07:00"
+    },
+    {
+        "id": "8136e4af-7f7e-437a-99e3-7c38b2d75f82",
+        "amount": 383,
+        "createdAt": "2024-11-13T06:52:00"
+    },
+    {
+        "id": "79f70e56-f554-4766-aea4-b6f360c5fddb",
+        "amount": 395,
+        "createdAt": "2024-11-13T08:24:00"
+    },
+    {
+        "id": "ac545137-9153-4df8-b41a-4ecd4154adaa",
+        "amount": 496,
+        "createdAt": "2024-11-13T10:43:00"
+    },
+    {
+        "id": "944b723d-87f5-4dd3-a66f-d6642eea4b7b",
+        "amount": 361,
+        "createdAt": "2024-11-13T05:49:00"
+    },
+    {
+        "id": "6e10be19-aae0-402b-9dd1-6338a1362898",
+        "amount": 302,
+        "createdAt": "2024-11-13T14:41:00"
+    },
+    {
+        "id": "1c3d8356-2b2e-4576-b582-d5262b8886cc",
+        "amount": 171,
+        "createdAt": "2024-11-13T01:19:00"
+    },
+    {
+        "id": "11c522f6-d94f-4140-9027-c5a9f79ae0e5",
+        "amount": 377,
+        "createdAt": "2024-11-13T12:44:00"
+    },
+    {
+        "id": "b5b07456-5666-4dbe-8a08-d808e412e77b",
+        "amount": 433,
+        "createdAt": "2024-11-13T22:44:00"
+    },
+    {
+        "id": "116ccd43-1eeb-4c36-98fa-b82aa12781ca",
+        "amount": 290,
+        "createdAt": "2024-11-14T00:36:00"
+    },
+    {
+        "id": "9ec71431-4708-4e81-a49c-280eae3c08a4",
+        "amount": 166,
+        "createdAt": "2024-11-14T07:23:00"
+    },
+    {
+        "id": "455bb975-c603-4ab7-bf98-97ed407b926e",
+        "amount": 370,
+        "createdAt": "2024-11-14T23:06:00"
+    },
+    {
+        "id": "6d6c9034-feb5-4406-b243-52bc5f4601de",
+        "amount": 256,
+        "createdAt": "2024-11-14T16:37:00"
+    },
+    {
+        "id": "aa60fd22-c383-4781-86f1-70dec80ecaa1",
+        "amount": 85,
+        "createdAt": "2024-11-15T22:33:00"
+    },
+    {
+        "id": "4a76f763-9ea2-48e6-be9f-671796a092b7",
+        "amount": 71,
+        "createdAt": "2024-11-15T00:14:00"
+    },
+    {
+        "id": "e3a064ac-45c0-421e-b940-fdbf1cea4db3",
+        "amount": 444,
+        "createdAt": "2024-11-15T02:22:00"
+    },
+    {
+        "id": "a42dc978-26a4-43a7-93b8-f83930f9d39a",
+        "amount": 125,
+        "createdAt": "2024-11-15T13:09:00"
+    },
+    {
+        "id": "39a2bd77-dc47-4cca-9262-40d91c09bcdb",
+        "amount": 316,
+        "createdAt": "2024-11-15T10:57:00"
+    },
+    {
+        "id": "bacc7713-8963-489b-bd72-5509826f85c3",
+        "amount": 235,
+        "createdAt": "2024-11-16T18:58:00"
+    },
+    {
+        "id": "40e07a02-3c95-4e32-8e34-3ce6cbe3af9d",
+        "amount": 458,
+        "createdAt": "2024-11-16T20:57:00"
+    },
+    {
+        "id": "3913301c-c02f-4488-bc8f-1aa1e00c6214",
+        "amount": 173,
+        "createdAt": "2024-11-16T13:21:00"
+    },
+    {
+        "id": "8a736c93-d64e-456f-92ad-e6ea810eacce",
+        "amount": 201,
+        "createdAt": "2024-11-16T21:44:00"
+    },
+    {
+        "id": "af68021b-7271-4c38-87cb-7bccd663445b",
+        "amount": 82,
+        "createdAt": "2024-11-17T09:15:00"
+    },
+    {
+        "id": "17406c61-0c1a-4b40-b175-e5206aedbecc",
+        "amount": 370,
+        "createdAt": "2024-11-17T18:41:00"
+    },
+    {
+        "id": "0772b595-6fb0-42b8-8ee1-f00a442bf3e8",
+        "amount": 163,
+        "createdAt": "2024-11-17T08:50:00"
+    },
+    {
+        "id": "741ca82e-fa58-494e-b082-1431a2e5944c",
+        "amount": 301,
+        "createdAt": "2024-11-17T01:03:00"
+    },
+    {
+        "id": "f18fbfec-f5ca-48d8-8b89-0db00965ddcc",
+        "amount": 429,
+        "createdAt": "2024-11-18T14:44:00"
+    },
+    {
+        "id": "3bb317ac-f7da-480f-915f-a4365371f4f9",
+        "amount": 165,
+        "createdAt": "2024-11-18T05:18:00"
+    },
+    {
+        "id": "d56cc6cc-d879-4ef1-9ace-9177bf51894d",
+        "amount": 62,
+        "createdAt": "2024-11-18T11:16:00"
+    },
+    {
+        "id": "f7cc6b96-3d85-47c2-8181-6a4b8627ce55",
+        "amount": 423,
+        "createdAt": "2024-11-18T15:07:00"
+    },
+    {
+        "id": "89799a15-32cc-4173-902f-36ec5fcc3b7b",
+        "amount": 118,
+        "createdAt": "2024-11-18T19:20:00"
+    },
+    {
+        "id": "d6779640-e520-4bfe-a275-55c9094ec95e",
+        "amount": 500,
+        "createdAt": "2024-11-18T16:42:00"
+    },
+    {
+        "id": "6170ed5d-e379-47ea-a538-a69729baa35d",
+        "amount": 266,
+        "createdAt": "2024-11-18T14:14:00"
+    },
+    {
+        "id": "d77a7c91-28df-425c-9c95-55194df74dfd",
+        "amount": 407,
+        "createdAt": "2024-11-19T00:21:00"
+    },
+    {
+        "id": "438c6084-49e5-4e56-a256-fbf84a5d3142",
+        "amount": 465,
+        "createdAt": "2024-11-19T15:33:00"
+    },
+    {
+        "id": "7485d1e3-3740-4074-a5f0-0ac03815b5f2",
+        "amount": 185,
+        "createdAt": "2024-11-19T19:37:00"
+    },
+    {
+        "id": "f3fb6aec-8d55-4787-a8d7-7bec57598bcd",
+        "amount": 79,
+        "createdAt": "2024-11-19T06:05:00"
+    },
+    {
+        "id": "3114fc4c-a2fc-425a-9b7d-8f710df5eb07",
+        "amount": 373,
+        "createdAt": "2024-11-19T11:42:00"
+    },
+    {
+        "id": "38c6e9b1-fef4-4812-9cb5-fcb62e14a5e1",
+        "amount": 328,
+        "createdAt": "2024-11-19T17:17:00"
+    },
+    {
+        "id": "4acd81c2-93e4-47dd-9335-e7eed09dcddb",
+        "amount": 469,
+        "createdAt": "2024-11-20T03:55:00"
+    },
+    {
+        "id": "3783734f-5285-48f7-b584-9f3c4250954e",
+        "amount": 349,
+        "createdAt": "2024-11-20T10:35:00"
+    },
+    {
+        "id": "57cf3912-d9b0-4328-8fa2-e3dc3927eb4a",
+        "amount": 149,
+        "createdAt": "2024-11-20T21:32:00"
+    },
+    {
+        "id": "7046316e-06ca-4597-88b0-906fcf1f8066",
+        "amount": 484,
+        "createdAt": "2024-11-20T12:05:00"
+    },
+    {
+        "id": "652306e3-d829-4943-8287-e3ca55b093a4",
+        "amount": 242,
+        "createdAt": "2024-11-20T02:51:00"
+    },
+    {
+        "id": "97a830d2-2362-4071-8fb5-0318af58d50e",
+        "amount": 399,
+        "createdAt": "2024-11-20T07:53:00"
+    },
+    {
+        "id": "ac6aeef9-ef3f-4fc6-88d7-45f6b4911484",
+        "amount": 108,
+        "createdAt": "2024-11-20T01:36:00"
+    },
+    {
+        "id": "2ad29125-bddb-4e4d-bfb5-6d923b689e13",
+        "amount": 398,
+        "createdAt": "2024-11-21T18:34:00"
+    },
+    {
+        "id": "bace2179-fbb7-4d2f-bc0f-57f5b2479bf7",
+        "amount": 102,
+        "createdAt": "2024-11-21T07:26:00"
+    },
+    {
+        "id": "8b71c953-5f18-4615-b56b-c219b0fb42dd",
+        "amount": 321,
+        "createdAt": "2024-11-21T02:28:00"
+    },
+    {
+        "id": "5e1cfa9a-2cd6-442a-892d-0c44bff9c26b",
+        "amount": 462,
+        "createdAt": "2024-11-21T01:23:00"
+    },
+    {
+        "id": "c45328cd-41d9-4201-9a6c-7508578daaf7",
+        "amount": 284,
+        "createdAt": "2024-11-21T10:45:00"
+    },
+    {
+        "id": "b4c0e4e4-7a6d-445e-a964-917a5e4990b2",
+        "amount": 126,
+        "createdAt": "2024-11-21T09:30:00"
+    },
+    {
+        "id": "88901b1a-a3c0-417b-9d30-033c599bc7d1",
+        "amount": 391,
+        "createdAt": "2024-11-21T10:16:00"
+    },
+    {
+        "id": "20bf748a-3cdc-4554-af29-cf3a8edb7cf8",
+        "amount": 78,
+        "createdAt": "2024-11-21T08:41:00"
+    },
+    {
+        "id": "a6683930-856f-401f-9764-d772ea2351b9",
+        "amount": 351,
+        "createdAt": "2024-11-22T23:13:00"
+    },
+    {
+        "id": "c48a3879-e89b-4476-865b-3474b8e9051c",
+        "amount": 269,
+        "createdAt": "2024-11-22T23:19:00"
+    },
+    {
+        "id": "e1fabba3-da8a-4c5e-9766-cdc64b9a8ba6",
+        "amount": 56,
+        "createdAt": "2024-11-22T01:51:00"
+    },
+    {
+        "id": "5d392052-0b44-482a-bcd5-6f6606318095",
+        "amount": 194,
+        "createdAt": "2024-11-22T13:22:00"
+    },
+    {
+        "id": "2d95c7ee-fe29-4d64-89a8-523672e90d41",
+        "amount": 96,
+        "createdAt": "2024-11-22T21:13:00"
+    },
+    {
+        "id": "2bbf690e-7ea0-4abf-a755-ada983325d03",
+        "amount": 251,
+        "createdAt": "2024-11-22T20:38:00"
+    },
+    {
+        "id": "954be029-500b-426e-ae10-eb339112a6f7",
+        "amount": 415,
+        "createdAt": "2024-11-23T12:00:00"
+    },
+    {
+        "id": "7a958000-1b8c-43e3-a4a2-8fa2c71c1766",
+        "amount": 274,
+        "createdAt": "2024-11-23T00:52:00"
+    },
+    {
+        "id": "e7898fc6-f02a-4dd0-85f9-f272d0b86c68",
+        "amount": 202,
+        "createdAt": "2024-11-23T08:46:00"
+    },
+    {
+        "id": "17636261-6994-4043-b113-96c094c3c6ab",
+        "amount": 335,
+        "createdAt": "2024-11-23T13:36:00"
+    },
+    {
+        "id": "efd65631-e1aa-43ad-bdb1-419645b9bb5e",
+        "amount": 393,
+        "createdAt": "2024-11-23T11:36:00"
+    },
+    {
+        "id": "11d53876-4059-4770-ac3f-a151d6f0e6a2",
+        "amount": 500,
+        "createdAt": "2024-11-23T10:00:00"
+    },
+    {
+        "id": "bc0a6439-8ca0-4c50-b1dc-bdb79cbbf892",
+        "amount": 383,
+        "createdAt": "2024-11-23T02:30:00"
+    },
+    {
+        "id": "6d661eae-8ae6-45bb-8945-9d44a8214d88",
+        "amount": 296,
+        "createdAt": "2024-11-24T21:52:00"
+    },
+    {
+        "id": "ff25ba80-2c18-4d25-8c86-f05ae38eaff4",
+        "amount": 293,
+        "createdAt": "2024-11-24T03:22:00"
+    },
+    {
+        "id": "f674b14e-d847-409b-9b9e-a4b426087bb0",
+        "amount": 487,
+        "createdAt": "2024-11-24T01:07:00"
+    },
+    {
+        "id": "369a2314-c562-4060-b134-37e6a89d5525",
+        "amount": 309,
+        "createdAt": "2024-11-24T23:08:00"
+    },
+    {
+        "id": "e808dca7-57a5-459a-8f73-c352d8dcef09",
+        "amount": 103,
+        "createdAt": "2024-11-24T11:49:00"
+    },
+    {
+        "id": "071b5c43-493a-4d6d-83e2-2bcb8fec8ec5",
+        "amount": 242,
+        "createdAt": "2024-11-24T16:12:00"
+    },
+    {
+        "id": "9da2ad70-76d2-4ab9-b46c-33f2d3d46a15",
+        "amount": 444,
+        "createdAt": "2024-11-24T20:37:00"
+    },
+    {
+        "id": "e367c808-d11d-46aa-8439-0bf345d67ceb",
+        "amount": 392,
+        "createdAt": "2024-11-25T18:50:00"
+    },
+    {
+        "id": "8cdb495f-8427-4d09-abe9-81387d16b2dc",
+        "amount": 295,
+        "createdAt": "2024-11-25T12:32:00"
+    },
+    {
+        "id": "70a3f8f4-bc7f-4f13-bf06-c07325bb9f1f",
+        "amount": 333,
+        "createdAt": "2024-11-25T01:42:00"
+    },
+    {
+        "id": "b7b938f4-26da-453e-86cc-11f536c16d50",
+        "amount": 136,
+        "createdAt": "2024-11-25T20:31:00"
+    },
+    {
+        "id": "c7c4d0c2-51fb-4c39-af49-44674d811860",
+        "amount": 362,
+        "createdAt": "2024-11-25T23:45:00"
+    },
+    {
+        "id": "20434f37-b14b-4f97-bdf4-4be5fa1ac0a7",
+        "amount": 119,
+        "createdAt": "2024-11-25T17:01:00"
+    },
+    {
+        "id": "0c4473ef-41a1-409f-a433-19a0c446e75a",
+        "amount": 449,
+        "createdAt": "2024-11-25T05:49:00"
+    },
+    {
+        "id": "17ace7f6-8052-4847-b4dc-26a7d4751fdd",
+        "amount": 290,
+        "createdAt": "2024-11-26T01:39:00"
+    },
+    {
+        "id": "29f099bf-9723-4d0e-8232-1bfda3078b1d",
+        "amount": 139,
+        "createdAt": "2024-11-26T20:41:00"
+    },
+    {
+        "id": "6cab38ce-161b-4b69-b8ab-0cc0e577eacf",
+        "amount": 169,
+        "createdAt": "2024-11-26T03:28:00"
+    },
+    {
+        "id": "166a720a-207d-453f-961a-d19b99ebac28",
+        "amount": 285,
+        "createdAt": "2024-11-26T20:40:00"
+    },
+    {
+        "id": "d5a00518-03a2-431b-b4bb-c2d8581b4da2",
+        "amount": 294,
+        "createdAt": "2024-11-26T02:16:00"
+    },
+    {
+        "id": "c9308805-37af-4706-8233-0e8aaa774129",
+        "amount": 324,
+        "createdAt": "2024-11-26T08:10:00"
+    },
+    {
+        "id": "6bd996a6-7af5-48fd-aaa6-06b37e8be480",
+        "amount": 499,
+        "createdAt": "2024-11-26T19:45:00"
+    },
+    {
+        "id": "44da26e8-acb5-44d6-9be8-8dfb623c3139",
+        "amount": 309,
+        "createdAt": "2024-11-26T23:46:00"
+    },
+    {
+        "id": "d88f3530-e15f-433b-a747-6529cb28b1dc",
+        "amount": 443,
+        "createdAt": "2024-11-27T02:16:00"
+    },
+    {
+        "id": "7b7e1d36-e9f7-4348-b0e0-f9a6d1ea69b0",
+        "amount": 53,
+        "createdAt": "2024-11-27T06:20:00"
+    },
+    {
+        "id": "f69a9d1b-c786-4652-820c-fe3ba9d506a4",
+        "amount": 405,
+        "createdAt": "2024-11-27T01:35:00"
+    },
+    {
+        "id": "11623833-b5f1-45d5-8ab9-adfc9747f925",
+        "amount": 364,
+        "createdAt": "2024-11-27T07:18:00"
+    },
+    {
+        "id": "a765ca1d-6742-4bf4-ad13-3389759a07e3",
+        "amount": 356,
+        "createdAt": "2024-11-28T14:15:00"
+    },
+    {
+        "id": "2a79a7a7-db6b-4c0b-a8b0-5755c11b0fc4",
+        "amount": 372,
+        "createdAt": "2024-11-28T05:24:00"
+    },
+    {
+        "id": "7046b4a2-75af-45af-8191-4d9b399c8975",
+        "amount": 93,
+        "createdAt": "2024-11-28T08:15:00"
+    },
+    {
+        "id": "4834bce8-f1fe-4d91-abb4-b880bb8f6a80",
+        "amount": 178,
+        "createdAt": "2024-11-28T23:52:00"
+    },
+    {
+        "id": "12a0ac73-3bc3-496b-a10b-7320c19df0ce",
+        "amount": 456,
+        "createdAt": "2024-11-28T05:23:00"
+    },
+    {
+        "id": "5e312615-1df6-47c0-a8c3-3e57154da17e",
+        "amount": 360,
+        "createdAt": "2024-11-29T14:02:00"
+    },
+    {
+        "id": "05e53928-4291-4d74-9a25-0d5183e5a79f",
+        "amount": 243,
+        "createdAt": "2024-11-29T09:07:00"
+    },
+    {
+        "id": "2eedf520-cfdf-462b-a5f5-5788a5eb5298",
+        "amount": 99,
+        "createdAt": "2024-11-29T09:55:00"
+    },
+    {
+        "id": "3fb03045-913e-4285-a9ac-538e2bc44631",
+        "amount": 89,
+        "createdAt": "2024-11-29T04:51:00"
+    },
+    {
+        "id": "0bbc675b-6c33-4566-bee4-84ee53532062",
+        "amount": 394,
+        "createdAt": "2024-11-29T02:58:00"
+    },
+    {
+        "id": "fbc2c361-f20a-4f6d-960e-52e86f2b76a4",
+        "amount": 56,
+        "createdAt": "2024-11-29T12:19:00"
+    },
+    {
+        "id": "81b117ce-6d8a-4a49-8e0c-975fc7563d6a",
+        "amount": 392,
+        "createdAt": "2024-11-29T06:33:00"
+    },
+    {
+        "id": "777ae812-7f92-44bb-a344-026ef4e54142",
+        "amount": 167,
+        "createdAt": "2024-11-29T17:26:00"
+    },
+    {
+        "id": "37ffd0ab-1afd-4380-93d3-9bb54a4d4bea",
+        "amount": 146,
+        "createdAt": "2024-11-30T02:33:00"
+    },
+    {
+        "id": "36ed5a63-899a-40ad-9d48-4b6456970dd5",
+        "amount": 161,
+        "createdAt": "2024-11-30T15:27:00"
+    },
+    {
+        "id": "176853cc-6fb9-41ea-9cd2-7e45e593278e",
+        "amount": 249,
+        "createdAt": "2024-11-30T02:12:00"
+    },
+    {
+        "id": "41173801-b193-461c-81fc-7ddfb530858d",
+        "amount": 310,
+        "createdAt": "2024-11-30T04:37:00"
+    },
+    {
+        "id": "e25abe42-8279-48ed-ab81-bb2ad12ef27a",
+        "amount": 68,
+        "createdAt": "2024-11-30T10:33:00"
+    },
+    {
+        "id": "a9574d54-2005-4de8-b7ef-cf47f8a00ef7",
+        "amount": 142,
+        "createdAt": "2024-11-30T23:25:00"
+    },
+    {
+        "id": "70679129-c02b-4f24-ad40-f07de75f3aa1",
+        "amount": 213,
+        "createdAt": "2024-11-30T00:14:00"
+    },
+    {
+        "id": "c9418d00-c3f9-4b96-b698-b95a43ebe512",
+        "amount": 185,
+        "createdAt": "2024-11-30T13:10:00"
+    }
+]

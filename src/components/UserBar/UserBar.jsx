@@ -14,9 +14,20 @@ import {
 } from '@floating-ui/react';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { useSelector } from 'react-redux';
+import {
+  selectAuthUser,
+  selectIsLoggedIn,
+  selectUserDisplayName,
+} from '../../redux/auth/selectors';
 
 const UserBar = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
+
+  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const user = useSelector(selectAuthUser);
+
+  const displayedName = isLoggedIn && user?.name ? user.name : 'User';
 
   const { refs, floatingStyles, context } = useFloating({
     open: isOpen,
@@ -39,7 +50,7 @@ const UserBar = ({}) => {
         {...getReferenceProps()}
         className={css.btn}
       >
-        <h4 className={css.name}>Name</h4>
+        <h4 className={css.name}>{displayedName}</h4>
         <RxAvatar className={css.avatar} />
         <Icon
           id="icon-menu"

@@ -1,11 +1,20 @@
 .list {
+  height: 106px;
   display: flex;
   flex-direction: row;
+  overflow-y: hidden;
   gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #323f47 #f1f1f1;
+  scrollbar-width: 150px;
+  scroll-margin-top: 24px;
 }
 
 @media only screen and (min-width: 768px) {
   .list {
+    height: 118px;
     gap: 32px;
+    scrollbar-width: 235px;
   }
 }

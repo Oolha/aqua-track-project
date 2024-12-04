@@ -6,12 +6,19 @@ import AddWaterBtn from '../AddWaterBtn/AddWaterBtn';
 import WaterProgressBar from '../WaterProgressBar/WaterProgressBar';
 import WaterModal from '../WaterModal/WaterModal';
 import { Modal } from '../Modal/Modal';
-import {useModal} from '../../hooks/useModalHook.js'
-
-
+import { useModal } from '../../hooks/useModalHook.js';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchCurrentUser } from '../../redux/auth/operations.js';
 
 const WaterMainInfo = () => {
   const [isOpenModal, setIsOpenModal] = useModal();
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchCurrentUser());
+  }, [dispatch]);
 
   return (
     <div className={css.wrapper}>
@@ -40,7 +47,11 @@ const WaterMainInfo = () => {
 
       <WaterProgressBar />
       <AddWaterBtn handleClickBtn={setIsOpenModal} />
-      {isOpenModal && <Modal toggleModal={setIsOpenModal}><WaterModal /></Modal> } 
+      {isOpenModal && (
+        <Modal toggleModal={setIsOpenModal}>
+          <WaterModal />
+        </Modal>
+      )}
     </div>
   );
 };
