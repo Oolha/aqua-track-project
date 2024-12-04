@@ -77,6 +77,10 @@
   border: 1px solid #ef5050;
 }
 
+.error:hover {
+  border: 1px solid #ef5050;
+}
+
 .errorMessage {
   /*  text-align: center; */
   color: #ef5050;

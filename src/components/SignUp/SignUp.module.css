@@ -145,6 +145,9 @@
   border: 1px solid red;
   background-color: #ffe6e6;
 }
+.inputError:hover {
+  border: 1px solid red;
+}
 
 .notification {
   position: fixed;
