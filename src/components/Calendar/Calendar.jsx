@@ -21,8 +21,9 @@ export const Calendar = () => {
   for (let day = 1; day <= amountDays; day++) {
     let id = parseInt(day.toString() + month.toString() + year.toString());
     const currentDate = new Date(year, month, day);
-    
+   
     const waterItemsperDay = getWaterItemsperDay(waterData,currentDate);
+    console.log(waterItemsperDay);
     const amount=amountWaterPerDay(waterItemsperDay);
 
     dayItems.push(

@@ -40,10 +40,11 @@ export function getWaterItemsperDay(waterData, initialDate) {
   const waterItemsperDay = [];
 
   waterData.forEach((item) => {
-    let createdAtField = item.createdAt;
-    createdAtField = item.name;
+    let createdAtField = item.date;
+    
 
     const date = new Date(createdAtField);
+    
 
     if (
       date.getDate() === initialDate.getDate() &&
@@ -58,8 +59,8 @@ export function getWaterItemsperDay(waterData, initialDate) {
 
 export function amountWaterPerDay(waterItems) {
   return waterItems.reduce((acc, item) => {
-    let amountField = item.amount;
-    amountField = +item.phoneNumber.trim();
+    let amountField = item.volume;
+   
     acc += amountField;
     return acc;
   }, 0);
