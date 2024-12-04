@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from "react-redux";
 import { changeDate } from "../../redux/date/slice.js";
 import {getMonthName,changeMonth} from '../../utils/calendar.js'
+import {selectCurrentDate} from '../../redux/date/selectors.js'
 
 
 import Icons from '../../assets/icons/sprite.svg';
@@ -9,7 +10,7 @@ import Icons from '../../assets/icons/sprite.svg';
 import css from './CalendarPagination.module.css';
 
 export const CalendarPagination = () => {
-  const serializedDate = useSelector(state=>state.date.currDate);
+  const serializedDate = useSelector(selectCurrentDate);
   const initialDate = new Date(serializedDate)
 
   const dispatch = useDispatch();

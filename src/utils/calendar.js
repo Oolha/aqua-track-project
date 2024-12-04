@@ -35,7 +35,10 @@ export function getDaysInMonthFromDate(initialDate) {
 export function getMonthName(date) {
   return monthNames[date.getMonth()];
 }
+export function getNumberMonth(month) {
+return (+month<10)?`0${month}`:month;
 
+}
 export function getWaterItemsperDay(waterData, initialDate) {
   const waterItemsperDay = [];
 

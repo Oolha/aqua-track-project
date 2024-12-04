@@ -23,7 +23,7 @@ export const Calendar = () => {
     const currentDate = new Date(year, month, day);
    
     const waterItemsperDay = getWaterItemsperDay(waterData,currentDate);
-    console.log(waterItemsperDay);
+    
     const amount=amountWaterPerDay(waterItemsperDay);
 
     dayItems.push(
