@@ -1,1 +1,0 @@
-{"version":3,"file":"Logo-LpHG_J3N.js","sources":["../../src/components/Logo/Logo.jsx"],"sourcesContent":["import css from './Logo.module.css';\n\nconst Logo = () => {\n  return <h3 className={css.logo}>AquaTrack</h3>;\n};\n\nexport default Logo;\n"],"names":["Logo","jsx","css"],"mappings":"2EAEMA,EAAO,IACHC,EAAA,IAAA,KAAA,CAAG,UAAWC,EAAI,KAAM,SAAS,WAAA,CAAA"}
