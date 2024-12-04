@@ -4,29 +4,31 @@ import axios from 'axios';
 export const instance = axios.create({
   baseURL: 'https://aqua-track-project-back.onrender.com/',
 });
-
-const setHeaders = (token) => {
-  instance.defaults.headers.common.Authorization = `Bearer ${token}`;
-};
-
-const resetHeaders = () => {
-  instance.defaults.headers.common.Authorization = '';
-};
+instance.interceptors.request.use(
+  (config) => {
+    const token = store.getState().auth.token;
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
 
 export const createWaterEntry = createAsyncThunk(
   'water/createEntry',
   async (waterData, thunkAPI) => {
-    const token = thunkAPI.getState().auth.token;
-    setHeaders(token);
     try {
       const response = await instance.post('water', waterData);
-      console.log(response.data);
       return response.data;
     } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
+      return thunkAPI.rejectWithValue(
+        e.response?.data?.message || e.message || 'Failed to create water entry'
+      );
     }
   }
 );
+
 export const patchWaterEntry = createAsyncThunk(
   'water/patchEntry',
   async ({ id, updatedData }, thunkAPI) => {

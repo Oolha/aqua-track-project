@@ -1,4 +1,10 @@
-import { fetchCurrentUser, fetchLogOut, fetchSignIn, fetchSignUp, fetchUpdateUser } from './operations';
+import {
+  fetchCurrentUser,
+  fetchLogOut,
+  fetchSignIn,
+  fetchSignUp,
+  fetchUpdateUser,
+} from './operations';
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -25,6 +31,7 @@ const authSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchSignUp.fulfilled, (state, { payload }) => {
+        console.log('Payload received on login:', payload);
         state.isLoading = false;
         state.error = null;
         state.user = payload.user;
@@ -59,14 +66,14 @@ const authSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
-      .addCase(fetchUpdateUser.pending,handlePending)
-      .addCase(fetchCurrentUser.pending,handlePending)
+      .addCase(fetchUpdateUser.pending, handlePending)
+      .addCase(fetchCurrentUser.pending, handlePending)
       .addCase(fetchCurrentUser.fulfilled, (state, action) => {
         state.isLoading = false;
         state.user = action.payload;
       })
-   
-      .addCase(fetchCurrentUser.rejected,handleRejected);
+
+      .addCase(fetchCurrentUser.rejected, handleRejected);
   },
 });
 

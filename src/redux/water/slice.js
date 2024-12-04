@@ -30,28 +30,29 @@ export const waterSlice = createSlice({
       .addCase(createWaterEntry.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
-        state.dailyEntries.push(action.payload.data);
-        state.waterAmount = action.payload.water;
+        state.dailyEntries.unshift(payload.data);
+        state.waterAmount += payload.data.volume;
       })
       .addCase(fetchDailyWaterEntries.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
-        state.dailyEntries = action.payload.data;
-        state.waterAmount = action.payload.water;
+        state.dailyEntries = payload.items;
+        state.waterAmount = payload.progressDay;
       })
-      .addCase(fetchMonthlyWaterEntries.fulfilled, (state, action) => {
-        state.monthlyStats = action.payload.data;
+      .addCase(fetchMonthlyWaterEntries.fulfilled, (state, { payload }) => {
+        state.monthlyStats = payload.data;
       })
-      .addCase(patchWaterEntry.fulfilled, (state, action) => {
-        const updatedEntry = action.payload.data;
+      .addCase(patchWaterEntry.fulfilled, (state, { payload }) => {
+        const updatedEntry = payload.data;
         state.dailyEntries = state.dailyEntries.map((entry) =>
           entry._id === updatedEntry._id ? updatedEntry : entry
         );
       })
-      .addCase(deleteWaterEntry.fulfilled, (state, action) => {
+      .addCase(deleteWaterEntry.fulfilled, (state, { payload }) => {
         state.dailyEntries = state.dailyEntries.filter(
-          (entry) => entry._id !== action.payload.id
+          (entry) => entry._id !== payload.id
         );
+        state.waterAmount -= payload.volume;
       })
       .addCase(createWaterEntry.pending, handlePending)
       .addCase(createWaterEntry.rejected, handleRejected)
