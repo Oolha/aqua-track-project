@@ -1,17 +1,26 @@
 import css from './ChooseDate.module.css';
-// import { useState } from 'react';
+import {selectCurrentDate} from '../../redux/date/selectors.js'
+import { useSelector } from 'react-redux';
 
-const ChooseDate = ({}) => {
-  //   const [selectedDate, setSelectedDate] = useState(new Date());
+import {getMonthName} from '../../utils/calendar.js'
 
-  //   const handleDateChange = date => {
-  //     setSelectedDate(date?.toDate() || new Date());
-  //   };
+
+const ChooseDate = () => {
+  const today = new Date();
+  const dayToday=today.getDate();
+  const monthToday = today.getMonth();
+  const serializedDate=useSelector(selectCurrentDate);
+
+  const currentDate=new Date(serializedDate);
+  const dayCurrentDate=currentDate.getDate();
+  const monthCurrentDate=currentDate.getMonth();
+  const isToday=((dayCurrentDate===dayToday)&&(monthCurrentDate===monthToday))?true:false
+
 
   return (
     <>
-      {/* <p className={css.curDate}>{selectedDate || 'Today'}</p> */}
-      <p className={css.curDate}>Today</p>
+
+      <p className={css.curDate}>{(isToday)?"Today":`${getMonthName(currentDate)}, ${dayCurrentDate}`}</p>
     </>
   );
 };
