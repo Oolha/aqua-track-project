@@ -19,6 +19,7 @@ const LogOutModal = ({toggleModal}) => {
   // const [isLogOutModalOpen, setIsLogOutModalOpen] = useState(false);
 
   const dispatch = useDispatch();
+ 
   // const isOpenModal = useSelector((state) => state.modal.isOpen);
 
   // const onCloseModal = () => {
@@ -36,7 +37,7 @@ const LogOutModal = ({toggleModal}) => {
             <button
               className={clsx(css.button, css.logoutButton)}
               type="button"
-              onClick={() => dispatch(fetchLogOut)}
+              onClick={()=>dispatch(fetchLogOut())}
             >
               Log out
             </button>
