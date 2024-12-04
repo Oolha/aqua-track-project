@@ -1,4 +1,5 @@
-import { useForm, Controller, set } from 'react-hook-form';
+import { useEffect, useState } from 'react';
+import { useForm, Controller } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { Icon } from '../Icon/Icon';
@@ -6,19 +7,20 @@ import style from './WaterForm.module.css';
 import { useDispatch } from 'react-redux';
 import { createWaterEntry } from '../../redux/water/operations';
 
-const WaterForm = ({ data }) => {
+const WaterForm = ({ entry, onAddWater }) => {
+  const [initialDate, setInitialDate] = useState();
   const dispatch = useDispatch();
 
   const validationSchema = Yup.object().shape({
-    time: Yup.string()
+    date: Yup.string()
       .required('Time is required')
       .matches(/^([01]\d|2[0-3]):([0-5]\d)$/, 'Time must be in hh:mm format'),
-    amount: Yup.number()
-      .required('Amount is required')
-      .typeError('Amount must be a number')
-      .integer('Amount must be an integer')
-      .min(50, 'Minimum amount is 50')
-      .max(3000, 'Maximum amount is 3000'),
+    volume: Yup.number()
+      .required('Value is required')
+      .typeError('Value must be a number')
+      .integer('Value must be an integer')
+      .min(50, 'Minimum value is 50')
+      .max(3000, 'Maximum value is 3000'),
   });
 
   const extractTime = (timestamp) => {
@@ -29,8 +31,8 @@ const WaterForm = ({ data }) => {
   };
 
   const defaultValues = {
-    time: extractTime(data.time),
-    amount: data.amount || '50',
+    date: extractTime(entry.date),
+    volume: entry.volume || '50',
   };
 
   const {
@@ -42,17 +44,23 @@ const WaterForm = ({ data }) => {
     formState: { errors },
   } = useForm({ defaultValues, resolver: yupResolver(validationSchema) });
 
-  const currentAmount = watch('amount');
+  const currentAmount = watch('volume');
 
   const onSubmit = (formData) => {
+    const hours = formData.date.split(':')[0];
+    const minutes = formData.date.split(':')[1];
+    const newDate = new Date(
+      initialDate.setHours(hours, minutes)
+    ).toISOString();
+
     console.log('Submitting water entry:', {
-      amount: Number(formData.amount),
-      time: formData.time,
+      volume: Number(formData.volume),
+      date: newDate,
     });
     dispatch(
       createWaterEntry({
-        amount: Number(formData.amount),
-        time: formData.time,
+        volume: Number(formData.volume),
+        date: newDate,
       })
     );
   };
@@ -63,24 +71,28 @@ const WaterForm = ({ data }) => {
       : `${value} ml`;
 
   const decreaseAmount = () => {
-    if (+getValues('amount') - 50 >= 50) {
-      setValue('amount', +getValues('amount') - 50);
+    if (+getValues('volume') - 50 >= 50) {
+      setValue('volume', +getValues('volume') - 50);
     } else {
-      setValue('amount', 50);
+      setValue('volume', 50);
     }
   };
 
   const increaseAmount = () => {
-    if (+getValues('amount') + 50 <= 3000) {
-      setValue('amount', +getValues('amount') + 50);
+    if (+getValues('volume') + 50 <= 3000) {
+      setValue('volume', +getValues('volume') + 50);
     } else {
-      setValue('amount', 3000);
+      setValue('volume', 3000);
     }
   };
 
+  useEffect(() => {
+    setInitialDate(entry.date ? new Date(entry.date) : new Date());
+  }, [entry]);
+
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={style.waterForm}>
-      <p>{data.id ? 'Correct entered data:' : 'Choose a value:'}</p>
+      <p>{entry.id ? 'Correct entered data:' : 'Choose a value:'}</p>
       <div className={style.valuePickerContainer}>
         <p>Amount of water:</p>
         <div className={style.adjustmentContainer}>
@@ -105,12 +117,12 @@ const WaterForm = ({ data }) => {
         <label>
           <p className={style.timeBlockLabel}>Recording time:</p>
           <Controller
-            name="time"
+            name="date"
             control={control}
             render={({ field }) => (
               <input
                 className={`${style.inputField} ${
-                  errors.time ? style.inputError : ''
+                  errors.date ? style.inputError : ''
                 }`}
                 type="text"
                 placeholder="hh:mm"
@@ -118,8 +130,8 @@ const WaterForm = ({ data }) => {
               />
             )}
           />
-          {errors.time && (
-            <span className={style.errorMessage}>{errors.time.message}</span>
+          {errors.date && (
+            <span className={style.errorMessage}>{errors.date.message}</span>
           )}
         </label>
       </div>
@@ -128,12 +140,12 @@ const WaterForm = ({ data }) => {
           Enter the value of the water used:
         </p>
         <Controller
-          name="amount"
+          name="volume"
           control={control}
           render={({ field }) => (
             <input
               className={`${style.inputField} ${
-                errors.amount ? style.inputError : ''
+                errors.volume ? style.inputError : ''
               }`}
               type="number"
               placeholder="Enter the value of the water used:"
@@ -141,8 +153,8 @@ const WaterForm = ({ data }) => {
             />
           )}
         />
-        {errors.amount && (
-          <span className={style.errorMessage}>{errors.amount.message}</span>
+        {errors.volume && (
+          <span className={style.errorMessage}>{errors.volume.message}</span>
         )}
       </label>
       <br />
