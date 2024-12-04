@@ -1,16 +1,26 @@
+
 .welcomFont {
   background: #f0eff4;
   border-radius: 30px;
   width: 343px;
   height: 411px;
-  padding: 24px 16px 67px 16px;
+  padding: 16px;
+  position: relative; 
   margin-bottom: 16px;
+  
+}
+
+.logoContainer {
+  position: absolute;
+  top: 24px;
+  left: 16px;
 }
 
 .box {
+  margin-top: 118px;
   width: 311px;
-  padding: 74px 16px 22px 2px;
 }
+
 
 .subtitle {
   font-family: var(--font-family);
@@ -82,19 +92,27 @@
 /* -------------------------------------------- */
 @media screen and (min-width: 768px) and (max-width: 1439px) {
   .welcomFont {
-    background: #f0eff4;
-    border-radius: 30px;
-    width: 704px;
-    height: 498px;
-    padding-top: 32px;
-    padding-left: 32px;
-  }
+  background: #f0eff4;
+  border-radius: 30px;
+  width: 704px;
+  height: 498px;
+  padding: 32px;
+  position: relative; 
+  margin-bottom: 16px;
+  
+}
 
-  .box {
-    width: 517px;
-    padding: 50px 93px 50px 32px;
-    margin-bottom: 16px;
-  }
+.logoContainer {
+  position: absolute;
+  top: 32px;
+  left: 32px;
+}
+
+.box {
+  margin-top: 74px;
+  width: 547px;
+  height: 342px;
+}
 
   .subtitle {
     font-size: 16px;
@@ -108,6 +126,7 @@
 
   .links {
     gap: 16px;
+    margin-bottom: 50px;
   }
 
   .linkGreen {
@@ -151,19 +170,20 @@
     background: #f0eff4;
     width: 672px;
     height: 736px;
-  }
-  .box {
-    padding: 132px 61px 188px 29px;
-    margin: 0;
-
-    padding: 32px 61px 188px 32px;
-    margin-right: 32px;
+    margin-bottom: 0;
+    padding: 32px;
   }
 
   .box {
     width: 547px;
-    padding: 132px 16px 22px 16px;
-    margin-left: 16px;
+    margin-top: 156px;
+    margin-left: 32px;
+  }
+
+  .logoContainer {
+    position: absolute;
+    top: 32px;
+    left: 32px;
   }
 
   .subtitle {
@@ -184,6 +204,7 @@
   .links {
     display: flex;
     gap: 16px;
+    margin-bottom: 188px;
   }
 
   .linkGreen {

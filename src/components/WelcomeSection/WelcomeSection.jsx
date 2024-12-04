@@ -5,7 +5,9 @@ import Logo from '../Logo/Logo.jsx';
 function WelcomeSection() {
   return (
     <div className={styles.welcomFont}>
-      <Logo />
+      <div className={styles.logoContainer}>
+        <Logo />
+      </div>
       <div className={styles.box}>
         <p className={styles.subtitle}>Record daily water intake and track</p>
         <h2 className={`${styles.title} title`}>Water consumption tracker</h2>
