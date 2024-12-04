@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const instance = axios.create({
-  baseURL: 'https://aqua-track-project-back.onrender.com/',
+  baseURL: 'http://localhost:3000/',
 });
 
 const setHeaders = (token) => {

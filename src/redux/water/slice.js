@@ -1,15 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit';
 import {
   createWaterEntry,
-  fetchDailyWaterEntries,
+ 
   patchWaterEntry,
   fetchMonthlyWaterEntries,
   deleteWaterEntry,
 } from './operations';
+
+
+
 const initialState = {
-  dailyEntries: [],
-  monthlyStats: {},
-  waterAmount: 0,
+  items: [],
   isLoading: false,
   error: null,
 };
@@ -21,7 +22,7 @@ const handleRejected = (state, { payload }) => {
   state.isLoading = false;
   state.error = payload;
 };
-export const waterSlice = createSlice({
+const waterSlice = createSlice({
   name: 'water',
   initialState,
 
@@ -30,17 +31,14 @@ export const waterSlice = createSlice({
       .addCase(createWaterEntry.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
+        console.log(action.payload)
         state.dailyEntries.unshift(payload.data);
         state.waterAmount += payload.data.volume;
       })
-      .addCase(fetchDailyWaterEntries.fulfilled, (state, { payload }) => {
-        state.isLoading = false;
-        state.error = null;
-        state.dailyEntries = payload.items;
-        state.waterAmount = payload.progressDay;
-      })
       .addCase(fetchMonthlyWaterEntries.fulfilled, (state, { payload }) => {
-        state.monthlyStats = payload.data;
+        
+        state.items=payload.data;
+       
       })
       .addCase(patchWaterEntry.fulfilled, (state, { payload }) => {
         const updatedEntry = payload.data;
@@ -56,8 +54,6 @@ export const waterSlice = createSlice({
       })
       .addCase(createWaterEntry.pending, handlePending)
       .addCase(createWaterEntry.rejected, handleRejected)
-      .addCase(fetchDailyWaterEntries.pending, handlePending)
-      .addCase(fetchDailyWaterEntries.rejected, handleRejected)
       .addCase(fetchMonthlyWaterEntries.pending, handlePending)
       .addCase(fetchMonthlyWaterEntries.rejected, handleRejected)
       .addCase(patchWaterEntry.pending, handlePending)
