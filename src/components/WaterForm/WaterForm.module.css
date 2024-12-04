@@ -129,3 +129,15 @@
   color: #ef5050;
   margin-top: 10px;
 }
+
+/* hide input arrows Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* hide input arrows Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
