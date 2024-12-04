@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import {instance}  from '../auth/operations.js';
+import { instance } from '../auth/operations.js';
 
 // export const instance = axios.create({
 //   baseURL: 'https://aqua-track-project-back.onrender.com/',
@@ -15,15 +15,18 @@ import {instance}  from '../auth/operations.js';
 //   (error) => Promise.reject(error)
 // );
 
-
-
-
-
 export const createWaterEntry = createAsyncThunk(
   'water/createEntry',
   async (waterData, thunkAPI) => {
     try {
-      const response = await instance.post('water', waterData);
+      const formattedData = {
+        ...waterData,
+        date: new Date(waterData.date)
+          .toISOString()
+          .slice(0, 16)
+          .replace('T', ' '),
+      };
+      const response = await instance.post('water', formattedData);
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(
@@ -57,17 +60,14 @@ export const deleteWaterEntry = createAsyncThunk(
   }
 );
 
-
-
 export const fetchMonthlyWaterEntries = createAsyncThunk(
   'water/fetchMonthlyEntries',
   async (date, thunkAPI) => {
-    
     try {
       const response = await instance.get('water/month', {
-        params: {...date},
+        params: { ...date },
       });
-     
+
       return response.data;
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
