@@ -1,41 +1,56 @@
-import { useDispatch, useSelector } from "react-redux";
-import clsx from "clsx";
-import Modal from "../Modal/Modal.jsx";
-import { toggleModal } from "../../hooks/useModalHook.js";
-import Container from "../Сontainer/Container.jsx";
+import { useDispatch, useSelector } from 'react-redux';
+import clsx from 'clsx';
+import { Modal } from '../Modal/Modal.jsx';
+import { toggleModal } from '../../hooks/useModalHook.js';
+import Container from '../Сontainer/Container.jsx';
+import css from './DeleteWaterModal.module.css';
+import { deleteWaterEntry } from '../../redux/water/operations.js';
 
-import css from "./DeleteWaterModal.module.css";
-
-
-const DeleteWaterModal = () => {
+const DeleteWaterModal = (itemId) => {
   const dispatch = useDispatch();
   const isOpenModal = useSelector((state) => state.modal.isOpen);
 
   const onCloseModal = () => {
     dispatch(toggleModal());
   };
+  const handleDelete = () => {
+    dispatch(deleteWaterEntry(itemId));
+    onCloseModal();
+  };
 
   return (
     <>
-    <Container>
-      {isOpenModal && (
-        <Modal onCloseModal={onCloseModal}>
-          <div className={css.modal}>
-            <h2 className={css.title}>Delete entry</h2>
-            <p className={css.text}>Are you sure you want to delete the entry?</p>
+      <Container>
+        {isOpenModal && (
+          <Modal onCloseModal={onCloseModal}>
+            <div className={css.modal}>
+              <h2 className={css.title}>Delete entry</h2>
+              <p className={css.text}>
+                Are you sure you want to delete the entry?
+              </p>
 
-            <div className={css.boxButton}>
-              <button className={clsx(css.button, css.logoutButton)} type="button">Delete</button>
-              <button className={clsx(css.button, css.cancelButton)} type="button" onClick={onCloseModal}>Cancel</button>
+              <div className={css.boxButton}>
+                <button
+                  className={clsx(css.button, css.logoutButton)}
+                  type="button"
+                  onClick={handleDelete}
+                >
+                  Delete
+                </button>
+                <button
+                  className={clsx(css.button, css.cancelButton)}
+                  type="button"
+                  onClick={onCloseModal}
+                >
+                  Cancel
+                </button>
+              </div>
             </div>
-
-          </div>
-        </Modal>
-      )}
-    </Container>
+          </Modal>
+        )}
+      </Container>
     </>
   );
 };
-
 
 export default DeleteWaterModal;
