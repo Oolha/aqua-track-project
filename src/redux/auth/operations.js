@@ -12,15 +12,23 @@ const setHeaders = (token) => {
 const resetHeaders = () => {
   instance.defaults.headers.common.Authorization = '';
 };
+
+const fetchCurrentUserData = async () => {
+  const currentUserResponse = await instance.get('/auth/current-user');
+  return currentUserResponse.data.data;
+};
+
 export const fetchSignUp = createAsyncThunk(
   'auth/signUp',
   async (userData, thunkAPI) => {
     try {
       const response = await instance.post('auth/register', userData);
 
-      const { accessToken, user } = response.data;
+      const { accessToken } = response.data.data;
       setHeaders(accessToken);
-      return { user, accessToken };
+      const user = await fetchCurrentUserData();
+
+      return { accessToken, user };
     } catch (e) {
       const errorMessage =
         e.response?.data?.message || e.message || 'Signup failed';
@@ -33,10 +41,12 @@ export const fetchSignIn = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await instance.post('auth/login', userData);
-
-      const { accessToken, user } = response.data.data;
+      console.log('Sign-in response:', response.data);
+      const { accessToken } = response.data.data;
       setHeaders(accessToken);
-      return { user, accessToken };
+      const user = await fetchCurrentUserData();
+
+      return { accessToken, user };
     } catch (e) {
       const errorMessage =
         e.response?.data?.message || e.message || 'Login failed';
@@ -50,7 +60,6 @@ export const fetchLogOut = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const response = await instance.post('auth/logout');
-
       resetHeaders();
       return response.data;
     } catch (e) {
@@ -68,8 +77,7 @@ export const fetchUpdateUser = createAsyncThunk(
       const response = await instance.patch('/auth/update-user', userData);
       return response.data;
     } catch (e) {
-      const errorMessage =
-        e.response?.data?.message || e.message;
+      const errorMessage = e.response?.data?.message || e.message;
       return thunkAPI.rejectWithValue(errorMessage);
     }
   }
@@ -85,8 +93,7 @@ export const fetchCurrentUser = createAsyncThunk(
       const response = await instance.get('/auth/current-user');
       return response.data;
     } catch (e) {
-      const errorMessage =
-        e.response?.data?.message || e.message;
+      const errorMessage = e.response?.data?.message || e.message;
       return thunkAPI.rejectWithValue(errorMessage);
     }
   }

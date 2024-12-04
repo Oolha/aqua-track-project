@@ -7,11 +7,11 @@ const WaterItem = ({ item }) => {
       <Icon id="icon-water" size={38} />
       <div className={css.listItems}>
         <div className={css.item}>
-          <p className={css.itemText}>{item.waterAmount}</p>
+          <p className={css.itemText}>{item.volume}</p>
           <Icon id="icon-pencil" size={14} />
         </div>
-        <div className={item}>
-          <p className={css.itemText}>{item.time}</p>
+        <div className={css.item}>
+          <p className={css.itemText}>{item.date}</p>
           <Icon id="icon-bin" size={14} />
         </div>
       </div>
