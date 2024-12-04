@@ -12,15 +12,13 @@ import { fetchSignUp } from '../../redux/auth/operations.js';
 const schema = Yup.object().shape({
   email: Yup.string()
     .email('Invalid email format')
-    .min(3, 'Enter a real email!')
-    .max(50, 'Too Long!')
     .required('Email is required'),
   password: Yup.string()
-    .min(4, 'Enter a real password!')
+    .min(8, 'Enter a real password!')
     .max(50, 'Too long')
     .required('Password is required'),
   repeatPassword: Yup.string()
-    .min(4, 'Enter a real password!')
+    .min(8, 'Enter a real password!')
     .max(50, 'Too long')
     .oneOf([Yup.ref('password'), null], 'Passwords must match!')
     .required('Password is required'),
