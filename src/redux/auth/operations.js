@@ -91,7 +91,7 @@ export const fetchCurrentUser = createAsyncThunk(
       setHeaders(token);
 
       const response = await instance.get('/auth/current-user');
-      return response.data;
+      return response.data.data;
     } catch (e) {
       const errorMessage = e.response?.data?.message || e.message;
       return thunkAPI.rejectWithValue(errorMessage);
