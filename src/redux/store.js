@@ -1,6 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
-import waterReducer from './water/slice';
+import waterReducer from './water/slice.js';
 import authReducer from './auth/slice';
+import dateReducer from './date/slice.js'
 import {
   persistStore,
   persistReducer,
@@ -23,7 +24,8 @@ export const store = configureStore({
   reducer: {
     auth: persistReducer(authPersistConfig, authReducer),
     water: waterReducer,
-    
+     date: dateReducer,
+    auth: authReducer,
   },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({

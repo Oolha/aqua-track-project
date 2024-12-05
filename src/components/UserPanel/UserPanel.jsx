@@ -1,20 +1,22 @@
 import { useSelector } from 'react-redux';
 import UserBar from '../UserBar/UserBar';
 import css from './UserPanel.module.css';
-import { selectAuthUser, selectIsLoggedIn } from '../../redux/auth/selectors';
+import {
+  selectIsLoggedIn,
+  selectUserDisplayName,
+} from '../../redux/auth/selectors';
 
 const UserPanel = ({}) => {
-  const user = useSelector(selectAuthUser);
   const isLoggedIn = useSelector(selectIsLoggedIn);
-
-  const displayName = isLoggedIn
-    ? user?.name || user?.email || 'User'
-    : 'Guest';
+  const displayName = useSelector(selectUserDisplayName);
 
   return (
     <div className={css.mainBox}>
       <h2 className={css.title}>
-        Hello <span className={css.span}>, {displayName}!</span>
+        Hello{' '}
+        <span className={css.span}>
+          , {isLoggedIn ? displayName : 'Guest'}!
+        </span>
       </h2>
       <UserBar />
     </div>

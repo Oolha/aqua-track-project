@@ -23,43 +23,44 @@ const App = () => {
 
   return isRefreshing ? (
     <b>Refreshing user...</b>
-  ) : (<Routes>
-    <Route path="/" element={<SharedLayout />}>
-      <Route
-        index
-        element={
-          <RestrictedRoute>
-            <HomePage />
-          </RestrictedRoute>
-        }
-      />
-      <Route
-        path="signup"
-        element={
-          <RestrictedRoute>
-            <SignUpPage />
-          </RestrictedRoute>
-        }
-      />
-      <Route
-        path="signin"
-        element={
-          <RestrictedRoute>
-            <SignInPage />
-          </RestrictedRoute>
-        }
-      />
-      <Route
-        path="tracker"
-        element={
-          <PrivateRoute>
-            <TrackerPage />
-          </PrivateRoute>
-        }
-      />
-    </Route>
-  </Routes>);
-  
+  ) : (
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route
+          index
+          element={
+            <RestrictedRoute>
+              <HomePage />
+            </RestrictedRoute>
+          }
+        />
+        <Route
+          path="signup"
+          element={
+            <RestrictedRoute>
+              <SignUpPage />
+            </RestrictedRoute>
+          }
+        />
+        <Route
+          path="signin"
+          element={
+            <RestrictedRoute>
+              <SignInPage />
+            </RestrictedRoute>
+          }
+        />
+        <Route
+          path="tracker"
+          element={
+            <PrivateRoute>
+              <TrackerPage />
+            </PrivateRoute>
+          }
+        />
+      </Route>
+    </Routes>
+  );
 };
 
 export default App;

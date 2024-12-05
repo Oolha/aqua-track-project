@@ -1,23 +1,13 @@
 .loginContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  padding: 16px;
-  padding-bottom: 50px;
-  margin: auto;
-  /* justify-content: center; */
-  height: 100vh;
   background-color: #f0eff4;
   border-radius: 30px;
-  justify-content: flex-start;
+  box-sizing: border-box;
   padding: 16px;
 }
 
-
-
 .formWrapper {
   width: 100%;
-  padding: 126px 0 16px 0;
+  padding: 172px 16px 216px 16px;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -33,22 +23,18 @@
 
 .form {
   width: 100%;
-    max-width: 436px;
-    margin: 0 auto;
-
+  max-width: 436px;
 }
 
 .field {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 10px;
   width: 100%;
-
 }
-
 .field:nth-child(2) {
-  margin-bottom: 32px;
+  margin-bottom: 20px;
 }
 
 .formLabel {
@@ -62,20 +48,28 @@
   position: relative;
   padding: 16px;
   width: 100%;
-
   font-size: 14px;
   line-height: 1.28;
   letter-spacing: -0.01em;
-
   background-color: transparent;
   outline: none;
-
   border-radius: 15px;
   border: 1px solid rgba(47, 47, 47, 0.2);
+  background-color: #fff;
+  transition: border-color 0.3s ease;
+  box-shadow: 0 10px 12px rgba(28, 61, 15, 0.2);
 }
 
 .formInput:focus {
   border: 1px solid rgba(47, 47, 47, 0.4);
+}
+
+.formInput:hover {
+  border-color: #69e974;
+}
+
+.formInput:active {
+  border-color: #69e974;
 }
 
 .error {
@@ -83,49 +77,72 @@
   border: 1px solid #ef5050;
 }
 
+.error:hover {
+  border: 1px solid #ef5050;
+}
+
 .errorMessage {
-  text-align: center;
+  /*  text-align: center; */
   color: #ef5050;
   font-weight: 400;
   font-size: 14px;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
 }
 
 .iconEye {
   position: absolute;
   top: 50%;
-  right: 16px;
+  right: 10px;
   transform: translateY(-50%);
-
   stroke: currentColor;
   fill: transparent;
+  pointer-events: none;
+  /* Заборонити клікати на саму іконку */
 }
 
 .formButton {
   width: 100%;
-    height: 50px;
-    border-radius: 30px;
-    border: none;
-    display: block;
-    font-size: 14px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    background: #9be1a0;
-    cursor: pointer;
-    /* margin-bottom: 8px; */
-}
 
+  height: 50px;
+  border-radius: 30px;
+  border: none;
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: #9be1a0;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  background-color: #9be1a0;
+  color: #323f47;
+  transition: all 0.3s ease;
+}
 
 .formButton:hover {
   background-color: #87d28d;
+  transform: translateY(-4px) scale(1.05);
+}
+.btnWrapper {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 
 .signinText {
-  margin-top: 8px;
-    font-weight: 400;
-    font-size: 14px;
-    color: rgba(47, 47, 47, 0.5);
-    text-align: center;
+  display: flex;
+  margin-top: 16px;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.01em;
+  color: rgba(47, 47, 47, 0.5);
+  gap: 10px;
 }
 
 .signupLink {
@@ -140,18 +157,24 @@
 .passwordToggle {
   all: unset;
   position: absolute;
-  right: 16px;
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: none;
+  border: none;
 }
 
 .passwordWrapper {
   position: relative;
   width: 100%;
+}
+.passwordToggle:focus {
+  outline: none;
+  /* Приховати контур при фокусі */
 }
 
 .error {
@@ -163,36 +186,40 @@
   .logo {
     padding: 32px 0 0 32px;
   }
-
+  .loginContainer {
+    width: 704px;
+    padding: 32px;
+  }
+  .formWrapper {
+    width: 100%;
+    padding: 225px 102px 281px 102px;
+  }
   .title {
     font-size: 36px;
-    line-height: 1.5;
+    line-height: 106%;
   }
 
-  .formLabel,
-  .formInput,
-  .formButton,
-  .signinText {
+  .formLabel {
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 150%;
   }
 
-  .loginContainer {
-    padding-left: 134px;
-    padding-right: 134px;
-  }
-
-  .field {
-    width: 436px;
+  .formInput {
+    width: 100%;
+    height: 56px;
+    font-size: 16px;
+    line-height: 150%;
   }
 
   .formButton {
-    width: 214px;
+    width: 436px;
     height: 60px;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    font-size: 16px;
   }
 
+  .signinText {
+    font-size: 16px;
+  }
   .signinText {
     flex-direction: row;
   }
@@ -205,11 +232,6 @@
   .passwordWrapper {
     width: calc(100vw - 64px);
   }
-    .signinText {
-      margin-top: 12px;
-      flex-direction: column;
-      text-align: center;
-    }
 
   .btnWrapper {
     flex-direction: column;
@@ -223,24 +245,26 @@
 
 @media only screen and (min-width: 768px) {
   .formButton {
-      width: 100%;
+    width: 100%;
   }
 
   .errorMessage {
+    margin-top: 8px;
+    color: #ff6b6b;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: -0.01em;
   }
-
-  /* .logoWrapper {
-    padding-right: 32px;
-  } */
 }
 
 @media only screen and (min-width: 1440px) {
   .loginContainer {
-    padding-left: 118px;
-    padding-right: 118px;
+    width: 672px;
+    height: 736px;
+  }
+  .formWrapper {
+    width: 100%;
+    padding: 113px 86px 169px 86px;
   }
 }
 
@@ -256,4 +280,3 @@
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   animation: fade-in 0.5s ease-in-out;
 }
-

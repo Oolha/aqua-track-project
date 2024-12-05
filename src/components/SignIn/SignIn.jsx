@@ -3,7 +3,7 @@ import { useState } from 'react';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-import axios from 'axios';
+// import axios from 'axios';
 import { Icon } from '../Icon/Icon.jsx';
 import Logo from '../../components/Logo/Logo.jsx';
 import css from './SignIn.module.css'; // Стилі форми
@@ -38,7 +38,8 @@ function SignInForm() {
 
   const onSubmit = async (data) => {
     try {
-      const result = await dispatch(fetchSignIn(data)).unwrap();
+      // const result = await dispatch(fetchSignIn(data)).unwrap();
+      await dispatch(fetchSignIn(data)).unwrap();
 
       reset();
       navigate('/tracker');
@@ -57,7 +58,11 @@ function SignInForm() {
         <Logo />
         <div className={css.formWrapper}>
           <h2 className={css.title}>Sign In</h2>
-          <form onSubmit={handleSubmit(onSubmit)} className={css.form}>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className={css.form}
+            noValidate
+          >
             <div className={css.field}>
               <label htmlFor="email" className={css.formLabel}>
                 Email
@@ -86,9 +91,7 @@ function SignInForm() {
                     errors.password ? css.error : ''
                   }`}
                 />
-                {errors.password && (
-                  <p className={css.errorMessage}>{errors.password.message}</p>
-                )}
+
                 <button
                   type="button"
                   className={css.passwordToggle}
@@ -103,21 +106,24 @@ function SignInForm() {
                 </button>
               </div>
             </div>
+            {errors.password && (
+              <p className={css.errorMessage}>{errors.password.message}</p>
+            )}
             <div className={css.btnWrapper}>
               <button type="submit" className={css.formButton}>
                 Sign In
               </button>
             </div>
           </form>
-        </div>
 
-        <div>
-          <p className={css.signinText}>
-            Don&apos;t have an account?{' '}
-            <Link to="/signup" className={css.signupLink}>
-              Sign Up
-            </Link>
-          </p>
+          <div>
+            <p className={css.signinText}>
+              Don&apos;t have an account?{' '}
+              <Link to="/signup" className={css.signupLink}>
+                Sign Up
+              </Link>
+            </p>
+          </div>
         </div>
 
         {notification && <div className={css.notification}>{notification}</div>}

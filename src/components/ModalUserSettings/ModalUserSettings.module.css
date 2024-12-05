@@ -14,6 +14,19 @@
     }
 }
 
+.user_avatar {
+    width: 75px;
+    height: 75px;
+    border-radius: 100%;
+    margin: 0 auto 10px auto;
+}
+@media (min-width: 768px) {
+    .user_avatar {
+        width: 100px;
+        height: 100px;
+    }
+}
+
 .error_message {
     font-weight: 400;
 font-size: 14px;
@@ -22,13 +35,16 @@ letter-spacing: -0.01em;
 color: #ef5050;
 }
 
+
 .title {
 font-weight: var(--font-weight-bold);
 font-size: 20px;
 line-height: 1.2;
 letter-spacing: -0.01em;
 color: var(--color-heading);
+margin-bottom: 20px;
 }
+
 
 @media (min-width: 768px) {
     .title {
@@ -253,13 +269,13 @@ scroll_container {
         padding: 16px 16px;  
     }
 }
-
+/* 
 .name_email_input:focus,
 .input_weight:focus,
 .input_active_time:focus,
 .input_drunk_water:focus {
     border: 1px solid rgba(47, 47, 47, 0.4);
-}
+} */
 
 
 
@@ -460,12 +476,13 @@ line-height: 1.49;
     line-height: 1.29;
     letter-spacing: -0.01em;
     color: var(--main);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
     
 }
 
 .btn_submit:hover ,
 .btn_submit:focus {
-    background: var(--green-hover);
+    background: #87d28d;
 
 }
 
@@ -473,4 +490,8 @@ line-height: 1.49;
     .btn_submit {
         padding: 16px 50px;
     }
+}
+
+.error_input {
+    border: 1px solid #ef5050;
 }

@@ -1,11 +1,38 @@
 .list {
+  height: 106px;
   display: flex;
   flex-direction: row;
+  overflow-y: hidden;
   gap: 8px;
+  overflow-x: auto;
+  scrollbar-color: #323f47 #f1f1f1;
+  scrollbar-width: 150px;
+  scroll-margin-top: 24px;
+}
+.scrollable {
+  overflow-x: scroll; /* Примусово показує скролбар */
+}
+.list::-webkit-scrollbar {
+  height: 8px; /* Висота скролбара */
 }
 
+.list::-webkit-scrollbar-thumb {
+  background-color: #323f47; /* Колір скролбара */
+  border-radius: 4px;
+}
+
+.list::-webkit-scrollbar-track {
+  background-color: #f1f1f1; /* Колір треку скролбара */
+}
 @media only screen and (min-width: 768px) {
   .list {
+    height: 118px;
     gap: 32px;
+    scrollbar-width: 235px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .list {
+    gap: 22px;
   }
 }

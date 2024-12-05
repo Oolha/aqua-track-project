@@ -1,18 +1,17 @@
 .fontSection {
-  background-image: url('../../assets/images/imageMobile@1x.jpg');
+  background-image: url('../../assets/images/RectangleM.jpg');
   border-radius: 30px;
   width: 343px;
   background-size: cover;
   padding: 20px;
 }
+
 .listBtn {
   position: relative;
   display: flex;
-  justify-content: flex-start;
   flex-wrap: wrap;
-  flex-direction: row;
   gap: 8px;
-  margin-left: 120px;
+  margin-left: 119px;
   margin-top: 12px;
 }
 
@@ -31,6 +30,7 @@
   color: #ffffff;
   cursor: not-allowed;
 }
+
 .ellipse {
   width: 8px;
   height: 8px;
@@ -41,6 +41,7 @@
   border-radius: 50%;
   background-color: #9be1a0;
 }
+
 .btnView {
   border-radius: 30px;
   border: none;
@@ -56,6 +57,7 @@
   color: #323f47;
   cursor: not-allowed;
 }
+
 .btnPersonal {
   border-radius: 30px;
   padding: 9px 12px;
@@ -71,73 +73,50 @@
   border: none;
   cursor: not-allowed;
 }
+
 .listStylesImg {
-  display: flex;
   border-radius: 30px;
-  padding: 8px 5px;
-  width: 160px;
+  width: 188px;
   height: 48px;
   box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
   margin-top: 209px;
-  margin-left: 10px;
-}
-.avatarGroup {
-  display: flex;
-  align-items: center;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid white;
-  margin-left: -10px;
-  position: relative;
-  z-index: 1;
-}
-
-.avatar:first-child {
-  margin-left: 0;
-}
-.textParagraph {
-  font-weight: 700;
-  font-size: 8px;
-  line-height: 117%;
-  color: #323f47;
-}
-.happy {
-  color: #9be1a0;
-}
-
-/* -------------------------------------------- */
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .fontSection {
-    background-image: url('../../assets/images/imageTablet@2x.jpg');
-    width: 736px;
+    background-image: url('../../assets/images/RectangleT.jpg');
+    width: 704px;
     height: 466px;
     padding: 32px;
   }
+
   .listStylesImg {
     display: flex;
     border-radius: 30px;
-    padding: 10px 20px;
-    width: 250px;
+    width: 237px;
     height: 67px;
     box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     background-color: #ffffff;
     margin-top: 265px;
+  }
+
+  .textParagraph {
+    width: 90px;
+  }
+
+  .listItemHabit {
     margin-left: -22px;
   }
-  .avatar {
-    width: 47px;
-    height: 47px;
+
+  .ellipse {
+    left: 16px;
   }
+
   .btnHabit {
-    padding: 11px 16px;
+    padding: 11px 11px 16px 28px;
     width: 111px;
     height: 34px;
-    background: #323f47;
     font-weight: 700;
     font-size: 12px;
   }
@@ -148,43 +127,62 @@
     font-size: 12px;
   }
   .btnPersonal {
-    border-radius: 30px;
-    border: none;
     padding: 11px 16px;
     width: 170px;
     height: 34px;
     font-size: 12px;
   }
-  .textParagraph {
-    font-size: 15px;
-    line-height: 149%;
-  }
+
   .listBtn {
-    display: flex;
-    justify-content: flex-start;
-    flex-wrap: wrap;
     gap: 10px;
-    margin-left: 415px;
+    margin-top: -30px;
+    margin-left: 380px;
   }
 }
-/* ------------------------------------- */
+
 @media only screen and (min-width: 1440px) {
   .fontSection {
-    background-image: url('../../assets/images/imageDesktop@1x.jpg');
+    background-image: url('../../assets/images/RectangleD.jpg');
     width: 672px;
     height: 736px;
   }
 
   .listStylesImg {
-    width: 250px;
+    width: 237px;
     height: 67px;
-    box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     margin-top: 537px;
-    margin-left: 32px;
+    margin-left: 16px;
+    padding: 10px 10px 10px 5px;
   }
 
   .listBtn {
     margin-top: -30px;
-    margin-left: 355px;
+    margin-left: 385px;
+    width: 242px;
+    height: 78px;
+  }
+
+  .btnView {
+    padding: 11px 14px;
+    width: 121px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .btnPersonal {
+    width: 158px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .ellipse {
+    left: 16px;
+  }
+
+  .btnHabit {
+    padding: 11px 11px 16px 28px;
+    width: 111px;
+    height: 34px;
+    font-size: 12px;
   }
 }

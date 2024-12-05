@@ -1,5 +1,4 @@
 .containerUp {
-  /*   margin: auto; */
   background-color: #f0eff4;
   border-radius: 30px;
   box-sizing: border-box;
@@ -24,6 +23,7 @@
   line-height: 100%;
   letter-spacing: -0.01em;
   margin-bottom: 32px;
+  /*  text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.5); */
 }
 
 .labelUp {
@@ -33,38 +33,61 @@
   color: #2f2f2f;
   display: block;
   margin-bottom: 8px;
+  /*   text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.4); */
+}
+
+.inputWrapper {
+  position: relative;
+  align-items: center;
 }
 
 .inputUp {
-  border: 1px solid rgba(47, 47, 47, 0.2);
+  border: 1px solid rgba(248, 246, 246, 0.863);
   border-radius: 15px;
   padding-right: 40px;
   padding-left: 16px;
   width: 100%;
   max-width: 100%;
-
+  background-color: #fff;
   height: 50px;
   font-weight: 400;
   font-size: 14px;
   line-height: 129%;
   letter-spacing: -0.01em;
-  color: rgba(47, 47, 47, 0.6);
+  color: rgba(10, 10, 10, 0.911);
   box-sizing: border-box;
+  box-shadow: 0 10px 12px rgba(28, 61, 15, 0.2);
+  transition: all 0.3s ease;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+.icon {
+  pointer-events: none;
+}
+
+.inputUp:hover {
+  border-color: #69e974;
+}
+
+.inputUp:focus {
+  border-color: #87d28d;
+}
+
+.inputUp:active {
+  border-color: #69e974;
 }
 
 .errorText {
   color: #ef5050;
   font-weight: 400;
   font-size: 14px;
-  position: absolute;
-  margin-top: 2px;
+  /* position: absolute; */
 }
 
 .btnUp {
   border-radius: 30px;
   border: none;
   width: 100%;
-
   height: 50px;
   font-size: 14px;
   font-weight: 700;
@@ -72,6 +95,13 @@
   background: #9be1a0;
   margin: 16px 0 16px 0;
   cursor: pointer;
+  box-shadow: 0 10px 12px rgba(28, 61, 15, 0.2);
+  transition: all 0.3s ease;
+}
+
+.btnUp:hover {
+  transform: translateY(-4px) scale(1.05);
+  background: #87d28d;
 }
 
 .textUp {
@@ -79,12 +109,19 @@
   font-size: 14px;
   color: rgba(47, 47, 47, 0.5);
   text-align: center;
+  /*   text-shadow: 2px 2px 4px rgba(12, 12, 12, 0.4); */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .linkUp {
   font-weight: 700;
   color: #2f2f2f;
   cursor: pointer;
+  text-decoration: underline;
+}
+
+.linkUp:hover {
+  color: #519256;
 }
 
 .iconButton {
@@ -99,22 +136,25 @@
   justify-content: center;
 }
 
-.inputWrapper {
-  position: relative;
-  align-items: center;
-}
-
 .inputError {
-  border: 1px solid red;
+  border: 0.1px solid rgb(243, 188, 188);
   background-color: #ffe6e6;
 }
 
+.inputError:focus {
+  border: 1px solid red;
+  background-color: #ffe6e6;
+}
+.inputError:hover {
+  border: 1px solid red;
+}
+
 .notification {
-  position: fixed; /* Завжди зверху екрану */
-  top: 20px; /* Відступ від верхнього краю */
+  position: fixed;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 1000; /* Щоб поверх всього */
+  z-index: 1000;
   padding: 15px 20px;
   border-radius: 8px;
   font-size: 16px;
@@ -127,24 +167,8 @@
   animation: fadeInOut 3s ease forwards;
 }
 
-/* Стиль для успішного повідомлення */
-.notification.success {
-  background-color: #4caf50;
-}
-
-/* Стиль для повідомлення про помилку */
 .notification.error {
   background-color: #f44336;
-}
-
-/* Стиль для інформаційного повідомлення */
-.notification.info {
-  background-color: #2196f3;
-}
-
-/* Стиль для попереджувального повідомлення */
-.notification.warning {
-  background-color: #ff9800;
 }
 
 @keyframes fadeInOut {

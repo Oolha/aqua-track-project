@@ -2,15 +2,23 @@
   background: #f0eff4;
   border-radius: 30px;
   width: 343px;
-  padding-top: 24px;
-  padding-left: 16px;
-}
-.box {
-  padding-top: 118px;
-  padding-right: 16px;
-  padding-bottom: 67px;
+  height: 411px;
+  padding: 16px;
+  position: relative;
   margin-bottom: 16px;
 }
+
+.logoContainer {
+  position: absolute;
+  top: 24px;
+  left: 16px;
+}
+
+.box {
+  margin-top: 118px;
+  width: 311px;
+}
+
 .subtitle {
   font-family: var(--font-family);
   font-weight: 400;
@@ -20,114 +28,165 @@
   color: #2f2f2f;
   margin-bottom: 16px;
 }
+
 .title {
   font-family: var(--font-family);
-  font-weight: 700;
+  font-weight: bold;
   font-size: 38px;
   line-height: 100%;
   letter-spacing: -0.01em;
   color: #323f47;
   margin-bottom: 32px;
 }
+
 .links {
   display: flex;
   gap: 10px;
+  margin-bottom: 67px;
 }
 
-.tryTrackerBtn {
+.linkGreen {
   border-radius: 30px;
   padding: 14px 19px;
   font-size: 14px;
-  width: 116px;
+  font-weight: bold;
+  line-height: 18px;
   height: 46px;
   color: #323f47;
   background-color: #9be1a0;
 }
-.signInBtn {
-  border: 1px solid black;
+
+.linkGreen:hover {
+  background-color: #87d28d;
+}
+
+.linkWhite {
   border-radius: 30px;
-  padding: 14px 28px;
-  font-size: 14px;
+  padding: 12px 24px;
+  line-height: 24px;
+  border: 1px solid#323F47;
   width: 104px;
   height: 46px;
+  font-size: 14px;
+  font-weight: bold;
   color: #323f47;
+  margin-left: 10px;
   background-color: transparent;
 }
 
+.linkWhite:hover {
+  color: #87d28d;
+  border-color: #87d28d;
+}
+
 /* -------------------------------------------- */
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .welcomFont {
-    width: 736px;
-    padding-top: 32px;
-    padding-left: 32px;
+    width: 704px;
+    height: 498px;
+    padding: 32px;
   }
+
+  .logoContainer {
+    top: 32px;
+    left: 32px;
+  }
+
   .box {
-    padding: 106px 93px 50px 32px;
-    margin-bottom: 16px;
+    margin-top: 74px;
+    width: 547px;
+    height: 342px;
   }
+
   .subtitle {
     font-size: 16px;
     line-height: 150%;
   }
+
   .title {
     font-size: 64px;
     line-height: 109%;
   }
+
   .links {
     gap: 16px;
+    margin-bottom: 50px;
   }
-  .tryTrackerBtn {
-    padding: 18px 40px;
-    font-size: 14px;
+
+  .linkGreen {
+    padding: 18px 36px;
+    font-size: 16px;
+    line-height: 24px;
     width: 169px;
     height: 60px;
   }
-  .signInBtn {
-    padding: 18px 40px;
+
+  .linkWhite {
+    padding: 18px 36px;
+    font-size: 16px;
     width: 135px;
     height: 60px;
   }
 }
+
 /* ------------------------------------- */
-@media only screen and (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   .welcomFont {
-    background: #f0eff4;
     width: 672px;
     height: 736px;
-    margin-right: 32px;
+    margin-bottom: 0;
+    padding: 32px;
   }
+
   .box {
-    padding: 188px 61px 188px 64px;
-    margin: 0;
+    width: 547px;
+    margin-top: 156px;
+    margin-left: 32px;
   }
+
+  .logoContainer {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+  }
+
   .subtitle {
     font-size: 16px;
-    line-height: 150%;
+    line-height: 24px;
   }
+
   .title {
-    font-weight: 700;
+    width: 547px;
+    height: auto;
     font-size: 80px;
-    line-height: 95%;
-    letter-spacing: -0.01em;
-    margin-bottom: 32px;
+    line-height: 76px;
   }
+
   .links {
-    display: flex;
-    gap: 16px;
+    margin-bottom: 188px;
   }
 
-  .tryTrackerBtn {
+  .linkGreen {
+    padding: 18px 36px;
     font-size: 16px;
-    width: 168px;
+    line-height: 24px;
+    width: 169px;
+    height: 60px;
   }
 
-  .signInBtn {
-    border: 1px solid black;
-    border-radius: 30px;
+  .linkGreen:hover {
+    background-color: #87d28d;
+  }
+
+  .linkWhite {
+    padding: 18px 36px;
     font-size: 16px;
     width: 135px;
     height: 60px;
-    color: #323f47;
-    background-color: transparent;
+  }
+
+  .linkWhite:hover {
+    color: #87d28d;
+    border-color: #87d28d;
   }
 }
