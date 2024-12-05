@@ -140,7 +140,7 @@ export const ModalUserSettings = ({toggleModal}) => {
                     />
                 ) : (
                     <img
-                        src={user.avatar || 'src/assets/images/imageUserAvatar.jpg'}
+                        src={user.avatar || '../../assets/images/imageUserAvatar.jpg'}
                         alt="User's avatar"
                         className={style.user_avatar}
                     />
