@@ -8,5 +8,5 @@ export const selectUserDisplayName = (state) => {
 };
 export const selectUserDailyNorma = (state) => {
   const user = state.auth.user;
-  return user.dailyNorm !== undefined ? user.dailyNorm : 1500;
+  return user.dailyNorm !== undefined || 0 ? user.dailyNorm : 1.5;
 };

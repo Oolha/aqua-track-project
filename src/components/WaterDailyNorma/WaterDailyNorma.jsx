@@ -5,8 +5,8 @@ import { selectUserDailyNorma } from '../../redux/auth/selectors';
 const WaterDailyNorma = () => {
   const dailyNorma = useSelector(selectUserDailyNorma);
 
-  const formatVolume = (ml) => {
-    return `${(ml / 1000).toFixed(1)} L`;
+  const formatVolume = (l) => {
+    return `${l.toFixed(1)} L`;
   };
 
   return (
