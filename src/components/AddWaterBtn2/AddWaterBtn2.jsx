@@ -22,7 +22,7 @@ const AddWaterBtn2 = ({ onAddWaterClick }) => {
           <Icon id="icon-close-in-round" className={css.icon} />
         )}
       </button>
-      <p className={css.addWaterText}>Add water</p>
+      <p className={`${css.addWaterText} addWaterText`}>Add water</p>
     </div>
   );
 };
