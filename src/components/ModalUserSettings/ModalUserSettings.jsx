@@ -68,14 +68,15 @@ export const ModalUserSettings = ({toggleModal}) => {
     
 
     useEffect(() => {
-        if (user && user.data) {
-            setValue('name', user.data.name || '');
-            setValue('email', user.data.email || '');
-            setValue('weight', user.data.weight || '');
-            setValue('activeTime', user.data.activeTime || '');
-            setValue('dailyNorm', user.data.dailyNorm || '');
-            setValue('gender', user.data.gender || '');
-            setSelectedGender(user.data.gender || ''); 
+        if (user) {
+            const userData = user.data || user;
+            setValue('name', userData.name || '');
+            setValue('email', userData.email || '');
+            setValue('weight', userData.weight || '');
+            setValue('activeTime', userData.activeTime || '');
+            setValue('dailyNorm', userData.dailyNorm || '');
+            setValue('gender', userData.gender || '');
+            setSelectedGender(userData.gender || ''); 
         }
     }, [user, setValue]);
  
@@ -139,7 +140,7 @@ export const ModalUserSettings = ({toggleModal}) => {
                     />
                 ) : (
                     <img
-                        src={user?.data?.avatar || 'src/assets/images/imageUserAvatar.jpg'}
+                        src={user.avatar || '../../assets/images/imageUserAvatar.jpg'}
                         alt="User's avatar"
                         className={style.user_avatar}
                     />
