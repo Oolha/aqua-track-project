@@ -24,4 +24,3 @@ function WelcomeSection() {
   );
 }
 export default WelcomeSection;
-
