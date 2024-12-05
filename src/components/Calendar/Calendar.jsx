@@ -2,7 +2,8 @@ import { useSelector } from 'react-redux';
 import {selectWaterItems} from '../../redux/water/selectors.js'
 import { CalendarItem } from '../CalendarItem/CalendarItem';
 import { getDaysInMonthFromDate, getWaterItemsperDay,amountWaterPerDay } from '../../utils/calendar';
-import {selectCurrentDate} from '../../redux/date/selectors.js'
+import {selectCurrentDate} from '../../redux/date/selectors.js';
+import {selectUserDailyNorma} from '../../redux/auth/selectors.js'
 import css from './Calendar.module.css';
 
 
@@ -10,8 +11,7 @@ import css from './Calendar.module.css';
 
 export const Calendar = () => {
   const initialDate = useSelector(selectCurrentDate);
-  // const norma=useSelector(state=>state.user.norma);
-  const norma=1500;
+  const norma=useSelector(selectUserDailyNorma);
   const waterData = useSelector(selectWaterItems);
   const date = new Date(initialDate);
   const month = date.getMonth();
