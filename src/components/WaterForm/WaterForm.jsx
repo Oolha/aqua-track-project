@@ -49,14 +49,27 @@ const WaterForm = ({ entry, onAddWater }) => {
   const onSubmit = (formData) => {
     const hours = formData.date.split(':')[0];
     const minutes = formData.date.split(':')[1];
-    const newDate = new Date(
-      initialDate.setHours(hours, minutes)
-    ).toISOString();
+    // const newDate = new Date(initialDate.setHours(hours, minutes)).toISOString();
+    
+    
+ 
+    const localDate = new Date(initialDate);
+    localDate.setHours(hours, minutes);
+    
+    const year = localDate.getFullYear();
+    const month = String(localDate.getMonth() + 1).padStart(2, '0'); // Місяці з 0-індексацією
+    const day = String(localDate.getDate()).padStart(2, '0');
+    const localHours = String(localDate.getHours()).padStart(2, '0');
+    const localMinutes = String(localDate.getMinutes()).padStart(2, '0');
+    
+    const newDate = `${year}-${month}-${day}T${localHours}:${localMinutes}`;   
+   
 
-    console.log('Submitting water entry:', {
-      volume: Number(formData.volume),
-      date: newDate,
-    });
+
+    // console.log('Submitting water entry:', {
+    //   volume: Number(formData.volume),
+    //   date: newDate,
+    // });
     dispatch(
       createWaterEntry({
         volume: Number(formData.volume),
