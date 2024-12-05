@@ -21,10 +21,7 @@ export const createWaterEntry = createAsyncThunk(
     try {
       const formattedData = {
         ...waterData,
-        date: new Date(waterData.date)
-          .toISOString()
-          .slice(0, 16)
-          .replace('T', ' '),
+        date: waterData.date.slice(0, 16).replace('T', ' '),
       };
       const response = await instance.post('water', formattedData);
       return response.data;
