@@ -16,6 +16,7 @@ import bottleTablet from '../../assets/images/bottle_tablet.png';
 import bottleTablet2x from '../../assets/images/bottle_tablet@2x.png';
 import bottleMobile from '../../assets/images/bottle_mobile.png';
 import bottleMobile2x from '../../assets/images/bottle_mobile@2x.png';
+import { fetchDailyWater } from '../../redux/water/operations.js';
 
 const WaterMainInfo = () => {
   const [isOpenModal, setIsOpenModal] = useModal();
@@ -24,6 +25,11 @@ const WaterMainInfo = () => {
 
   useEffect(() => {
     dispatch(fetchCurrentUser());
+  }, [dispatch]);
+
+  useEffect(() => {
+    const today = new Date().toLocaleDateString('en-CA');
+    dispatch(fetchDailyWater(today));
   }, [dispatch]);
 
   return (

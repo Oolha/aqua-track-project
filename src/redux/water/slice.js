@@ -4,12 +4,14 @@ import {
   patchWaterEntry,
   fetchMonthlyWaterEntries,
   deleteWaterEntry,
+  fetchDailyWater,
 } from './operations';
 
 const initialState = {
   items: [],
   isLoading: false,
   error: null,
+  waterAmountPerDay: [],
 };
 const handlePending = (state) => {
   state.isLoading = true;
@@ -51,7 +53,13 @@ const waterSlice = createSlice({
       .addCase(patchWaterEntry.pending, handlePending)
       .addCase(patchWaterEntry.rejected, handleRejected)
       .addCase(deleteWaterEntry.pending, handlePending)
-      .addCase(deleteWaterEntry.rejected, handleRejected);
+      .addCase(deleteWaterEntry.rejected, handleRejected)
+      .addCase(fetchDailyWater.pending, handlePending)
+      .addCase(
+        fetchDailyWater.fulfilled,
+        (state, { payload }) => (state.waterAmountPerDay = payload.data)
+      )
+      .addCase(fetchDailyWater.rejected, handleRejected);
   },
 });
 
