@@ -20,9 +20,7 @@ dailyNorm: Yup.number().min(0, 'Daily water norm cannot be a negative number').r
 
 export const ModalUserSettings = ({toggleModal}) => {
     const dispatch = useDispatch();
-    const [avatar, setAvatar] = useState(null);
     const [formData, setFormData] = useState({ weight: '', activeTime: '', dailyNorm: '' });
-    const [dailyNorm, setDailyNorm] = useState();
     const user = useSelector(selectAuthUser);
     const [selectedGender, setSelectedGender] = useState('');
     const isLoading = useSelector(selectIsLoading);
@@ -43,7 +41,6 @@ export const ModalUserSettings = ({toggleModal}) => {
     const handleFileChange = (event) => {
         const file = event.target.files[0];
         if (file) {
-            setAvatar(URL.createObjectURL(file));
             setValue('avatar', event.target.files); 
         }
     };
@@ -56,16 +53,30 @@ export const ModalUserSettings = ({toggleModal}) => {
         dispatch(fetchCurrentUser());
     }, [dispatch]);
 
+    const weight = watch('weight');
+    const activeTime = watch('activeTime');
+    const dailyNorm = watch('dailyNorm');
+
     useEffect(() => {
-        if (user && user.data) {
-            setValue('name', user.data.name || '');
-            setValue('email', user.data.email || '');
-            setValue('weight', user.data.weight || '');
-            setValue('activeTime', user.data.activeTime || '');
-            setValue('dailyNorm', user.data.dailyNorm || '');
-            setValue('gender', user.data.gender || '');
-            setSelectedGender(user.data.gender || ''); 
-            setAvatar(user.data.avatar || ''); 
+    setFormData({
+        weight,
+        activeTime,
+        dailyNorm,
+    });
+    }, [weight, activeTime, dailyNorm]);
+
+    
+
+    useEffect(() => {
+        if (user) {
+            const userData = user.data || user;
+            setValue('name', userData.name || '');
+            setValue('email', userData.email || '');
+            setValue('weight', userData.weight || '');
+            setValue('activeTime', userData.activeTime || '');
+            setValue('dailyNorm', userData.dailyNorm || '');
+            setValue('gender', userData.gender || '');
+            setSelectedGender(userData.gender || ''); 
         }
     }, [user, setValue]);
  
@@ -129,7 +140,7 @@ export const ModalUserSettings = ({toggleModal}) => {
                     />
                 ) : (
                     <img
-                        src={user?.data?.avatar || 'src/assets/images/imageUserAvatar.jpg'}
+                        src={user.avatar || '../../assets/images/imageUserAvatar.jpg'}
                         alt="User's avatar"
                         className={style.user_avatar}
                     />
@@ -241,13 +252,11 @@ export const ModalUserSettings = ({toggleModal}) => {
                                 <div className={style.water_intake_input_group}>
                                     <label className={style.label_title}>Write down how much water you will drink:</label>
                                     <input 
-                                    // type="number"
                                         name="dailyNorm"
-                                        value={dailyNorm}
+                                        value={formData.dailyNorm}
                                         {...register('dailyNorm')}
                                         onChange={(e) => setFormData({ ...formData, dailyNorm: e.target.value })}
-                                        // onChange={(e) => setValue('dailyNorm', e.target.value)}
-                                                                           className={`${style.input_drunk_water} ${errors.dailyNorm ? style.error_input : ''}`}
+                                        className={`${style.input_drunk_water} ${errors.dailyNorm ? style.error_input : ''}`}
                                     />
                                        {errors.dailyNorm && <p className={style.error_message}>{errors.dailyNorm.message}</p>}
                                 </div>
