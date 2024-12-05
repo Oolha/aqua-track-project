@@ -9,6 +9,8 @@ import { fetchCurrentUser, fetchUpdateUser } from '../../redux/auth/operations';
 import { selectAuthUser, selectIsLoading } from '../../redux/auth/selectors';
 import Loader from '../Loader/Loader';
 
+import AvatarImg from "../../assets/images/imageUserAvatar.jpg"
+
 const validationSchema = Yup.object().shape({
     name: Yup.string().matches(/^[a-zA-Z ]+$/, 'Name can only contain letters').required('Name is required'),
 email: Yup.string().email('Email must be a valid email address').required('Email is required'),
@@ -141,7 +143,7 @@ export const ModalUserSettings = ({toggleModal}) => {
                     />
                 ) : (
                     <img
-                        src={user.avatar || '../../assets/images/imageUserAvatar.jpg'}
+                        src={user.avatar || AvatarImg}
                         alt="User's avatar"
                         className={style.user_avatar}
                     />
