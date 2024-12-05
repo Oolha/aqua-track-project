@@ -11,7 +11,7 @@ const WaterDailyNorma = () => {
 
   return (
     <div className={css.wrapper}>
-      <p className={css.normaLitr}>{formatVolume(dailyNorma)}</p>
+      <p className={`${css.normaLitr} normaLitr`}>{formatVolume(dailyNorma)}</p>
       <p className={css.text}>My daily norma</p>
     </div>
   );
