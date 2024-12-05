@@ -15,8 +15,11 @@ const WaterList = () => {
     return getWaterItemsperDay(waterData, currentDate);
   }, [waterData, currentDate]);
 
+  const listClassName = `${css.list} ${
+    waterItemsperDay.length > 3 ? css.scrollable : ''
+  }`;
   return (
-    <ul className={css.list}>
+    <ul className={listClassName}>
       {waterItemsperDay.map((item) => {
         return <WaterItem key={item._id} item={item} />;
       })}
