@@ -15,11 +15,14 @@ const WaterProgressBar = () => {
   // const waterAmount = useSelector(selectWaterAmountPerDay);
   // console.log(waterAmount, 'day');
   const itemsWater = useSelector(selectWaterItems);
-  console.log(itemsWater, 'items');
-  const today = new Date();
-  const dayWaterItem = getWaterItemsperDay(itemsWater);
-  // const waterPercent = Math.min(Math.round((waterAmount / dailyNorma) * 100), 100);
 
+  // console.log(itemsWater, 'items');
+  const today = new Date();
+  
+  const dayWaterItem = getWaterItemsperDay(itemsWater,today);
+  const amount = amountWaterPerDay(dayWaterItem)
+  // const waterPercent = Math.min(Math.round((waterAmount / dailyNorma) * 100), 100);
+console.log( amount)
   const progressStyle = {
     left: 'calc(70% - 12px)',
     // transform: 'translateY(-calc(70% - 12px)',
