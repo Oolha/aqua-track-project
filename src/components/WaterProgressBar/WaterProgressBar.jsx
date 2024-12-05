@@ -24,7 +24,7 @@ const WaterProgressBar = () => {
     <div className={css.wrapper}>
       <p className={css.text}>Today</p>
 
-      <div className={css.scale}>
+      <div className={`${css.scale} scale`}>
         <span
           className={css.volumeInfo}
           style={{
