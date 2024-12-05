@@ -11,7 +11,7 @@ export const MonthInfo = ({}) => {
   const currentYear = currentDate.getFullYear();
 
   return (
-    <section className={css.monthInfo}>
+    <section className={`${css.monthInfo} monthInfo`}>
       <div className={css.wrapper}>
       <h2 className={css.monthInfoHeader}>Month</h2>
       <span className={css.pagination}>
