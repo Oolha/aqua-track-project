@@ -50,10 +50,10 @@ export const patchWaterEntry = createAsyncThunk(
 
 export const deleteWaterEntry = createAsyncThunk(
   'water/deleteEntry',
-  async (id, thunkAPI) => {
+  async (_id, thunkAPI) => {
     try {
-      const response = await instance.delete(`water/${id}`);
-      return { id, message: response.data.message };
+      const response = await instance.delete(`water/${_id}`);
+      return { _id, message: response.data.message };
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
