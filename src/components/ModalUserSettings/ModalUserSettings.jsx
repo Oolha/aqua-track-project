@@ -95,6 +95,7 @@ export const ModalUserSettings = ({toggleModal}) => {
                 formData.append('avatar', data.avatar[0]);
             }
             await dispatch(fetchUpdateUser(formData));
+            
             toggleModal();
         } catch (error) {
             console.error('Failed to update user:', error);
