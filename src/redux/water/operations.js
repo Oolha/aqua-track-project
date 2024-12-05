@@ -74,15 +74,3 @@ export const fetchMonthlyWaterEntries = createAsyncThunk(
     }
   }
 );
-
-export const fetchDailyWater = createAsyncThunk(
-  'water/fetchDailyEntries',
-  async (date, thunkAPI) => {
-    try {
-      const response = await instance.get('water/day');
-      return response.data;
-    } catch (e) {
-      return thunkAPI.rejectWithValue(e.message);
-    }
-  }
-);

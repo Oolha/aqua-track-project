@@ -1,10 +1,6 @@
 import { useSelector } from 'react-redux';
 import css from './WaterProgressBar.module.css';
-import {
-  selectWaterAmount,
-  selectWaterAmountPerDay,
-  selectWaterItems,
-} from '../../redux/water/selectors';
+import { selectWaterItems } from '../../redux/water/selectors';
 import { selectUserDailyNorma } from '../../redux/auth/selectors';
 import { getWaterItemsperDay, amountWaterPerDay } from '../../utils/calendar';
 
@@ -12,32 +8,41 @@ import { getWaterItemsperDay, amountWaterPerDay } from '../../utils/calendar';
 
 const WaterProgressBar = () => {
   const dailyNorma = useSelector(selectUserDailyNorma);
-  // const waterAmount = useSelector(selectWaterAmountPerDay);
-  // console.log(waterAmount, 'day');
+
   const itemsWater = useSelector(selectWaterItems);
 
-  // console.log(itemsWater, 'items');
   const today = new Date();
-  
-  const dayWaterItem = getWaterItemsperDay(itemsWater,today);
-  const amount = amountWaterPerDay(dayWaterItem)
-  // const waterPercent = Math.min(Math.round((waterAmount / dailyNorma) * 100), 100);
-console.log( amount)
-  const progressStyle = {
-    left: 'calc(70% - 12px)',
-    // transform: 'translateY(-calc(70% - 12px)',
-  };
+
+  const dayWaterItem = getWaterItemsperDay(itemsWater, today);
+  const amount = amountWaterPerDay(dayWaterItem);
+  const waterPercent = Math.min(
+    Math.round((amount / 1000 / dailyNorma) * 100),
+    100
+  );
 
   return (
     <div className={css.wrapper}>
       <p className={css.text}>Today</p>
 
       <div className={css.scale}>
-        <span className={css.volumeInfo} style={progressStyle}>
-          70%
+        <span
+          className={css.volumeInfo}
+          style={{
+            left: waterPercent === 0 ? `0px` : `calc(${waterPercent}% - 12px)`,
+          }}
+        >
+          {waterPercent}%
         </span>
-        <div className={css.progressBar} style={{ width: `70%` }}></div>
-        <span className={css.circle} style={progressStyle}></span>
+        <div
+          className={css.progressBar}
+          style={{ width: `${waterPercent}%` }}
+        ></div>
+        <span
+          className={css.circle}
+          style={{
+            left: waterPercent === 0 ? `0px` : `calc(${waterPercent}% - 12px)`,
+          }}
+        ></span>
       </div>
       <ul className={css.listPercent}>
         <li className={css.itemPercent}>0%</li>
