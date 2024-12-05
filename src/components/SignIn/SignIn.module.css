@@ -7,7 +7,7 @@
 
 .formWrapper {
   width: 100%;
-  padding: 172px 16px 216px 16px;
+  padding: 172px 0 216px 0;
   margin: 0 auto;
   box-sizing: border-box;
 }
