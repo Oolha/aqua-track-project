@@ -27,20 +27,20 @@ const WaterMainInfo = () => {
 
       <picture>
         <source
-          srcSet="./src/assets/images/bottle_desktop.png 1x, ./src/assets/images/bottle_desktop@2x.png 2x"
+          srcSet="/assets/images/bottle_desktop.png 1x, /assets/images/bottle_desktop@2x.png 2x"
           media="(min-width: 1440px)"
         />
         <source
-          srcSet="./src/assets/images/bottle_tablet.png 1x, ./src/assets/images/bottle_tablet@2x.png 2x"
+          srcSet="/assets/images/bottle_tablet.png 1x, /assets/images/bottle_tablet@2x.png 2x"
           media="(min-width: 768px)"
         />
         <source
-          srcSet="./src/assets/images/bottle_mobile.png 1x, ./src/assets/images/bottle_mobile@2x.png 2x"
+          srcSet="/assets/images/bottle_mobile.png 1x, /assets/images/bottle_mobile@2x.png 2x"
           media="(max-width: 767px)"
         />
         <img
           className={css.imageBottle}
-          src="./src/assets/images/bottle_desktop.png"
+          src="/assets/images/bottle_desktop.png"
           alt="Transparent bottle for water"
         />
       </picture>
