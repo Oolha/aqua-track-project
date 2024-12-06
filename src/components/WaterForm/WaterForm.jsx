@@ -14,7 +14,7 @@ import { selectIsLoading } from '../../redux/water/selectors';
 
 const WaterForm = ({ entry, toggleModal }) => {
   const dispatch = useDispatch();
-  // const isLoading = useSelector(selectIsLoading);
+  const isLoading = useSelector(selectIsLoading);
 
   const extractDate = (timestamp) => {
     if (timestamp) return timestamp.split(' ')[0];
@@ -111,7 +111,7 @@ const WaterForm = ({ entry, toggleModal }) => {
 
   return (
     <>
-      {/* {isLoading && <Loader />} */}
+      {isLoading && <Loader />}
       <form onSubmit={handleSubmit(onSubmit)} className={style.waterForm}>
         <p>{entry._id ? 'Correct entered data:' : 'Choose a value:'}</p>
         <div className={style.valuePickerContainer}>
@@ -179,11 +179,7 @@ const WaterForm = ({ entry, toggleModal }) => {
           )}
         </label>
         <br />
-        <button
-          className={style.saveBtn}
-          // disabled={isLoading}
-          type="submit"
-        >
+        <button className={style.saveBtn} disabled={isLoading} type="submit">
           Save
         </button>
       </form>
