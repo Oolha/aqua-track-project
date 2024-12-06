@@ -5,7 +5,7 @@ import { Modal } from '../Modal/Modal';
 import { useModal } from '../../hooks/useModalHook.js';
 import LogOutModal from '../LogOutModal/LogOutModal.jsx';
 
-const UserBarPopover = () => {
+const UserBarPopover = ({ closePopover }) => {
   const [isSettingsModalOpen, setIsSettingsModalOpen] = useModal();
   const [isLogOutModalOpen, setIsLogOutModalOpen] = useModal();
 
