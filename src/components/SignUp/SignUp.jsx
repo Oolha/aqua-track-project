@@ -168,11 +168,7 @@ function SignUpForm() {
             Sign Up
           </button>
         </form>
-        {notification && (
-          <div className={`${css.notification} ${css[notification.type]}`}>
-            {notification.message}
-          </div>
-        )}
+        {notification && <div className={css.notification}>{notification}</div>}
         <div>
           <p className={css.textUp}>
             Already have account?{' '}
