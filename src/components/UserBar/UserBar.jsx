@@ -70,7 +70,8 @@ const UserBar = ({}) => {
           style={floatingStyles}
           {...getFloatingProps()}
         >
-          <UserBarPopover />
+          <UserBarPopover closePopover={() => setIsOpen(false)} />
+          {/* <UserBarPopover closePopover={() => setIsOpen(false)} /> */}
         </div>
       )}
     </>

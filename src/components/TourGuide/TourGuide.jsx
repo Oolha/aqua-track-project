@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useTour } from '@reactour/tour';
+import { useTranslation } from 'react-i18next';
 
 const TourGuide = () => {
+  const { t } = useTranslation();
   const { setIsOpen } = useTour();
   const [isButtonVisible, setIsButtonVisible] = useState(false);
 
@@ -31,7 +33,7 @@ const TourGuide = () => {
           }}
           onClick={() => setIsOpen(true)}
         >
-          Start Tour
+          {t('homepage.advantages.tour')}
         </button>
       )}
     </>

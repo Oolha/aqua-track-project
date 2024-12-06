@@ -9,33 +9,31 @@
     align-items: center;
     background: rgba(47, 47, 47, 0.6);
     z-index: 1;
-    animation: fadeInBackdrop 0.4s ease-out forwards;
-}
-
-.modal {
+  }
+  
+  .modal {
     position: relative;
     border-radius: 15px;
     padding: 40px 20px;
     box-shadow: 0 4px 50px 0 rgba(0, 0, 0, 0.1);
     background-color: var(--my-white);
-    animation: modalExpand 0.5s ease-out forwards;
-}
-
-@media screen and (min-width:768px) {
+  }
+  
+  @media screen and (min-width: 768px) {
     .modal {
-    padding: 40px;
-}
-}
-.modal_settings{
+      padding: 40px;
+    }
+  }
+  .modal_settings {
     padding: 40px 7px 40px 20px;
-}
-
-@media screen and (min-width:768px) {
+  }
+  
+  @media screen and (min-width: 768px) {
     .modal_settings {
-    padding: 40px 16px 40px 40px;
-}
-}
-.btn_close {
+      padding: 40px 16px 40px 40px;
+    }
+  }
+  .btn_close {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -44,46 +42,25 @@
     right: 16px;
     border: none;
     background-color: transparent;
-}
-
-@media screen and (min-width:768px) {
+  }
+  
+  @media screen and (min-width: 768px) {
     .btn_close {
-        top: 20px;
-        right: 20px;   
+      top: 20px;
+      right: 20px;
     }
-}
-
-.content_wrapper {
+  }
+  
+  .content_wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-@media screen and (min-width:768px) {
-    .icon_close {
-        width: 28px;
-        height: 28px;
-    }
-}
-
-@keyframes modalExpand {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
   }
-
-
-  @keyframes fadeInBackdrop {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
+  
+  @media screen and (min-width: 768px) {
+    .icon_close {
+      width: 28px;
+      height: 28px;
     }
   }

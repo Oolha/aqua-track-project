@@ -31,7 +31,6 @@ const authSlice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(fetchSignUp.fulfilled, (state, { payload }) => {
-        console.log('Payload received on login:', payload);
         state.isLoading = false;
         state.error = null;
         state.user = payload.user;

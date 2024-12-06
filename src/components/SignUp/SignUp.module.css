@@ -167,9 +167,7 @@
   animation: fadeInOut 3s ease forwards;
 }
 
-.notification.error {
-  background-color: #f44336;
-}
+
 
 @keyframes fadeInOut {
   0% {

@@ -8,6 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
 import Logo from '../../components/Logo/Logo.jsx';
 import { fetchSignUp } from '../../redux/auth/operations.js';
+import { useTranslation } from 'react-i18next';
 
 const schema = Yup.object().shape({
   email: Yup.string()
@@ -25,6 +26,7 @@ const schema = Yup.object().shape({
 });
 
 function SignUpForm() {
+  const { t } = useTranslation();
   const [showPwd, setShowPwd] = useState(false);
   const [showRepeatPwd, setShowRepeatPwd] = useState(false);
   const [notification, setNotification] = useState(null);
@@ -45,12 +47,8 @@ function SignUpForm() {
   });
 
   const onSubmit = async (data) => {
-    console.log('Form data:', data);
+    
     const { email, password } = data;
-
-    /*
-      const result = await dispatch(fetchSignUp(signupData)).unwrap();
-      console.log('Signup success:', result); */
 
     try {
       const result = await dispatch(fetchSignUp({ email, password })).unwrap();
@@ -79,17 +77,17 @@ function SignUpForm() {
     <div className={css.containerUp}>
       <Logo />
       <div className={css.formUp}>
-        <h2 className={css.titleUp}>Sign Up</h2>
+        <h2 className={css.titleUp}>{t('signUp.title')}</h2>
         <form onSubmit={handleSubmit(onSubmit)} noValidate>
           <div>
             <label htmlFor="email" className={css.labelUp}>
-              Email
+              {t('signUp.email')}
             </label>
             <input
               {...register('email')}
               type="email"
               name="email"
-              placeholder="Enter your email"
+              placeholder={t('signUp.placeholderEmail')}
               className={`${css.inputUp} ${errors.email ? css.inputError : ''}`}
             />
           </div>
@@ -99,14 +97,14 @@ function SignUpForm() {
 
           <div>
             <label htmlFor="password" className={css.labelUp}>
-              Password
+              {t('signUp.password')}
             </label>
             <div className={css.inputWrapper}>
               <input
                 {...register('password')}
                 type={showPwd ? 'text' : 'password'}
                 name="password"
-                placeholder="Enter your password"
+                placeholder={t('signUp.placeholderPassword')}
                 className={`${css.inputUp} ${
                   errors.password ? css.inputError : ''
                 }  `}
@@ -135,14 +133,14 @@ function SignUpForm() {
           </div>
           <div>
             <label htmlFor="password" className={css.labelUp}>
-              Repeat password
+              {t('signUp.placeholderRepeatPassword')}
             </label>
             <div className={css.inputWrapper}>
               <input
                 {...register('repeatPassword')}
                 type={showRepeatPwd ? 'text' : 'password'}
                 name="repeatPassword"
-                placeholder="Repeat password"
+                placeholder={t('signUp.placeholderRepeatPassword')}
                 className={`${css.inputUp} ${
                   errors.repeatPassword ? css.inputError : ''
                 }`}
@@ -171,19 +169,15 @@ function SignUpForm() {
           </div>
 
           <button type="submit" className={css.btnUp}>
-            Sign Up
+            {t('signIn.signUp')}
           </button>
         </form>
-        {notification && (
-          <div className={`${css.notification} ${css[notification.type]}`}>
-            {notification.message}
-          </div>
-        )}
+        {notification && <div className={css.notification}>{notification}</div>}
         <div>
           <p className={css.textUp}>
-            Already have account?{' '}
+            {t('signUp.account')}{' '}
             <Link to="/signin" className={css.linkUp}>
-              Sign In
+              {t('signUp.signIn')}
             </Link>
           </p>
         </div>

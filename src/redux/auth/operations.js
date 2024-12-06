@@ -22,9 +22,13 @@ export const fetchSignUp = createAsyncThunk(
   'auth/signUp',
   async (userData, thunkAPI) => {
     try {
-      const response = await instance.post('auth/register', userData);
+      const registerResponse = await instance.post('auth/register', userData);
+      const loginResponse = await instance.post('auth/login', {
+        email: userData.email,
+        password: userData.password,
+      });
 
-      const { accessToken } = response.data.data;
+      const { accessToken } = loginResponse.data.data;
       setHeaders(accessToken);
       const user = await fetchCurrentUserData();
 
@@ -41,11 +45,10 @@ export const fetchSignIn = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await instance.post('auth/login', userData);
-      console.log('Sign-in response:', response.data);
       const { accessToken } = response.data.data;
       setHeaders(accessToken);
-      const user = await fetchCurrentUserData();
 
+      const user = await fetchCurrentUserData();
       return { accessToken, user };
     } catch (e) {
       const errorMessage =
@@ -88,9 +91,13 @@ export const fetchCurrentUser = createAsyncThunk(
   async (_, thunkAPI) => {
     try {
       const token = thunkAPI.getState().auth.token;
-      setHeaders(token);
 
+      if (!token) {
+        return thunkAPI.rejectWithValue('No token available');
+      }
+      setHeaders(token);
       const response = await instance.get('/auth/current-user');
+
       return response.data.data;
     } catch (e) {
       const errorMessage = e.response?.data?.message || e.message;

@@ -10,9 +10,9 @@ import {
   selectAuthIsLoading,
   selectAuthUser,
 } from '../../redux/auth/selectors';
-
 import AvatarImg from '../../assets/images/imageUserAvatar.jpg';
 import Loader from '../Loader/Loader';
+import { useTranslation } from 'react-i18next'; // Импортируем библиотеку для локализации
 
 const validationSchema = Yup.object().shape({
   name: Yup.string()
@@ -38,6 +38,7 @@ const validationSchema = Yup.object().shape({
 });
 
 export const ModalUserSettings = ({ toggleModal }) => {
+  const { t } = useTranslation(); // Инициализация хука для перевода
   const isLoading = useSelector(selectAuthIsLoading);
   const dispatch = useDispatch();
   const [formData, setFormData] = useState({
@@ -47,7 +48,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
   });
   const user = useSelector(selectAuthUser);
   const [selectedGender, setSelectedGender] = useState('');
-
+  const [displayDailyNorm, setDisplayDailyNorm] = useState('');
   const genders = ['female', 'male'];
 
   const {
@@ -74,9 +75,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
       setValue('avatar', event.target.files);
     }
   };
-  useEffect(() => {
-    console.log(errors);
-  }, [errors]);
+
   const avatarFile = watch('avatar');
 
   useEffect(() => {
@@ -121,12 +120,14 @@ export const ModalUserSettings = ({ toggleModal }) => {
         formData.append('avatar', data.avatar[0]);
       }
       await dispatch(fetchUpdateUser(formData));
+      setDisplayDailyNorm(data.dailyNorm);
       await dispatch(fetchCurrentUser());
       toggleModal();
     } catch (error) {
       console.error('Failed to update user:', error);
     }
   };
+
   const handleInputChange = (e, selectedGender) => {
     const { name, value } = e.target;
     setValue(name, value);
@@ -149,14 +150,17 @@ export const ModalUserSettings = ({ toggleModal }) => {
       setValue('dailyNorm', roundedDailyNorm);
       setValue('gender', selectedGender);
 
+      setDisplayDailyNorm(roundedDailyNorm);
+
       return { ...updatedData, dailyNorm: roundedDailyNorm };
     });
   };
+
   return (
     <>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       <div className={style.wrapper}>
-        <h2 className={style.title}>Setting</h2>
+        <h2 className={style.title}>{t('settingsModal.titleModal')}</h2>
         {avatarFile && avatarFile[0] ? (
           <img
             src={URL.createObjectURL(avatarFile[0])}
@@ -173,7 +177,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
         <div className={style.upload_photo}>
           <label className={style.upload_label}>
             <Icon id="icon-upload" size={18} className={style.icon_upload} />
-            Upload a photo
+            {t('settingsForm.userUploadButton')}
             <input
               type="file"
               onChange={handleFileChange}
@@ -187,7 +191,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
               <div className={style.form_group}>
                 <div className={style.gender_identity_container}>
                   <label className={style.label_title}>
-                    Your gender identity:
+                    {t('settingsForm.userGender')}:
                   </label>
                   <div className={style.checkbox_wrapper}>
                     {genders.map((gender, index) => (
@@ -213,7 +217,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
                         >
                           <span></span>
                         </div>
-                        {gender === 'female' ? 'Woman' : 'Man'}
+                        {gender === 'female' ? t('settingsForm.genderWoman') : t('settingsForm.genderMan')}
                       </label>
                     ))}
                   </div>
@@ -225,7 +229,9 @@ export const ModalUserSettings = ({ toggleModal }) => {
                 </div>
                 <div className={style.name_email_wrapper}>
                   <div className={style.name_email_group}>
-                    <label className={style.label_title}>Your name:</label>
+                    <label className={style.label_title}>
+                      {t('settingsForm.userNameLabel')}:
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -245,7 +251,9 @@ export const ModalUserSettings = ({ toggleModal }) => {
                     )}
                   </div>
                   <div className={style.name_email_group}>
-                    <label className={style.label_title}>Email:</label>
+                    <label className={style.label_title}>
+                      {t('settingsForm.userEmailLabel')}:
+                    </label>
                     <input
                       type="email"
                       name="email"
@@ -266,27 +274,26 @@ export const ModalUserSettings = ({ toggleModal }) => {
                   </div>
                 </div>
                 <div className={style.water_norm_group}>
-                  <label className={style.label_title}>My daily norma:</label>
+                  <label className={style.label_title}>
+                    {t('settingsForm.subtitle')}:
+                  </label>
                   <div className={style.water_norm_container}>
                     <p className={style.water_norm_title}>
-                      For woman:{' '}
+                      {t('settingsForm.textForWoman')}{' '}
                       <span className={style.water_norm_span}>
                         V=(M*0,03) + (T*0,4)
-                      </span>{' '}
+                      </span>
                     </p>
                     <p className={style.water_norm_title}>
-                      For man:{' '}
+                      {t('settingsForm.textForMan')}{' '}
                       <span className={style.water_norm_span}>
                         V=(M*0,04) + (T*0,6)
-                      </span>{' '}
+                      </span>
                     </p>
                   </div>
                   <p className={style.water_norm_description}>
                     <span className={style.water_norm_description_span}>*</span>{' '}
-                    V is the volume of the water norm in liters per day, M is
-                    your body weight, T is the time of active sports, or another
-                    type of activity commensurate in terms of loads (in the
-                    absence of these, you must set 0)
+                    {t('settingsForm.textDescription')}
                   </p>
                   <p className={style.water_norm_calling}>
                     <Icon
@@ -294,7 +301,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
                       id="icon-calling"
                       className={style.icon_calling}
                     />{' '}
-                    Active time in hours
+                    {t('settingsForm.textActiveTime')}
                   </p>
                 </div>
               </div>
@@ -302,7 +309,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
                 <div className={style.weight_and_time_wrapper}>
                   <div className={style.weight_and_time_group}>
                     <label className={style.label_text}>
-                      Your weight in kilograms:
+                      {t('settingsForm.userWeight')}:
                     </label>
                     <input
                       type="number"
@@ -323,7 +330,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
                   </div>
                   <div className={style.weight_and_time_group}>
                     <label className={style.label_text}>
-                      The time of active participation in sports:
+                      {t('settingsForm.userTime')}:
                     </label>
                     <input
                       type="number"
@@ -346,21 +353,25 @@ export const ModalUserSettings = ({ toggleModal }) => {
                 <div className={style.water_intake_container}>
                   <div className={style.water_requirement_group}>
                     <p className={style.label_text}>
-                      The required amount of water in liters per day:
+                      {t('settingsForm.WaterAmount')}
                     </p>
-                    <p className={style.water_amount}>1.8 L</p>
+                    <p className={style.water_amount}>
+                      {displayDailyNorm || user.dailyNorm}L
+                    </p>
                   </div>
                   <div className={style.water_intake_input_group}>
                     <label className={style.label_title}>
-                      Write down how much water you will drink:
+                      {t('settingsForm.labelWaterNorma')}
                     </label>
                     <input
                       name="dailyNorm"
                       value={formData.dailyNorm}
                       {...register('dailyNorm')}
-                      onChange={(e) =>
-                        setFormData({ ...formData, dailyNorm: e.target.value })
-                      }
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        setFormData({ ...formData, dailyNorm: value });
+                        setDisplayDailyNorm(value);
+                      }}
                       className={`${style.input_drunk_water} ${
                         errors.dailyNorm ? style.error_input : ''
                       }`}
@@ -375,7 +386,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
               </div>
             </div>
             <button type="submit" className={style.btn_submit}>
-              Save
+              {t('settingsForm.subButton')}
             </button>
           </form>
         </div>

@@ -3,7 +3,12 @@
   flex-direction: column;
   gap: 16px;
 }
-
+.wrapperStyle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
 @media screen and (min-width: 1440px) {
   .wrapper {
     flex-direction: row;
