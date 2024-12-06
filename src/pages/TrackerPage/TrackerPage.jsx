@@ -49,7 +49,7 @@ const TrackerPage = () => {
     <TourProvider steps={steps}>
       <TourGuide />
       <div className={css.wrapper}>
-        {/* <div>{isLoading && "Request in progress..."}</div> */}
+        {isLoading || (isLoading2 && <Loader />)}
         <WaterMainInfo />
         <WaterDetailedInfo />
       </div>
