@@ -1,22 +1,25 @@
 import HappyCustomers from '../../components/HappyCustomers/HappyCustomers';
 import styles from './AdvantagesSection.module.css';
+import { useTranslation } from 'react-i18next';
 
 function AdvantagesSection() {
+  const { t } = useTranslation();
+  
   return (
     <div className={styles.fontSection}>
       <div className={`${styles.listStylesImg} listStylesImg`}>
-      <HappyCustomers />
+        <HappyCustomers />
       </div>
       <div className={styles.listBtn}>
         <button className={styles.btnHabit} type="button">
-          Habit drive
+          {t('homepage.advantages.habitDrive')}
         </button>
         <span className={styles.ellipse}></span>
         <button className={styles.btnView} type="button">
-          View statistics
+          {t('homepage.advantages.viewStatistic')}
         </button>
         <button className={styles.btnPersonal} type="button">
-          Personal rate setting
+          {t('homepage.advantages.personalSetting')}
         </button>
       </div>
     </div>

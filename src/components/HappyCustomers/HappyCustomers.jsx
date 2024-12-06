@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import styles from './HappyCustomers.module.css';
+import { useTranslation } from 'react-i18next';
 
 const HappyCustomers = () => {
+    const { t } = useTranslation();
     const [users, setUsers] = useState([]);
     const [totalUsers, setTotalUsers] = useState(0); 
 
@@ -41,7 +43,9 @@ const HappyCustomers = () => {
             </div>
             <div className={styles.text}>
                 <p className={styles.textParagraph}>
-                    Our <span className={styles.happy}>happy</span> customers
+                    {t('homepage.advantages.our')}
+                    <span className={styles.happy}>{t('homepage.advantages.accent')}</span>
+                    {t('homepage.advantages.customers')}
                 </p>
                 <p className={styles.total}>+{totalUsers}</p>
             </div>

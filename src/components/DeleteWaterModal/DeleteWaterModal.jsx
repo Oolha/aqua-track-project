@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import clsx from 'clsx';
 import css from './DeleteWaterModal.module.css';
 import { deleteWaterEntry } from '../../redux/water/operations.js';
+import { useTranslation } from 'react-i18next';
 
 const DeleteWaterModal = ({ itemId, toggleModal }) => {
   const dispatch = useDispatch();
@@ -11,11 +12,13 @@ const DeleteWaterModal = ({ itemId, toggleModal }) => {
     toggleModal();
   };
 
+  const { t } = useTranslation();
+
   return (
     <>
       <div className={css.modal}>
-        <h2 className={css.title}>Delete entry</h2>
-        <p className={css.text}>Are you sure you want to delete the entry?</p>
+        <h2 className={css.title}>{t('deleteModal.title')}</h2>
+        <p className={css.text}>{t('deleteModal.confirm')}</p>
 
         <div className={css.boxButton}>
           <button
@@ -23,14 +26,14 @@ const DeleteWaterModal = ({ itemId, toggleModal }) => {
             type="button"
             onClick={handleDelete}
           >
-            Delete
+            {t('deleteModal.delete')}
           </button>
           <button
             className={clsx(css.button, css.cancelButton)}
             type="button"
             onClick={toggleModal}
           >
-            Cancel
+            {t('deleteModal.close')}
           </button>
         </div>
       </div>

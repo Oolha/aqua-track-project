@@ -8,13 +8,12 @@ import { TourProvider } from '@reactour/tour';
 import TourGuide from '../../components/TourGuide/TourGuide.jsx';
 
 import { fetchMonthlyWaterEntries } from '../../redux/water/operations';
-
+import Languages from '../../components/Languages/Languages';
 import { selectCurrentDate } from '../../redux/date/selectors.js';
 import { getNumberMonth } from '../../utils/calendar.js';
 import { selectAuthIsLoading } from '../../redux/auth/selectors.js';
 import Loader from '../../components/Loader/Loader.jsx';
 import { selectIsLoading } from '../../redux/water/selectors.js';
-// import {parseDate} from '../../utils/calendar.js'
 
 const steps = [
   { selector: '.normaLitr', content: 'Your daily water intake' },
@@ -47,6 +46,9 @@ const TrackerPage = () => {
 
   return (
     <TourProvider steps={steps}>
+      <div className={css.wrapperStyle}>
+        <Languages />
+      </div>
       <TourGuide />
       <div className={css.wrapper}>
         {isLoading || (isLoading2 && <Loader />)}

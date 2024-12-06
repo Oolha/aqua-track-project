@@ -3,12 +3,12 @@ import { useState } from 'react';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { useForm } from 'react-hook-form';
-// import axios from 'axios';
 import { Icon } from '../Icon/Icon.jsx';
 import Logo from '../../components/Logo/Logo.jsx';
 import css from './SignIn.module.css'; // Стилі форми
 import { useDispatch } from 'react-redux';
 import { fetchSignIn } from '../../redux/auth/operations.js';
+import { useTranslation } from 'react-i18next';
 
 const schema = Yup.object({
   email: Yup.string()
@@ -20,6 +20,7 @@ const schema = Yup.object({
 });
 
 function SignInForm() {
+  const { t } = useTranslation();
   const [showPwd, setShowPwd] = useState(false);
   const [notification, setNotification] = useState(null); // Для повідомлень
   const navigate = useNavigate();
@@ -38,14 +39,13 @@ function SignInForm() {
 
   const onSubmit = async (data) => {
     try {
-      // const result = await dispatch(fetchSignIn(data)).unwrap();
       await dispatch(fetchSignIn(data)).unwrap();
 
       reset();
       navigate('/tracker');
     } catch (error) {
       const errorMessage =
-        error?.message || 'Failed to log in. Please try again.';
+        error?.message || t('signIn.failedLogin'); // Используем перевод для сообщения об ошибке
 
       setNotification(errorMessage);
       setTimeout(() => setNotification(null), 5000);
@@ -57,7 +57,7 @@ function SignInForm() {
       <div className={css.loginContainer}>
         <Logo />
         <div className={css.formWrapper}>
-          <h2 className={css.title}>Sign In</h2>
+          <h2 className={css.title}>{t('signIn.title')}</h2>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className={css.form}
@@ -65,12 +65,12 @@ function SignInForm() {
           >
             <div className={css.field}>
               <label htmlFor="email" className={css.formLabel}>
-                Email
+                {t('signIn.email')}
               </label>
               <input
                 {...register('email')}
                 type="email"
-                placeholder="Enter your email"
+                placeholder={t('signIn.placeholderEmail')}
                 className={`${css.formInput} ${errors.email ? css.error : ''}`}
               />
               {errors.email && (
@@ -80,13 +80,13 @@ function SignInForm() {
 
             <div className={css.field}>
               <label htmlFor="password" className={css.formLabel}>
-                Password
+                {t('signIn.password')}
               </label>
               <div className={css.passwordWrapper}>
                 <input
                   {...register('password')}
                   type={showPwd ? 'text' : 'password'}
-                  placeholder="Enter your password"
+                  placeholder={t('signIn.placeholderPassword')}
                   className={`${css.formInput} ${
                     errors.password ? css.error : ''
                   }`}
@@ -96,7 +96,7 @@ function SignInForm() {
                   type="button"
                   className={css.passwordToggle}
                   onClick={togglePwdVisibility}
-                  aria-label={showPwd ? 'Hide password' : 'Show password'}
+                  aria-label={showPwd ? t('signIn.hidePassword') : t('signIn.showPassword')}
                 >
                   <Icon
                     id={showPwd ? 'icon-eye' : 'icon-eye-off'}
@@ -111,16 +111,16 @@ function SignInForm() {
             )}
             <div className={css.btnWrapper}>
               <button type="submit" className={css.formButton}>
-                Sign In
+                {t('homepage.welcome.signInBtn')}
               </button>
             </div>
           </form>
 
           <div>
             <p className={css.signinText}>
-              Don&apos;t have an account?{' '}
+              {t('signIn.account')}{' '}
               <Link to="/signup" className={css.signupLink}>
-                Sign Up
+                {t('signIn.signUp')}
               </Link>
             </p>
           </div>

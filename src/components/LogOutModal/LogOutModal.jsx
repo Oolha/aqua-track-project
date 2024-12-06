@@ -3,33 +3,37 @@ import { useDispatch } from 'react-redux';
 import clsx from 'clsx';
 import css from './LogOutModal.module.css';
 import { fetchLogOut } from '../../redux/auth/operations.js';
+import { useTranslation } from 'react-i18next';
+
 
 const LogOutModal = ({ toggleModal }) => {
+  const { t } = useTranslation();
   const dispatch = useDispatch();
 
   return (
     <>
-      <div className={css.modal}>
-        <h2 className={css.title}>Log out</h2>
-        <p className={css.text}>Do you really want to leave?</p>
+        <div className={css.modal}>
 
-        <div className={css.boxButton}>
-          <button
-            className={clsx(css.button, css.logoutButton)}
-            type="button"
-            onClick={() => dispatch(fetchLogOut())}
-          >
-            Log out
-          </button>
+          <h2 className={css.title}>{t('logOutModal.title')}</h2>
+          <p className={css.text}>{t('logOutModal.confirm')}</p>
 
-          <button
-            className={clsx(css.button, css.cancelButton)}
-            type="button"
-            onClick={toggleModal}
-          >
-            Cancel
-          </button>
-        </div>
+          <div className={css.boxButton}>
+            <button
+              className={clsx(css.button, css.logoutButton)}
+              type="button"
+              onClick={() => dispatch(fetchLogOut())}
+            >
+              {t('logOutModal.logOut')}
+            </button>
+
+            <button
+              className={clsx(css.button, css.cancelButton)}
+              type="button"
+              onClick={toggleModal}
+            >
+              {t('logOutModal.close')}
+            </button>
+          </div>
       </div>
     </>
   );

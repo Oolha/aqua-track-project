@@ -9,12 +9,13 @@ import {
   createWaterEntry,
   patchWaterEntry,
 } from '../../redux/water/operations';
-// import Loader from '../Loader/Loader';
 import { selectIsLoading } from '../../redux/water/selectors';
+import { useTranslation } from 'react-i18next';
 
 const WaterForm = ({ entry, toggleModal }) => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
+  const { t } = useTranslation();
 
   const extractDate = (timestamp) => {
     if (timestamp) return timestamp.split(' ')[0];
@@ -22,9 +23,7 @@ const WaterForm = ({ entry, toggleModal }) => {
     const date = new Date();
     const pad = (n) => String(n).padStart(2, '0');
 
-    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(
-      date.getDate()
-    )}`;
+    return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
   };
 
   const extractTime = (timestamp) => {
@@ -41,14 +40,14 @@ const WaterForm = ({ entry, toggleModal }) => {
 
   const validationSchema = Yup.object().shape({
     time: Yup.string()
-      .required('Time is required')
-      .matches(/^([01]\d|2[0-3]):([0-5]\d)$/, 'Time must be in hh:mm format'),
+      .required(t('validationForm.drinkingTimeRequired'))
+      .matches(/^([01]\d|2[0-3]):([0-5]\d)$/, t('validationForm.drinkingTimeRequired')),
     volume: Yup.number()
-      .required('Value is required')
-      .typeError('Value must be a number')
-      .integer('Value must be an integer')
-      .min(50, 'Minimum value is 50')
-      .max(3000, 'Maximum value is 3000'),
+      .required(t('validationForm.usedWaterRequired'))
+      .typeError(t('validationForm.usedWaterTypeError'))
+      .integer(t('validationForm.usedWaterInteger'))
+      .min(50, t('validationForm.usedWaterPositive'))
+      .max(3000, t('validationForm.usedWaterMax')),
   });
 
   const defaultValues = {
@@ -110,80 +109,75 @@ const WaterForm = ({ entry, toggleModal }) => {
   };
 
   return (
-    <>
-      {/* {isLoading && <Loader />} */}
-      <form onSubmit={handleSubmit(onSubmit)} className={style.waterForm}>
-        <p>{entry._id ? 'Correct entered data:' : 'Choose a value:'}</p>
-        <div className={style.valuePickerContainer}>
-          <p>Amount of water:</p>
-          <div className={style.adjustmentContainer}>
-            <button
-              className={style.adjustmentButton}
-              type="button"
-              onClick={decreaseAmount}
-            >
-              <Icon id="icon-minus" size={24} className={style.icon} />
-            </button>
-            <div className={style.amountDisplay}>
-              {litersFormat(currentAmount)}
-            </div>
-            <button
-              className={style.adjustmentButton}
-              type="button"
-              onClick={increaseAmount}
-            >
-              <Icon id="icon-plus" size={24} className={style.icon} />
-            </button>
+    <form onSubmit={handleSubmit(onSubmit)} className={style.waterForm}>
+      <p>{entry._id ? t('waterForm.titleEdit') : t('waterForm.titleAdd')}</p>
+      <div className={style.valuePickerContainer}>
+        <p>{t('waterForm.secondTitle')}:</p>
+        <div className={style.adjustmentContainer}>
+          <button
+            className={style.adjustmentButton}
+            type="button"
+            onClick={decreaseAmount}
+          >
+            <Icon id="icon-minus" size={24} className={style.icon} />
+          </button>
+          <div className={style.amountDisplay}>
+            {litersFormat(currentAmount)}
           </div>
-          <label>
-            <p className={style.timeBlockLabel}>Recording time:</p>
-            <Controller
-              name="time"
-              control={control}
-              render={({ field }) => (
-                <input
-                  className={`${style.inputField} ${
-                    errors.time ? style.inputError : ''
-                  }`}
-                  type="text"
-                  placeholder="hh:mm"
-                  {...field}
-                />
-              )}
-            />
-            {errors.time && (
-              <span className={style.errorMessage}>{errors.time.message}</span>
-            )}
-          </label>
+          <button
+            className={style.adjustmentButton}
+            type="button"
+            onClick={increaseAmount}
+          >
+            <Icon id="icon-plus" size={24} className={style.icon} />
+          </button>
         </div>
         <label>
-          <p className={style.amountBlockLabel}>
-            Enter the value of the water used:
-          </p>
+          <p className={style.timeBlockLabel}>{t('waterForm.time')}:</p>
           <Controller
-            name="volume"
+            name="time"
             control={control}
             render={({ field }) => (
               <input
                 className={`${style.inputField} ${
-                  errors.volume ? style.inputError : ''
+                  errors.time ? style.inputError : ''
                 }`}
-                type="number"
-                placeholder="Enter the value of the water used:"
+                type="text"
+                placeholder="hh:mm"
                 {...field}
               />
             )}
           />
-          {errors.volume && (
-            <span className={style.errorMessage}>{errors.volume.message}</span>
+          {errors.time && (
+            <span className={style.errorMessage}>{errors.time.message}</span>
           )}
         </label>
-        <br />
-        <button className={style.saveBtn} disabled={isLoading} type="submit">
-          Save
-        </button>
-      </form>
-    </>
+      </div>
+      <label>
+        <p className={style.amountBlockLabel}>{t('waterForm.waterUsed')}:</p>
+        <Controller
+          name="volume"
+          control={control}
+          render={({ field }) => (
+            <input
+              className={`${style.inputField} ${
+                errors.volume ? style.inputError : ''
+              }`}
+              type="number"
+              placeholder={t('waterForm.waterUsed')}
+              {...field}
+            />
+          )}
+        />
+        {errors.volume && (
+          <span className={style.errorMessage}>{errors.volume.message}</span>
+        )}
+      </label>
+      <br />
+      <button className={style.saveBtn} disabled={isLoading} type="submit">
+        {t('waterForm.button')}
+      </button>
+    </form>
   );
 };
 
