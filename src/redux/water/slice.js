@@ -43,7 +43,7 @@ const waterSlice = createSlice({
       .addCase(deleteWaterEntry.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
-        state.items = state.items.filter((item) => item._id !== payload.id);
+        state.items = state.items.filter((item) => item._id !== payload._id);
       })
       .addCase(createWaterEntry.pending, handlePending)
       .addCase(createWaterEntry.rejected, handleRejected)
