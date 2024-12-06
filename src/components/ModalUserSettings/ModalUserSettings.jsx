@@ -152,7 +152,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
   };
   return (
     <>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       <div className={style.wrapper}>
         <h2 className={style.title}>Setting</h2>
         {avatarFile && avatarFile[0] ? (
