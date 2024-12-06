@@ -36,8 +36,8 @@ const WaterForm = ({ entry, toggleModal }) => {
     return `${pad(date.getHours())}:${pad(date.getMinutes())}`;
   };
 
-  const [entryDate, setEntryDate] = useState(extractDate(entry.date));
-  const [entryTime, setEntryTime] = useState(extractTime(entry.date));
+  const entryDate = extractDate(entry.date);
+  const entryTime = extractTime(entry.date);
 
   const validationSchema = Yup.object().shape({
     time: Yup.string()

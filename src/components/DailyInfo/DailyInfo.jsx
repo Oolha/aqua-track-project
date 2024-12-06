@@ -3,11 +3,13 @@ import ChooseDate from '../ChooseDate/ChooseDate';
 import WaterList from '../WaterList/WaterList';
 import WaterModal from '../WaterModal/WaterModal';
 import css from './DailyInfo.module.css';
-import { useState } from 'react';
 import { Modal } from '../Modal/Modal';
 import { useModal } from '../../hooks/useModalHook.js';
+import { selectFormattedCurrentDate } from '../../redux/date/selectors.js';
+import { useSelector } from 'react-redux';
 
 const DailyInfo = () => {
+  const date = useSelector(selectFormattedCurrentDate);
   const [isModalVisible, setModalVisible] = useModal();
 
   return (
@@ -21,7 +23,7 @@ const DailyInfo = () => {
 
       {isModalVisible && (
         <Modal toggleModal={setModalVisible}>
-          <WaterModal toggleModal={setModalVisible} />
+          <WaterModal toggleModal={setModalVisible} entry={{ date }} />
         </Modal>
       )}
     </div>
