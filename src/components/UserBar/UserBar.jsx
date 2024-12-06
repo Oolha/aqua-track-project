@@ -23,7 +23,6 @@ import {
 
 const UserBar = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const user = useSelector(selectAuthUser);
 
@@ -70,7 +69,8 @@ const UserBar = ({}) => {
           style={floatingStyles}
           {...getFloatingProps()}
         >
-          <UserBarPopover />
+          <UserBarPopover closePopover={() => setIsOpen(false)} />
+          {/* <UserBarPopover closePopover={() => setIsOpen(false)} /> */}
         </div>
       )}
     </>

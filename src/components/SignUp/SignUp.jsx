@@ -48,10 +48,6 @@ function SignUpForm() {
     console.log('Form data:', data);
     const { email, password } = data;
 
-    /*
-      const result = await dispatch(fetchSignUp(signupData)).unwrap();
-      console.log('Signup success:', result); */
-
     try {
       const result = await dispatch(fetchSignUp({ email, password })).unwrap();
 

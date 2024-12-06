@@ -4,7 +4,6 @@ import css from './SignUpPage.module.css';
 
 function SignUpPage() {
   return (
-    /*   <div className={css.container}> */
     <div className={css.signUp}>
       <SignUpForm />
       <div className={css.hidden}>
