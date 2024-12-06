@@ -31,6 +31,7 @@ const waterSlice = createSlice({
         state.items.unshift(action.payload.data);
       })
       .addCase(fetchMonthlyWaterEntries.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
         state.items = payload.data;
       })
       .addCase(patchWaterEntry.fulfilled, (state, { payload }) => {
