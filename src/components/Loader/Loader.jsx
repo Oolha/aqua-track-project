@@ -3,7 +3,7 @@ import { InfinitySpin } from 'react-loader-spinner';
 
 const Loader = () => {
   return (
-    <div className={css.loader}>
+    <div className={css.loaderContainer}>
       <InfinitySpin
         visible={true}
         width="200"
