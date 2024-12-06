@@ -22,7 +22,7 @@ export const CalendarItem = ({ initialDay, waterNorma=1500, waterAmount=0 }) => 
     
     dispatch(changeDate(clickedDate(currentYear,currentMonth,initialDay)))
   };
-  const rate = Math.round((waterAmount * 100) / waterNorma);
+  const rate = Math.round((waterAmount * 100) / (waterNorma*1000));
   
   const isOutstanding = (rate<100) ? true : false;
   const isActive = (activeDay===initialDay) ? true : false;

@@ -8,9 +8,13 @@ import { TourProvider } from '@reactour/tour';
 import TourGuide from '../../components/TourGuide/TourGuide.jsx';
 
 import { fetchMonthlyWaterEntries } from '../../redux/water/operations';
-import { selectIsLoading } from '../../redux/water/selectors.js';
+
 import { selectCurrentDate } from '../../redux/date/selectors.js';
 import { getNumberMonth } from '../../utils/calendar.js';
+import { selectAuthIsLoading } from '../../redux/auth/selectors.js';
+import Loader from '../../components/Loader/Loader.jsx';
+import { selectIsLoading } from '../../redux/water/selectors.js';
+// import {parseDate} from '../../utils/calendar.js'
 
 const steps = [
   { selector: '.normaLitr', content: 'Your daily water intake' },
@@ -29,16 +33,17 @@ const steps = [
 
 const TrackerPage = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
+  const isLoading = useSelector(selectAuthIsLoading);
+  const isLoading2 = useSelector(selectIsLoading);
   const serializedDate = useSelector(selectCurrentDate);
   const initialDate = new Date(serializedDate);
   const currentMonth = getNumberMonth(initialDate.getMonth() + 1);
   const currentYear = initialDate.getFullYear();
-  const date = { year: currentYear, month: currentMonth };
 
   useEffect(() => {
+    const date = { year: currentYear, month: currentMonth };
     dispatch(fetchMonthlyWaterEntries(date));
-  }, [dispatch, date]);
+  }, [dispatch, currentMonth, currentYear]);
 
   return (
     <TourProvider steps={steps}>

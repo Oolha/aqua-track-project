@@ -55,7 +55,7 @@ const WaterMainInfo = () => {
       <AddWaterBtn handleClickBtn={setIsOpenModal} />
       {isOpenModal && (
         <Modal toggleModal={setIsOpenModal}>
-          <WaterModal />
+          <WaterModal toggleModal={setIsOpenModal} />
         </Modal>
       )}
     </div>
