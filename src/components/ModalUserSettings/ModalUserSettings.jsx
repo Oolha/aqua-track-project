@@ -74,9 +74,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
       setValue('avatar', event.target.files);
     }
   };
-  useEffect(() => {
-    console.log(errors);
-  }, [errors]);
+
   const avatarFile = watch('avatar');
 
   useEffect(() => {
