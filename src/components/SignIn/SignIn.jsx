@@ -70,7 +70,7 @@ function SignInForm() {
               <input
                 {...register('email')}
                 type="email"
-                placeholder={t('signIn.emailPlaceholder')}
+                placeholder={t('signIn.placeholderEmail')}
                 className={`${css.formInput} ${errors.email ? css.error : ''}`}
               />
               {errors.email && (
@@ -86,7 +86,7 @@ function SignInForm() {
                 <input
                   {...register('password')}
                   type={showPwd ? 'text' : 'password'}
-                  placeholder={t('signIn.passwordPlaceholder')}
+                  placeholder={t('signIn.placeholderPassword')}
                   className={`${css.formInput} ${
                     errors.password ? css.error : ''
                   }`}
