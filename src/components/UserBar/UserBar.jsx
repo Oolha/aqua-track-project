@@ -23,7 +23,6 @@ import {
 
 const UserBar = ({}) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const isLoggedIn = useSelector(selectIsLoggedIn);
   const user = useSelector(selectAuthUser);
 

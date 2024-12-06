@@ -165,8 +165,9 @@
   max-width: 90%;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   animation: fadeInOut 3s ease forwards;
-}
 
+  background-color: #f44336;
+}
 
 
 @keyframes fadeInOut {

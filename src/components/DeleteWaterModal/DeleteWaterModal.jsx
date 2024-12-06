@@ -1,6 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux';
 import clsx from 'clsx';
-
 import css from './DeleteWaterModal.module.css';
 import { deleteWaterEntry } from '../../redux/water/operations.js';
 import { useTranslation } from 'react-i18next';

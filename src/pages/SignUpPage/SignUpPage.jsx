@@ -10,8 +10,10 @@ function SignUpPage() {
   const isLoading = useSelector(selectAuthIsLoading);
 
   return (
+
   <div className={css.wrapperStyle}>
           <Languages />
+
     <div className={css.signUp}>
       {isLoading && <Loader />}
       <SignUpForm />

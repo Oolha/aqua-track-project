@@ -13,6 +13,7 @@ const UserPanel = () => {
     <div className={css.mainBox}>
       <h2 className={css.title}>
         {t('userPanel.greeting')}{' '}  
+
         <span className={css.span}>, {name}!</span>
       </h2>
       <UserBar />

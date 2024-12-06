@@ -47,9 +47,8 @@ function SignUpForm() {
   });
 
   const onSubmit = async (data) => {
-    
-    const { email, password } = data;
 
+    const { email, password } = data;
     try {
       const result = await dispatch(fetchSignUp({ email, password })).unwrap();
 

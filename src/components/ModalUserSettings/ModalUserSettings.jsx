@@ -358,6 +358,10 @@ export const ModalUserSettings = ({ toggleModal }) => {
                     <p className={style.water_amount}>
                       {displayDailyNorm || user.dailyNorm}L
                     </p>
+                    <p className={style.water_amount}>
+                      {displayDailyNorm || user.dailyNorm}L
+                    </p>
+
                   </div>
                   <div className={style.water_intake_input_group}>
                     <label className={style.label_title}>
@@ -369,6 +373,9 @@ export const ModalUserSettings = ({ toggleModal }) => {
                       {...register('dailyNorm')}
                       onChange={(e) => {
                         const value = e.target.value;
+
+                        console.log(value);
+
                         setFormData({ ...formData, dailyNorm: value });
                         setDisplayDailyNorm(value);
                       }}
