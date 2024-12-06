@@ -4,9 +4,12 @@ import { parseTime } from '../../utils/calendar.js';
 import { useModal } from '../../hooks/useModalHook.js';
 import { Modal } from '../Modal/Modal.jsx';
 import DeleteWaterModal from '../DeleteWaterModal/DeleteWaterModal.jsx';
+import WaterModal from '../WaterModal/WaterModal.jsx';
 
 const WaterItem = ({ item }) => {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useModal();
+  const [isWaterModalOpen, setIsWaterModalOpen] = useModal();
+
   return (
     <div className={css.waterItem}>
       <Icon id="icon-water" className={css.icon} />
@@ -16,9 +19,14 @@ const WaterItem = ({ item }) => {
           <p className={css.itemTextTime}>{parseTime(item.date)}</p>
         </div>
         <div className={css.itemIconsBox}>
-          <button type="button">
+          <button type="button" onClick={setIsWaterModalOpen}>
             <Icon id="icon-pencil" className={css.icons} />
           </button>
+          {isWaterModalOpen && (
+            <Modal toggleModal={setIsWaterModalOpen}>
+              <WaterModal entry={item} toggleModal={setIsWaterModalOpen} />
+            </Modal>
+          )}
           <button type="button" onClick={setIsDeleteModalOpen}>
             <Icon id="icon-bin" className={css.icons} />
           </button>

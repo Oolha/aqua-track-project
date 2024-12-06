@@ -90,7 +90,8 @@
   }
 
   .volumeInfo {
-    font-size: 10px;
+    top: -20px;
+    font-size: 12px;
   }
 
   .scale {

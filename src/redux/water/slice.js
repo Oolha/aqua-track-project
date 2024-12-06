@@ -31,18 +31,20 @@ const waterSlice = createSlice({
         state.items.unshift(action.payload.data);
       })
       .addCase(fetchMonthlyWaterEntries.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
         state.items = payload.data;
       })
       .addCase(patchWaterEntry.fulfilled, (state, { payload }) => {
+        state.isLoading = false;
         const updatedEntry = payload.data;
-        state.dailyEntries = state.dailyEntries.map((entry) =>
-          entry._id === updatedEntry._id ? updatedEntry : entry
+        state.items = state.items.map((item) =>
+          item._id === updatedEntry._id ? updatedEntry : item
         );
       })
       .addCase(deleteWaterEntry.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.error = null;
-        state.items = state.items.filter((item) => item._id !== payload.id);
+        state.items = state.items.filter((item) => item._id !== payload._id);
       })
       .addCase(createWaterEntry.pending, handlePending)
       .addCase(createWaterEntry.rejected, handleRejected)

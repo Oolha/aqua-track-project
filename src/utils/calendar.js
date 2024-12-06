@@ -36,19 +36,15 @@ export function getMonthName(date) {
   return monthNames[date.getMonth()];
 }
 export function getNumberMonth(month) {
-return (+month<10)?`0${month}`:month;
-
+  return +month < 10 ? `0${month}` : month;
 }
 export function getWaterItemsperDay(waterData, initialDate) {
   const waterItemsperDay = [];
- 
 
   waterData.forEach((item) => {
     let createdAtField = item.date;
-    
 
     const date = new Date(createdAtField);
-    
 
     if (
       date.getDate() === initialDate.getDate() &&
@@ -58,28 +54,28 @@ export function getWaterItemsperDay(waterData, initialDate) {
       waterItemsperDay.push(item);
     }
   });
-  return waterItemsperDay.map(item=>item);
+  return waterItemsperDay.map((item) => item);
 }
 
 export function amountWaterPerDay(waterItems) {
   return waterItems.reduce((acc, item) => {
     let amountField = item.volume;
-   
+
     acc += amountField;
     return acc;
   }, 0);
 }
 
 export function parseDate(initialDate) {
-  const  date = new Date(initialDate);
-  const month= date.getMonth()+1;
+  const date = new Date(initialDate);
+  const month = date.getMonth() + 1;
   const year = date.getFullYear();
-  return `${year}-${month}`
+  return `${year}-${month}`;
 }
 
 export function parseTime(serialazeDate) {
   const date = new Date(serialazeDate);
-
-
-  return`${date.getHours()}:${date.getMinutes()}`
-}  
+  const hours = date.getHours().toString().padStart(2, '0');
+  const minutes = date.getMinutes().toString().padStart(2, '0');
+  return `${hours}:${minutes}`;
+}

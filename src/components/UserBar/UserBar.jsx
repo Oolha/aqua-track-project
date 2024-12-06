@@ -51,7 +51,11 @@ const UserBar = ({}) => {
         className={css.btn}
       >
         <h4 className={css.name}>{displayedName}</h4>
-        <RxAvatar className={css.avatar} />
+        {user?.avatar ? (
+          <img src={user.avatar} alt="User avatar" className={css.avatar} />
+        ) : (
+          <RxAvatar className={css.avatar} />
+        )}
         <Icon
           id="icon-menu"
           className={clsx(css.icon, {
