@@ -9,7 +9,7 @@ import {
   createWaterEntry,
   patchWaterEntry,
 } from '../../redux/water/operations';
-import Loader from '../Loader/Loader';
+// import Loader from '../Loader/Loader';
 import { selectIsLoading } from '../../redux/water/selectors';
 
 const WaterForm = ({ entry, toggleModal }) => {
@@ -111,7 +111,7 @@ const WaterForm = ({ entry, toggleModal }) => {
 
   return (
     <>
-      {isLoading && <Loader />}
+      {/* {isLoading && <Loader />} */}
       <form onSubmit={handleSubmit(onSubmit)} className={style.waterForm}>
         <p>{entry._id ? 'Correct entered data:' : 'Choose a value:'}</p>
         <div className={style.valuePickerContainer}>

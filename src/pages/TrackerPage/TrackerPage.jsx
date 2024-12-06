@@ -8,9 +8,12 @@ import { TourProvider } from '@reactour/tour';
 import TourGuide from '../../components/TourGuide/TourGuide.jsx';
 
 import { fetchMonthlyWaterEntries } from '../../redux/water/operations';
-import { selectIsLoading } from '../../redux/water/selectors.js';
+
 import { selectCurrentDate } from '../../redux/date/selectors.js';
 import { getNumberMonth } from '../../utils/calendar.js';
+import { selectAuthIsLoading } from '../../redux/auth/selectors.js';
+import Loader from '../../components/Loader/Loader.jsx';
+import { selectIsLoading } from '../../redux/water/selectors.js';
 // import {parseDate} from '../../utils/calendar.js'
 
 const steps = [
@@ -30,7 +33,8 @@ const steps = [
 
 const TrackerPage = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(selectIsLoading);
+  const isLoading = useSelector(selectAuthIsLoading);
+  const isLoading2 = useSelector(selectIsLoading);
   const serializedDate = useSelector(selectCurrentDate);
   const initialDate = new Date(serializedDate);
   const currentMonth = getNumberMonth(initialDate.getMonth() + 1);
@@ -45,7 +49,7 @@ const TrackerPage = () => {
     <TourProvider steps={steps}>
       <TourGuide />
       <div className={css.wrapper}>
-        {/* <div>{isLoading && "Request in progress..."}</div> */}
+        {isLoading || (isLoading2 && <Loader />)}
         <WaterMainInfo />
         <WaterDetailedInfo />
       </div>
