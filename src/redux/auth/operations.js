@@ -45,7 +45,6 @@ export const fetchSignIn = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await instance.post('auth/login', userData);
-
       const { accessToken } = response.data.data;
       setHeaders(accessToken);
 
