@@ -11,12 +11,18 @@ const steps = [
 ];
 
 import styles from './HomePage.module.css';
+import { useSelector } from 'react-redux';
+import { selectAuthIsLoading } from '../../redux/auth/selectors.js';
+import Loader from '../../components/Loader/Loader.jsx';
 
 const HomePage = () => {
+  const isLoading = useSelector(selectAuthIsLoading);
+
   return (
     <TourProvider steps={steps}>
       <TourGuide />
       <div className={styles.homePage}>
+        {isLoading && <Loader />}
         <WelcomeSection />
         <AdvantagesSection />
       </div>
