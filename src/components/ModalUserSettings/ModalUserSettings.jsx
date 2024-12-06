@@ -47,7 +47,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
   });
   const user = useSelector(selectAuthUser);
   const [selectedGender, setSelectedGender] = useState('');
-
+  const [displayDailyNorm, setDisplayDailyNorm] = useState('');
   const genders = ['female', 'male'];
 
   const {
@@ -119,6 +119,7 @@ export const ModalUserSettings = ({ toggleModal }) => {
         formData.append('avatar', data.avatar[0]);
       }
       await dispatch(fetchUpdateUser(formData));
+      setDisplayDailyNorm(data.dailyNorm);
       await dispatch(fetchCurrentUser());
       toggleModal();
     } catch (error) {
@@ -146,6 +147,8 @@ export const ModalUserSettings = ({ toggleModal }) => {
 
       setValue('dailyNorm', roundedDailyNorm);
       setValue('gender', selectedGender);
+
+      setDisplayDailyNorm(roundedDailyNorm);
 
       return { ...updatedData, dailyNorm: roundedDailyNorm };
     });
@@ -346,7 +349,9 @@ export const ModalUserSettings = ({ toggleModal }) => {
                     <p className={style.label_text}>
                       The required amount of water in liters per day:
                     </p>
-                    <p className={style.water_amount}>1.8 L</p>
+                    <p className={style.water_amount}>
+                      {displayDailyNorm || user.dailyNorm}L
+                    </p>
                   </div>
                   <div className={style.water_intake_input_group}>
                     <label className={style.label_title}>
@@ -356,9 +361,12 @@ export const ModalUserSettings = ({ toggleModal }) => {
                       name="dailyNorm"
                       value={formData.dailyNorm}
                       {...register('dailyNorm')}
-                      onChange={(e) =>
-                        setFormData({ ...formData, dailyNorm: e.target.value })
-                      }
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        console.log(value);
+                        setFormData({ ...formData, dailyNorm: value });
+                        setDisplayDailyNorm(value);
+                      }}
                       className={`${style.input_drunk_water} ${
                         errors.dailyNorm ? style.error_input : ''
                       }`}
