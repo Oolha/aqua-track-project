@@ -4,7 +4,7 @@ import { parseTime } from '../../utils/calendar.js';
 import { useModal } from '../../hooks/useModalHook.js';
 import { Modal } from '../Modal/Modal.jsx';
 import DeleteWaterModal from '../DeleteWaterModal/DeleteWaterModal.jsx';
-import WaterModal from "../WaterModal/WaterModal.jsx"
+import WaterModal from '../WaterModal/WaterModal.jsx';
 
 const WaterItem = ({ item }) => {
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useModal();
@@ -24,7 +24,7 @@ const WaterItem = ({ item }) => {
           </button>
           {isWaterModalOpen && (
             <Modal toggleModal={setIsWaterModalOpen}>
-              <WaterModal/>
+              <WaterModal entry={item} toggleModal={setIsWaterModalOpen} />
             </Modal>
           )}
           <button type="button" onClick={setIsDeleteModalOpen}>
@@ -38,9 +38,6 @@ const WaterItem = ({ item }) => {
               />
             </Modal>
           )}
-          
-
-
         </div>
       </div>
     </div>

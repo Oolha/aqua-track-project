@@ -35,8 +35,8 @@ const waterSlice = createSlice({
       })
       .addCase(patchWaterEntry.fulfilled, (state, { payload }) => {
         const updatedEntry = payload.data;
-        state.dailyEntries = state.dailyEntries.map((entry) =>
-          entry._id === updatedEntry._id ? updatedEntry : entry
+        state.items = state.items.map((item) =>
+          item._id === updatedEntry._id ? updatedEntry : item
         );
       })
       .addCase(deleteWaterEntry.fulfilled, (state, { payload }) => {
