@@ -76,7 +76,9 @@ const authSlice = createSlice({
         state.isRefreshing = true;
       })
       .addCase(refreshUser.fulfilled, (state, action) => {
-        state.user = action.payload;
+        console.log(action.payload)
+        state.token = action.payload.data.accessToken;
+        console.log(state);
         state.isLoggedIn = true;
         state.isRefreshing = false;
       })

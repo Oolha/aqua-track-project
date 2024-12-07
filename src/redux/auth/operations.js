@@ -2,7 +2,7 @@ import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 export const instance = axios.create({
-  baseURL: 'https://aqua-track-project-back.onrender.com/',
+  baseURL: 'https://water-back.onrender.com',
   withCredentials: true,
 });
 
@@ -42,7 +42,7 @@ export const fetchSignIn = createAsyncThunk(
   async (userData, thunkAPI) => {
     try {
       const response = await instance.post('auth/login', userData);
-      console.log('Sign-in response:', response.data);
+      // console.log('Sign-in response:', response.data);
       const { accessToken } = response.data.data;
       setHeaders(accessToken);
       const user = await fetchCurrentUserData();
@@ -75,7 +75,7 @@ export const refreshUser = createAsyncThunk(
   'auth/refresh',
   async (_, thunkAPI) => {
     const state = thunkAPI.getState();
-    console.log("persistedToken^",state.auth.token)
+    // console.log("persistedToken^",state.auth.token)
     const persistedToken = state.auth.token;
 
     if (persistedToken === null) {
@@ -86,9 +86,9 @@ export const refreshUser = createAsyncThunk(
     try {
      
       setHeaders(persistedToken);
-      console.log(instance.defaults.headers.common.Authorization);
+      // console.log(instance.defaults.headers.common.Authorization);
       const res = await instance.post('auth/refresh');
-      console.log(res.data)
+      // console.log(res.data)
       return res.data;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
